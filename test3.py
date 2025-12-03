@@ -1,117 +1,178 @@
-from lxml import etree
-import pandas as pd
-import numpy as np
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.linear_model import LogisticRegression
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import classification_report
-import fasttext.util
-from sklearn.svm import LinearSVC
+import json
+import os
+from typing import List, Literal
+from pydantic import BaseModel, Field
+from dotenv import load_dotenv
 
-fasttext.util.download_model('en',if_exists='ignore')
-ft = fasttext.load_model('cc.en.300.bin')
+from langchain_openai import ChatOpenAI
+from langchain_core.messages import SystemMessage, HumanMessage
 
-def embed_fasttext(text):
-    return ft.get_sentence_vector(text)
+# ============================
+# Config
+# ============================
 
-def build_fasttext_features(df):
-    X = np.vstack([embed_fasttext(t) for t in df["input"]])
-    y = df["polarity"].values
-    return X, y
+INPUT_FILE = "amazon_reviews_arabic.jsonl"
+OUTPUT_FILE = "arabic_classification.jsonl"
 
-def train_fasttext_svm(X, y):
-    X_train, X_test, y_train, y_test = train_test_split(
-        X, y, test_size=0.2, random_state=42
+BATCH_SIZE = 20
+MAX_SENTENCES = 5000  # <-- change this to limit how many sentences you label (None for all)
+
+
+# ============================
+# 1. Pydantic Schemas
+# ============================
+
+class SentenceClassification(BaseModel):
+    index: int = Field(
+        description="Index of the sentence in the batch (0-based)."
+    )
+    label: Literal["positive", "negative"] = Field(
+        description='Sentiment label: "positive" or "negative". No neutral.'
     )
 
-    clf = LinearSVC()
-    clf.fit(X_train, y_train)
 
-    preds = clf.predict(X_test)
-
-    print("\n===== FastText + SVM =====")
-    print(classification_report(y_test, preds))
-
-    return clf
-
-def load_semeval_xml(path):
-    tree = etree.parse(path)
-    root = tree.getroot()
-
-    data = []
-
-    for sentence in root.findall("sentence"):
-        sent_id = sentence.get("id")
-        text = sentence.find("text").text.strip()
-
-        aspects = []
-        aspect_terms = sentence.find("aspectTerms")
-
-        if aspect_terms is not None:
-            for term in aspect_terms.findall("aspectTerm"):
-                aspects.append({
-                    "term": term.get("term"),
-                    "polarity": term.get("polarity"),
-                    "from": int(term.get("from")),
-                    "to": int(term.get("to"))
-                })
-
-        data.append({
-            "id": sent_id,
-            "text": text,
-            "aspects": aspects
-        })
-
-    return data
-
-def build_apc_dataset(parsed_xml):
-    rows = []
-
-    for item in parsed_xml:
-        sent = item["text"]
-        for asp in item["aspects"]:
-            rows.append({
-                "sentence": sent,
-                "aspect": asp["term"],
-                "polarity": asp["polarity"]
-            })
-
-    return pd.DataFrame(rows)
+class BatchClassification(BaseModel):
+    results: List[SentenceClassification]
 
 
-def prepare_text(df):
-    df["input"] = df["aspect"] + " [SEP] " + df["sentence"]
-    return df
+# ============================
+# 2. LLM Init with Structured Output
+# ============================
 
-df = build_apc_dataset(load_semeval_xml("Laptop_Train_v2.xml"))  
-df = prepare_text(df)
+load_dotenv(".env")
 
-def train_tfidf_lr(df):
-    X = df["input"]
-    y = df["polarity"]
+llm_raw = ChatOpenAI(
+    api_key=os.getenv("QWEN_API_KEY"),
+    base_url="https://dashscope-intl.aliyuncs.com/compatible-mode/v1",
+    model="qwen-plus-2025-04-28",
+    temperature=0,
+    max_tokens=3000,
+)
 
-    tfidf = TfidfVectorizer(
-        ngram_range=(1,2),
-        max_features=10000,
-        sublinear_tf=True
-    )
+# Force the LLM to return a BatchClassification object
+llm = llm_raw.with_structured_output(BatchClassification, strict=True)
 
-    X_vec = tfidf.fit_transform(X)
 
-    X_train, X_test, y_train, y_test = train_test_split(
-        X_vec, y, test_size=0.2, random_state=42
-    )
+# ============================
+# 3. System Prompt
+# ============================
 
-    clf = LogisticRegression(max_iter=1000)
-    clf.fit(X_train, y_train)
+SYSTEM_PROMPT = """
+You are an expert Arabic sentiment classifier.
 
-    preds = clf.predict(X_test)
+Your task:
+- For each sentence, classify the sentiment as either:
+  - "positive"
+  - "negative"
 
-    print("\n===== TF-IDF + Logistic Regression =====")
-    print(classification_report(y_test, preds))
+Rules:
+- Do NOT use "neutral". Force a decision: positive or negative.
+- Very short praise/compliment/recommendation → positive.
+- Complaints, mentions of returns, regret, bad quality → negative.
+- You will be given a list of sentences with indices (0, 1, 2, ...).
+- Return a JSON structure with a list called "results".
+- Each item in "results" must have:
+  - "index": the sentence index from the list
+  - "label": "positive" or "negative"
 
-    return clf, tfidf
+Make sure you cover ALL sentences that are provided.
+"""
 
-clf, tfidf = train_tfidf_lr(df)
-X, Y = build_fasttext_features(df)
-train_fasttext_svm(X,Y)
+
+# ============================
+# 4. Helpers
+# ============================
+
+def iter_sentences(path: str, max_sentences: int | None = None):
+    """Yield sentences (text) from a JSONL file, up to max_sentences."""
+    count = 0
+    with open(path, "r", encoding="utf-8") as f:
+        for line in f:
+            if max_sentences is not None and count >= max_sentences:
+                break
+            obj = json.loads(line)
+            # adjust key if your jsonl structure changes
+            text = obj.get("text", "").strip()
+            if not text:
+                continue
+            yield text
+            count += 1
+
+
+def batch(iterator, size: int):
+    """Yield lists of items of length up to size."""
+    current = []
+    for item in iterator:
+        current.append(item)
+        if len(current) == size:
+            yield current
+            current = []
+    if current:
+        yield current
+
+
+# ============================
+# 5. Main Classification Logic
+# ============================
+
+def classify_reviews(
+    input_path: str = INPUT_FILE,
+    output_path: str = OUTPUT_FILE,
+    batch_size: int = BATCH_SIZE,
+    max_sentences: int | None = MAX_SENTENCES,
+):
+    # Open output file in write mode.
+    # If you want to resume runs, change "w" -> "a" and handle skipping.
+    with open(output_path, "w", encoding="utf-8") as out_f:
+
+        sentence_iter = iter_sentences(input_path, max_sentences=max_sentences)
+
+        total_processed = 0
+
+        for chunk_idx, chunk in enumerate(batch(sentence_iter, batch_size)):
+            # Build the prompt with indexed sentences
+            # Example:
+            # 0: sentence...
+            # 1: sentence...
+            prompt_lines = []
+            for i, s in enumerate(chunk):
+                prompt_lines.append(f"{i}: {s}")
+            user_prompt = "صنّف الجمل التالية إلى إيجابية أو سلبية:\n\n" + "\n".join(prompt_lines)
+
+            # Call the structured LLM
+            result: BatchClassification = llm.invoke(
+                [
+                    SystemMessage(content=SYSTEM_PROMPT),
+                    HumanMessage(content=user_prompt),
+                ]
+            )
+
+            # Map index -> label, then write each as a jsonl line
+            for item in result.results:
+                idx = item.index
+                label = item.label
+
+                # Safety in case the model returns an invalid index
+                if 0 <= idx < len(chunk):
+                    sentence = chunk[idx]
+                    record = {
+                        "sentence": sentence,
+                        "label": label,
+                    }
+                    out_f.write(json.dumps(record, ensure_ascii=False) + "\n")
+
+            out_f.flush()  # ensure data is written to disk batch by batch
+
+            total_processed += len(chunk)
+            print(f"✓ Processed batch {chunk_idx + 1}, total sentences: {total_processed}")
+
+        print(f"✔ Done! Total classified sentences: {total_processed}")
+        print(f"✔ Output saved to: {output_path}")
+
+
+# ============================
+# 6. Run
+# ============================
+
+if __name__ == "__main__":
+    classify_reviews()
