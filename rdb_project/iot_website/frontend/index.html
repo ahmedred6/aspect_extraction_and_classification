@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>IoT SQL Assistant</title>
+
+  <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+
+<body>
+  <div style="height: 55px"></div>
+  <nav class="top-nav">
+    <a href="/" class="active">AI Assistant</a>
+    <a href="/dashboard.html">Dashboard</a>
+    <a href="/devices.html">Devices</a>
+  </nav>
+
+  <div class="app-shell">
+
+    <!-- LEFT: CHAT -->
+    <div class="chat-pane">
+
+      <div class="chat-header">
+        <div class="chat-header-icon">⌘</div>
+        <div class="chat-header-text">
+          <h1>IoT SQL Assistant</h1>
+          <p>Ask natural questions, get SQL + results from your database.</p>
+        </div>
+      </div>
+
+      <div id="messages" class="messages">
+        <div class="hint-text">
+          Try things like: <code>"How many devices are offline?"</code> or 
+          <code>"Show monthly electricity consumption per space"</code>.
+        </div>
+      </div>
+
+      <div class="input-area">
+        <input id="user-input" type="text" placeholder="Ask something about your IoT data..." />
+        <button id="send-btn">
+          <span>Send</span>
+          <span class="send-icon">➤</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- RIGHT: SIDE PANEL -->
+    <div class="side-pane">
+
+      <div class="side-card">
+        <h2>Example questions</h2>
+        <p>Click to auto-fill a question.</p>
+        <div class="example-list">
+          <div class="example-pill" data-q="How many communities do we have?">How many communities do we have?</div>
+          <div class="example-pill" data-q="List all spaces with their community names.">List all spaces with their community names.</div>
+          <div class="example-pill" data-q="Show monthly electricity consumption for each space.">Show monthly electricity consumption for each space.</div>
+          <div class="example-pill" data-q="Show all offline devices with their space name.">Show all offline devices with their space name.</div>
+        </div>
+      </div>
+
+      <div class="side-card">
+        <h2>What this agent does</h2>
+        <p>
+          • Converts your question → MySQL SELECT<br />
+          • Runs it on the <code>iot</code> database<br />
+          • Returns SQL + table preview
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="../static/js/chat.js"></script>
+</body>
+</html>

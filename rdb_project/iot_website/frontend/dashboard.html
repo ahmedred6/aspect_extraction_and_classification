@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>IoT Community Dashboard</title>
+
+    <link rel="stylesheet" href="/static/css/styles.css">
+
+    <style>
+
+/* ========= PAGE LAYOUT ========= */
+body.with-nav {
+    padding-top: 60px;
+}
+
+.dashboard-container {
+    max-width: 1250px;
+    margin: auto;
+    padding: 30px 20px;
+    color: #e5e7eb;
+}
+
+/* ========= TITLES ========= */
+.page-title {
+    text-align: center;
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #f1f5f9;
+    letter-spacing: 1px;
+}
+
+/* ========= COMMUNITY SELECTOR ========= */
+.selector-card {
+    background: rgba(15, 23, 42, 0.55);
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 35px;
+    text-align: center;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 0 40px rgba(56, 189, 248, 0.15);
+}
+
+.selector-card h2 {
+    margin-bottom: 15px;
+    font-size: 22px;
+    letter-spacing: 0.5px;
+}
+
+select, button {
+    padding: 12px 16px;
+    border-radius: 12px;
+    border: 1px solid rgba(56, 189, 248, 0.4);
+    background: rgba(3, 7, 18, 0.75);
+    color: #e5e7eb;
+    font-size: 15px;
+}
+
+button {
+    background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+    color: #0b1120;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    margin-left: 10px;
+    padding: 12px 20px;
+    box-shadow: 0 6px 20px rgba(56,189,248,0.35);
+    transition: 0.15s;
+}
+
+button:hover {
+    filter: brightness(1.08);
+    transform: translateY(-1px);
+}
+
+/* ========= STAT CARDS ========= */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 1100px) {
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.stat-card {
+    background: rgba(15, 23, 42, 0.8);
+    border-radius: 18px;
+    padding: 22px;
+    border: 1px solid rgba(148, 163, 184, 0.28);
+    text-align: center;
+    box-shadow: 0 0 25px rgba(0,0,0,0.25);
+    backdrop-filter: blur(12px);
+}
+
+.stat-card h3 {
+    margin: 0;
+    font-size: 15px;
+    letter-spacing: 0.4px;
+    color: #93a3b8;
+}
+
+.stat-card p {
+    margin-top: 8px;
+    font-size: 26px;
+    font-weight: 700;
+    color: #38bdf8;
+}
+
+/* ========= TABLE GRID (SIDE BY SIDE) ========= */
+.table-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 26px;
+}
+
+@media (max-width: 1100px) {
+    .table-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ========= TABLE WRAPPER (CARD) ========= */
+.data-card {
+    background: rgba(15, 23, 42, 0.72);
+    border: 1px solid rgba(148, 163, 184, 0.35);
+    border-radius: 18px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 25px rgba(0,0,0,0.28);
+    height: 420px; /* FIXED HEIGHT */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Table title */
+.data-card h2 {
+    margin: 0 0 14px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #f1f5f9;
+}
+
+/* ========= TABLE SCROLL AREA ========= */
+.table-scroll {
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex: 1;
+    padding-right: 4px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+    color: #e5e7eb;
+}
+
+th, td {
+    padding: 10px 12px;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+th {
+    background: rgba(2, 6, 23, 0.8);
+    color: #93c5fd;
+    font-weight: 600;
+}
+
+tr:nth-child(even) td {
+    background: rgba(15, 23, 42, 0.6);
+}
+
+    </style>
+</head>
+
+<body class="with-nav">
+
+<nav class="top-nav">
+    <a href="/">AI Assistant</a>
+    <a href="/dashboard.html" class="active">Dashboard</a>
+    <a href="/devices.html">Devices</a>
+</nav>
+
+<div class="dashboard-container">
+
+    <h1 class="page-title">IoT Community Dashboard</h1>
+
+    <!-- COMMUNITY SELECTOR -->
+    <div class="selector-card">
+        <h2>Select Community</h2>
+        <select id="community-select"></select>
+        <button onclick="loadCommunity()">Load Overview</button>
+    </div>
+
+    <!-- STAT CARDS -->
+    <div id="stats"></div>
+
+    <!-- TABLE GRID -->
+    <div id="tables" class="table-grid"></div>
+
+</div>
+
+<script>
+/* Load communities */
+async function loadCommunities() {
+    const res = await fetch("/api/communities");
+    const data = await res.json();
+    const select = document.getElementById("community-select");
+
+    data.forEach(c => {
+        const opt = document.createElement("option");
+        opt.value = c.community_id;
+        opt.textContent = c.community_name;
+        select.appendChild(opt);
+    });
+}
+
+/* Build a beautiful scrollable table */
+function buildTable(title, rows) {
+    if (!rows || rows.length === 0) return "";
+
+    const cols = Object.keys(rows[0]);
+
+    let html = `
+        <div class="data-card">
+            <h2>${title}</h2>
+            <div class="table-scroll">
+                <table>
+                    <tr>${cols.map(c => `<th>${c}</th>`).join("")}</tr>
+                    ${rows.map(r => `
+                        <tr>
+                            ${cols.map(c => `<td>${r[c]}</td>`).join("")}
+                        </tr>
+                    `).join("")}
+                </table>
+            </div>
+        </div>
+    `;
+    return html;
+}
+
+/* Load dashboard data */
+async function loadCommunity() {
+    const id = document.getElementById("community-select").value;
+    const res = await fetch(`/api/community/${id}`);
+    const data = await res.json();
+
+    /* STAT CARDS */
+    document.getElementById("stats").innerHTML = `
+        <div class="stats-grid">
+            <div class="stat-card"><h3>Total Devices</h3><p>${data.total_devices}</p></div>
+            <div class="stat-card"><h3>Total Spaces</h3><p>${data.total_spaces}</p></div>
+            <div class="stat-card"><h3>Total Subspaces</h3><p>${data.total_subspaces}</p></div>
+            <div class="stat-card"><h3>Total kWh</h3><p>${data.total_kwh ?? 0}</p></div>
+        </div>
+    `;
+
+    /* TABLES */
+    const tablesEl = document.getElementById("tables");
+    tablesEl.innerHTML = "";
+
+    tablesEl.innerHTML += buildTable("Devices per Space", data.devices_per_space);
+    tablesEl.innerHTML += buildTable("Subspaces per Space", data.subspaces_per_space);
+}
+
+loadCommunities();
+</script>
+
+</body>
+</html>

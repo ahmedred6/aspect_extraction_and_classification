@@ -6,9 +6,6 @@ venv/
 *.bin
 *.bin.gz
 
-# Ignore large datasets
-*.csv
-*.tsv
 
 # Ignore Jupyter notebook checkpoints
 .ipynb_checkpoints/
@@ -18,33 +15,17 @@ __pycache__/
 *.pyc
 
 # Ignore environment files
-.env
-
-# Ignore any download / cache / temp files
-*.pkl
+*.env
+*.csv
+*.json
+*.jsonl
 *.zip
-*.gz
-*.tar
-*.tar.gz
-*.log
-
-# Ignore compiled or generated data
-train.jsonl
-train_reduced.jsonl
-val.jsonl
-amazon_reviews.jsonl
-amazon_reviews.txt
-amazon_reviews_arabic.jsonl
-aspect_results.jsonl
-aspect_results_cleaned.jsonl
-
+*.pkl
 # Ignore your multi-GB word embeddings
 cc.en.300.bin
 cc.en.300.bin.gz
 
-# Optional: ignore scraped files or intermediate files
-checkpoint.txt
-sentences.txt
+
 
 # Optional: ignore notebook metadata
-*.ipynb
+

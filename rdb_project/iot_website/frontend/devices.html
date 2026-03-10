@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Device Status Explorer</title>
+
+  <!-- Global styles (same file you already use for index/dashboard) -->
+  <link rel="stylesheet" href="/static/css/styles.css">
+
+  <!-- Page-specific styling -->
+  <style>
+    .page-container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px 60px;
+      color: #e5e7eb;
+    }
+
+    .page-title {
+      text-align: center;
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 28px;
+      color: #f1f5f9;
+    }
+
+    /* Selector row (community + space + button) */
+    .selector-row {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 28px;
+      flex-wrap: wrap;
+    }
+
+    .selector-row select {
+      min-width: 180px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      background: rgba(15, 23, 42, 0.95);
+      color: #e5e7eb;
+      font-size: 14px;
+      outline: none;
+    }
+
+    .selector-row select:focus {
+      border-color: #38bdf8;
+    }
+
+    .selector-row button {
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      background: linear-gradient(135deg, #38bdf8, #0ea5e9);
+      color: #0b1120;
+      font-weight: 600;
+      font-size: 14px;
+      box-shadow: 0 8px 24px rgba(56, 189, 248, 0.6);
+    }
+
+    .selector-row button:hover {
+      filter: brightness(1.06);
+    }
+
+    /* DEVICE GRID – 2 per row on desktop, 1 per row on small screens */
+    .device-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .device-card {
+      flex: 1 1 360px;              /* min width 360px, grow to fill row */
+      max-width: calc(50% - 10px);  /* roughly 2 cards per row */
+      background: rgba(15, 23, 42, 0.92);
+      border-radius: 18px;
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      padding: 18px 20px;
+      box-shadow: 0 16px 40px rgba(15, 23, 42, 0.85);
+    }
+
+    @media (max-width: 900px) {
+      .device-card {
+        max-width: 100%;
+      }
+    }
+
+    .device-title {
+      margin: 0 0 10px;
+      font-size: 18px;
+      font-weight: 600;
+      color: #f9fafb;
+    }
+
+    .device-line {
+      margin: 4px 0;
+      font-size: 14px;
+    }
+
+    .device-label {
+      font-weight: 600;
+      color: #e5e7eb;
+    }
+
+    .status-online {
+      color: #22c55e;
+      font-weight: 600;
+    }
+
+    .status-offline {
+      color: #f97373;
+      font-weight: 600;
+    }
+
+    .no-devices-msg {
+      margin-top: 26px;
+      text-align: center;
+      font-size: 14px;
+      color: #9ca3af;
+    }
+
+    /* Keep nav consistent – you already have .top-nav in styles.css,
+       we just rely on it; no override here */
+
+  </style>
+</head>
+
+<body class="with-nav">
+  <!-- TOP NAV (same style as other pages) -->
+  <nav class="top-nav">
+    <a href="/">AI Assistant</a>
+    <a href="/dashboard.html">Dashboard</a>
+    <a href="/devices.html" class="active">Devices</a>
+  </nav>
+
+  <div class="page-container">
+    <h1 class="page-title">Device Status Explorer</h1>
+
+    <div class="selector-row">
+      <select id="community-select"></select>
+      <select id="space-select"></select>
+      <button onclick="loadDevices()">Load Devices</button>
+    </div>
+
+    <div id="devices" class="device-grid"></div>
+    <div id="no-devices" class="no-devices-msg" style="display:none;">
+      No devices found for this space.
+    </div>
+  </div>
+
+  <script>
+    async function loadCommunities() {
+      try {
+        const res = await fetch("/api/communities");
+        const data = await res.json();
+
+        const commSelect = document.getElementById("community-select");
+        commSelect.innerHTML = "";
+
+        data.forEach(c => {
+          const opt = document.createElement("option");
+          opt.value = c.community_id;
+          opt.textContent = c.community_name;
+          commSelect.appendChild(opt);
+        });
+
+        if (data.length > 0) {
+          await loadSpacesForCommunity(commSelect.value);
+        }
+      } catch (err) {
+        console.error("Failed to load communities:", err);
+      }
+    }
+
+    async function loadSpacesForCommunity(commId) {
+      try {
+        const res = await fetch(`/api/community/${commId}/spaces`);
+        const data = await res.json();
+
+        const spaceSelect = document.getElementById("space-select");
+        spaceSelect.innerHTML = "";
+
+        data.forEach(s => {
+          const opt = document.createElement("option");
+          opt.value = s.space_uuid;
+          opt.textContent = s.space_name;
+          spaceSelect.appendChild(opt);
+        });
+      } catch (err) {
+        console.error("Failed to load spaces:", err);
+      }
+    }
+
+    async function loadDevices() {
+      const spaceId = document.getElementById("space-select").value;
+      if (!spaceId) return;
+
+      const grid = document.getElementById("devices");
+      const noDiv = document.getElementById("no-devices");
+
+      grid.innerHTML = "";
+      noDiv.style.display = "none";
+
+      try {
+        const res = await fetch(`/api/space/${spaceId}/devices`);
+        const devices = await res.json();
+
+        if (!devices || devices.length === 0) {
+          noDiv.style.display = "block";
+          return;
+        }
+
+        devices.forEach(d => {
+          const card = document.createElement("div");
+          card.className = "device-card";
+
+          const statusText = d.is_online ? "Online" : "Offline";
+          const statusClass = d.is_online ? "status-online" : "status-offline";
+
+          let eventText = "N/A –";
+          if (d.last_status_code && d.last_status_value) {
+            eventText = `${d.last_status_code}: ${d.last_status_value}`;
+          } else if (d.last_status_code) {
+            eventText = d.last_status_code;
+          } else if (d.last_status_value) {
+            eventText = d.last_status_value;
+          }
+
+          const lastSeen = d.last_seen ? d.last_seen : "No records";
+
+          card.innerHTML = `
+            <h2 class="device-title">${d.device_name}</h2>
+
+            <p class="device-line">
+              <span class="device-label">Status:</span>
+              <span class="${statusClass}">${statusText}</span>
+            </p>
+
+            <p class="device-line">
+              <span class="device-label">Last Event:</span>
+              <span>${eventText}</span>
+            </p>
+
+            <p class="device-line">
+              <span class="device-label">Last Update:</span>
+              <span>${lastSeen}</span>
+            </p>
+          `;
+
+          grid.appendChild(card);
+        });
+      } catch (err) {
+        console.error("Failed to load devices:", err);
+        noDiv.style.display = "block";
+        noDiv.textContent = "Failed to load devices. Check console.";
+      }
+    }
+
+    // When community changes → reload its spaces
+    document.addEventListener("DOMContentLoaded", () => {
+      loadCommunities();
+
+      document.getElementById("community-select")
+        .addEventListener("change", (e) => {
+          const commId = e.target.value;
+          if (commId) {
+            loadSpacesForCommunity(commId);
+          }
+        });
+    });
+  </script>
+</html>
