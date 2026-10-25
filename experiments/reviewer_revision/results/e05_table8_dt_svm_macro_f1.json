@@ -1,0 +1,2287 @@
+{
+  "experiment": "e05_table8_dt_svm_macro_f1",
+  "run_at": "2026-10-25T16:07:37",
+  "python": "3.10.11",
+  "sklearn": "1.6.1",
+  "results": {
+    "english": {
+      "n_test": 3636,
+      "runs": [
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "gini",
+            "max_depth": 5,
+            "min_samples_leaf": 1
+          },
+          "accuracy": 0.6045104510451045,
+          "macro_f1": 0.5966999011142771,
+          "confusion_matrix[neg,pos]": [
+            [
+              1352,
+              483
+            ],
+            [
+              955,
+              846
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "gini",
+            "max_depth": 5,
+            "min_samples_leaf": 5
+          },
+          "accuracy": 0.6042354235423543,
+          "macro_f1": 0.5963879051613357,
+          "confusion_matrix[neg,pos]": [
+            [
+              1352,
+              483
+            ],
+            [
+              956,
+              845
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "gini",
+            "max_depth": 5,
+            "min_samples_leaf": 20
+          },
+          "accuracy": 0.6036853685368537,
+          "macro_f1": 0.5961397271219373,
+          "confusion_matrix[neg,pos]": [
+            [
+              1346,
+              489
+            ],
+            [
+              952,
+              849
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "gini",
+            "max_depth": 10,
+            "min_samples_leaf": 1
+          },
+          "accuracy": 0.6300880088008801,
+          "macro_f1": 0.6236653676669819,
+          "confusion_matrix[neg,pos]": [
+            [
+              1383,
+              452
+            ],
+            [
+              893,
+              908
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "gini",
+            "max_depth": 10,
+            "min_samples_leaf": 5
+          },
+          "accuracy": 0.6276127612761276,
+          "macro_f1": 0.6216621479555138,
+          "confusion_matrix[neg,pos]": [
+            [
+              1369,
+              466
+            ],
+            [
+              888,
+              913
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "gini",
+            "max_depth": 10,
+            "min_samples_leaf": 20
+          },
+          "accuracy": 0.6273377337733773,
+          "macro_f1": 0.6213561588321601,
+          "confusion_matrix[neg,pos]": [
+            [
+              1369,
+              466
+            ],
+            [
+              889,
+              912
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "gini",
+            "max_depth": 15,
+            "min_samples_leaf": 1
+          },
+          "accuracy": 0.6386138613861386,
+          "macro_f1": 0.6321496204392736,
+          "confusion_matrix[neg,pos]": [
+            [
+              1402,
+              433
+            ],
+            [
+              881,
+              920
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "gini",
+            "max_depth": 15,
+            "min_samples_leaf": 5
+          },
+          "accuracy": 0.6320132013201321,
+          "macro_f1": 0.6263918817839309,
+          "confusion_matrix[neg,pos]": [
+            [
+              1372,
+              463
+            ],
+            [
+              875,
+              926
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "gini",
+            "max_depth": 15,
+            "min_samples_leaf": 20
+          },
+          "accuracy": 0.6353135313531353,
+          "macro_f1": 0.6286795591599085,
+          "confusion_matrix[neg,pos]": [
+            [
+              1398,
+              437
+            ],
+            [
+              889,
+              912
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "gini",
+            "max_depth": 20,
+            "min_samples_leaf": 1
+          },
+          "accuracy": 0.6413641364136413,
+          "macro_f1": 0.6355820717850464,
+          "confusion_matrix[neg,pos]": [
+            [
+              1395,
+              440
+            ],
+            [
+              864,
+              937
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "gini",
+            "max_depth": 20,
+            "min_samples_leaf": 5
+          },
+          "accuracy": 0.6336633663366337,
+          "macro_f1": 0.6288986259182613,
+          "confusion_matrix[neg,pos]": [
+            [
+              1358,
+              477
+            ],
+            [
+              855,
+              946
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "gini",
+            "max_depth": 20,
+            "min_samples_leaf": 20
+          },
+          "accuracy": 0.6441144114411441,
+          "macro_f1": 0.6366834655125336,
+          "confusion_matrix[neg,pos]": [
+            [
+              1431,
+              404
+            ],
+            [
+              890,
+              911
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "gini",
+            "max_depth": 30,
+            "min_samples_leaf": 1
+          },
+          "accuracy": 0.6443894389438944,
+          "macro_f1": 0.6406888084109739,
+          "confusion_matrix[neg,pos]": [
+            [
+              1356,
+              479
+            ],
+            [
+              814,
+              987
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "gini",
+            "max_depth": 30,
+            "min_samples_leaf": 5
+          },
+          "accuracy": 0.6413641364136413,
+          "macro_f1": 0.6382751991211206,
+          "confusion_matrix[neg,pos]": [
+            [
+              1334,
+              501
+            ],
+            [
+              803,
+              998
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "gini",
+            "max_depth": 30,
+            "min_samples_leaf": 20
+          },
+          "accuracy": 0.6364136413641364,
+          "macro_f1": 0.6320491622574956,
+          "confusion_matrix[neg,pos]": [
+            [
+              1355,
+              480
+            ],
+            [
+              842,
+              959
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "gini",
+            "max_depth": 50,
+            "min_samples_leaf": 1
+          },
+          "accuracy": 0.6410891089108911,
+          "macro_f1": 0.6395316550656651,
+          "confusion_matrix[neg,pos]": [
+            [
+              1285,
+              550
+            ],
+            [
+              755,
+              1046
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "gini",
+            "max_depth": 50,
+            "min_samples_leaf": 5
+          },
+          "accuracy": 0.6317381738173817,
+          "macro_f1": 0.6306093393105285,
+          "confusion_matrix[neg,pos]": [
+            [
+              1249,
+              586
+            ],
+            [
+              753,
+              1048
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "gini",
+            "max_depth": 50,
+            "min_samples_leaf": 20
+          },
+          "accuracy": 0.6339383938393839,
+          "macro_f1": 0.6315785507027923,
+          "confusion_matrix[neg,pos]": [
+            [
+              1298,
+              537
+            ],
+            [
+              794,
+              1007
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "gini",
+            "max_depth": null,
+            "min_samples_leaf": 1
+          },
+          "accuracy": 0.6476897689768977,
+          "macro_f1": 0.6476731126952752,
+          "confusion_matrix[neg,pos]": [
+            [
+              1165,
+              670
+            ],
+            [
+              611,
+              1190
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "gini",
+            "max_depth": null,
+            "min_samples_leaf": 5
+          },
+          "accuracy": 0.6174367436743674,
+          "macro_f1": 0.6174012924010711,
+          "confusion_matrix[neg,pos]": [
+            [
+              1140,
+              695
+            ],
+            [
+              696,
+              1105
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "gini",
+            "max_depth": null,
+            "min_samples_leaf": 20
+          },
+          "accuracy": 0.636963696369637,
+          "macro_f1": 0.6362941946748145,
+          "confusion_matrix[neg,pos]": [
+            [
+              1236,
+              599
+            ],
+            [
+              721,
+              1080
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "entropy",
+            "max_depth": 5,
+            "min_samples_leaf": 1
+          },
+          "accuracy": 0.5728822882288229,
+          "macro_f1": 0.48514150222999874,
+          "confusion_matrix[neg,pos]": [
+            [
+              1792,
+              43
+            ],
+            [
+              1510,
+              291
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "entropy",
+            "max_depth": 5,
+            "min_samples_leaf": 5
+          },
+          "accuracy": 0.5728822882288229,
+          "macro_f1": 0.48570384026138924,
+          "confusion_matrix[neg,pos]": [
+            [
+              1790,
+              45
+            ],
+            [
+              1508,
+              293
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "entropy",
+            "max_depth": 5,
+            "min_samples_leaf": 20
+          },
+          "accuracy": 0.5723322332233224,
+          "macro_f1": 0.48476032476435266,
+          "confusion_matrix[neg,pos]": [
+            [
+              1790,
+              45
+            ],
+            [
+              1510,
+              291
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "entropy",
+            "max_depth": 10,
+            "min_samples_leaf": 1
+          },
+          "accuracy": 0.6185368536853685,
+          "macro_f1": 0.6035475239584904,
+          "confusion_matrix[neg,pos]": [
+            [
+              1478,
+              357
+            ],
+            [
+              1030,
+              771
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "entropy",
+            "max_depth": 10,
+            "min_samples_leaf": 5
+          },
+          "accuracy": 0.6190869086908691,
+          "macro_f1": 0.604468934121747,
+          "confusion_matrix[neg,pos]": [
+            [
+              1475,
+              360
+            ],
+            [
+              1025,
+              776
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "entropy",
+            "max_depth": 10,
+            "min_samples_leaf": 20
+          },
+          "accuracy": 0.6215621562156216,
+          "macro_f1": 0.6076784101174345,
+          "confusion_matrix[neg,pos]": [
+            [
+              1472,
+              363
+            ],
+            [
+              1013,
+              788
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "entropy",
+            "max_depth": 15,
+            "min_samples_leaf": 1
+          },
+          "accuracy": 0.6278877887788779,
+          "macro_f1": 0.6214821732204632,
+          "confusion_matrix[neg,pos]": [
+            [
+              1378,
+              457
+            ],
+            [
+              896,
+              905
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "entropy",
+            "max_depth": 15,
+            "min_samples_leaf": 5
+          },
+          "accuracy": 0.6309130913091309,
+          "macro_f1": 0.6246412580821743,
+          "confusion_matrix[neg,pos]": [
+            [
+              1382,
+              453
+            ],
+            [
+              889,
+              912
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "entropy",
+            "max_depth": 15,
+            "min_samples_leaf": 20
+          },
+          "accuracy": 0.6336633663366337,
+          "macro_f1": 0.6274920255183414,
+          "confusion_matrix[neg,pos]": [
+            [
+              1386,
+              449
+            ],
+            [
+              883,
+              918
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "entropy",
+            "max_depth": 20,
+            "min_samples_leaf": 1
+          },
+          "accuracy": 0.6314631463146315,
+          "macro_f1": 0.6254155053735466,
+          "confusion_matrix[neg,pos]": [
+            [
+              1379,
+              456
+            ],
+            [
+              884,
+              917
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "entropy",
+            "max_depth": 20,
+            "min_samples_leaf": 5
+          },
+          "accuracy": 0.6355885588558856,
+          "macro_f1": 0.6295294061466421,
+          "confusion_matrix[neg,pos]": [
+            [
+              1388,
+              447
+            ],
+            [
+              878,
+              923
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "entropy",
+            "max_depth": 20,
+            "min_samples_leaf": 20
+          },
+          "accuracy": 0.6353135313531353,
+          "macro_f1": 0.6291164740811945,
+          "confusion_matrix[neg,pos]": [
+            [
+              1390,
+              445
+            ],
+            [
+              881,
+              920
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "entropy",
+            "max_depth": 30,
+            "min_samples_leaf": 1
+          },
+          "accuracy": 0.6309130913091309,
+          "macro_f1": 0.6255786079646167,
+          "confusion_matrix[neg,pos]": [
+            [
+              1364,
+              471
+            ],
+            [
+              871,
+              930
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "entropy",
+            "max_depth": 30,
+            "min_samples_leaf": 5
+          },
+          "accuracy": 0.6309130913091309,
+          "macro_f1": 0.6260176708994254,
+          "confusion_matrix[neg,pos]": [
+            [
+              1355,
+              480
+            ],
+            [
+              862,
+              939
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "entropy",
+            "max_depth": 30,
+            "min_samples_leaf": 20
+          },
+          "accuracy": 0.6441144114411441,
+          "macro_f1": 0.6429906031468531,
+          "confusion_matrix[neg,pos]": [
+            [
+              1069,
+              766
+            ],
+            [
+              528,
+              1273
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "entropy",
+            "max_depth": 50,
+            "min_samples_leaf": 1
+          },
+          "accuracy": 0.6394389438943895,
+          "macro_f1": 0.6358493297454006,
+          "confusion_matrix[neg,pos]": [
+            [
+              1343,
+              492
+            ],
+            [
+              819,
+              982
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "entropy",
+            "max_depth": 50,
+            "min_samples_leaf": 5
+          },
+          "accuracy": 0.6322882288228823,
+          "macro_f1": 0.6287088864799768,
+          "confusion_matrix[neg,pos]": [
+            [
+              1328,
+              507
+            ],
+            [
+              830,
+              971
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "entropy",
+            "max_depth": 50,
+            "min_samples_leaf": 20
+          },
+          "accuracy": 0.6256875687568757,
+          "macro_f1": 0.6225976386212746,
+          "confusion_matrix[neg,pos]": [
+            [
+              1302,
+              533
+            ],
+            [
+              828,
+              973
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "entropy",
+            "max_depth": null,
+            "min_samples_leaf": 1
+          },
+          "accuracy": 0.6487898789878987,
+          "macro_f1": 0.6487407523629309,
+          "confusion_matrix[neg,pos]": [
+            [
+              1201,
+              634
+            ],
+            [
+              643,
+              1158
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "entropy",
+            "max_depth": null,
+            "min_samples_leaf": 5
+          },
+          "accuracy": 0.6372387238723872,
+          "macro_f1": 0.6370212468046539,
+          "confusion_matrix[neg,pos]": [
+            [
+              1203,
+              632
+            ],
+            [
+              687,
+              1114
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "entropy",
+            "max_depth": null,
+            "min_samples_leaf": 20
+          },
+          "accuracy": 0.6245874587458746,
+          "macro_f1": 0.6238314794374715,
+          "confusion_matrix[neg,pos]": [
+            [
+              1217,
+              618
+            ],
+            [
+              747,
+              1054
+            ]
+          ]
+        },
+        {
+          "family": "Linear SVM",
+          "params": {
+            "C": 0.001
+          },
+          "accuracy": 0.7257975797579758,
+          "macro_f1": 0.7255324856426848,
+          "confusion_matrix[neg,pos]": [
+            [
+              1376,
+              459
+            ],
+            [
+              538,
+              1263
+            ]
+          ]
+        },
+        {
+          "family": "Linear SVM",
+          "params": {
+            "C": 0.003
+          },
+          "accuracy": 0.7288228822882288,
+          "macro_f1": 0.7286093087012566,
+          "confusion_matrix[neg,pos]": [
+            [
+              1376,
+              459
+            ],
+            [
+              527,
+              1274
+            ]
+          ]
+        },
+        {
+          "family": "Linear SVM",
+          "params": {
+            "C": 0.005
+          },
+          "accuracy": 0.7334983498349835,
+          "macro_f1": 0.733308546071947,
+          "confusion_matrix[neg,pos]": [
+            [
+              1382,
+              453
+            ],
+            [
+              516,
+              1285
+            ]
+          ]
+        },
+        {
+          "family": "Linear SVM",
+          "params": {
+            "C": 0.01
+          },
+          "accuracy": 0.740924092409241,
+          "macro_f1": 0.7407279787223735,
+          "confusion_matrix[neg,pos]": [
+            [
+              1397,
+              438
+            ],
+            [
+              504,
+              1297
+            ]
+          ]
+        },
+        {
+          "family": "Linear SVM",
+          "params": {
+            "C": 0.02
+          },
+          "accuracy": 0.7511001100110011,
+          "macro_f1": 0.7509371702533341,
+          "confusion_matrix[neg,pos]": [
+            [
+              1412,
+              423
+            ],
+            [
+              482,
+              1319
+            ]
+          ]
+        },
+        {
+          "family": "Linear SVM",
+          "params": {
+            "C": 0.05
+          },
+          "accuracy": 0.7703520352035204,
+          "macro_f1": 0.7702080990961773,
+          "confusion_matrix[neg,pos]": [
+            [
+              1446,
+              389
+            ],
+            [
+              446,
+              1355
+            ]
+          ]
+        },
+        {
+          "family": "Linear SVM",
+          "params": {
+            "C": 0.1
+          },
+          "accuracy": 0.783003300330033,
+          "macro_f1": 0.7828846468069868,
+          "confusion_matrix[neg,pos]": [
+            [
+              1466,
+              369
+            ],
+            [
+              420,
+              1381
+            ]
+          ]
+        },
+        {
+          "family": "Linear SVM",
+          "params": {
+            "C": 0.2
+          },
+          "accuracy": 0.786028602860286,
+          "macro_f1": 0.7859446678216905,
+          "confusion_matrix[neg,pos]": [
+            [
+              1465,
+              370
+            ],
+            [
+              408,
+              1393
+            ]
+          ]
+        },
+        {
+          "family": "Linear SVM",
+          "params": {
+            "C": 0.5
+          },
+          "accuracy": 0.7896039603960396,
+          "macro_f1": 0.7895657430212144,
+          "confusion_matrix[neg,pos]": [
+            [
+              1460,
+              375
+            ],
+            [
+              390,
+              1411
+            ]
+          ]
+        },
+        {
+          "family": "Linear SVM",
+          "params": {
+            "C": 1
+          },
+          "accuracy": 0.7887788778877888,
+          "macro_f1": 0.7887251182783073,
+          "confusion_matrix[neg,pos]": [
+            [
+              1463,
+              372
+            ],
+            [
+              396,
+              1405
+            ]
+          ]
+        },
+        {
+          "family": "Linear SVM",
+          "params": {
+            "C": 2
+          },
+          "accuracy": 0.7838283828382838,
+          "macro_f1": 0.7837907029947817,
+          "confusion_matrix[neg,pos]": [
+            [
+              1449,
+              386
+            ],
+            [
+              400,
+              1401
+            ]
+          ]
+        },
+        {
+          "family": "Linear SVM",
+          "params": {
+            "C": 5
+          },
+          "accuracy": 0.767051705170517,
+          "macro_f1": 0.7670301183779348,
+          "confusion_matrix[neg,pos]": [
+            [
+              1412,
+              423
+            ],
+            [
+              424,
+              1377
+            ]
+          ]
+        },
+        {
+          "family": "Linear SVM",
+          "params": {
+            "C": 10
+          },
+          "accuracy": 0.7645764576457645,
+          "macro_f1": 0.7645533769063181,
+          "confusion_matrix[neg,pos]": [
+            [
+              1408,
+              427
+            ],
+            [
+              429,
+              1372
+            ]
+          ]
+        }
+      ],
+      "rows": {
+        "Decision Tree": {
+          "paper_accuracy": 0.765,
+          "closest_run": {
+            "family": "Decision Tree",
+            "params": {
+              "criterion": "entropy",
+              "max_depth": null,
+              "min_samples_leaf": 1
+            },
+            "accuracy": 0.6487898789878987,
+            "macro_f1": 0.6487407523629309,
+            "confusion_matrix[neg,pos]": [
+              [
+                1201,
+                634
+              ],
+              [
+                643,
+                1158
+              ]
+            ]
+          },
+          "macro_f1_range_within_1pt": null,
+          "n_runs_within_1pt": 0
+        },
+        "Linear SVM": {
+          "paper_accuracy": 0.782,
+          "closest_run": {
+            "family": "Linear SVM",
+            "params": {
+              "C": 0.1
+            },
+            "accuracy": 0.783003300330033,
+            "macro_f1": 0.7828846468069868,
+            "confusion_matrix[neg,pos]": [
+              [
+                1466,
+                369
+              ],
+              [
+                420,
+                1381
+              ]
+            ]
+          },
+          "macro_f1_range_within_1pt": [
+            0.7828846468069868,
+            0.7895657430212144
+          ],
+          "n_runs_within_1pt": 5
+        }
+      }
+    },
+    "arabic": {
+      "n_test": 1966,
+      "runs": [
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "gini",
+            "max_depth": 5,
+            "min_samples_leaf": 1
+          },
+          "accuracy": 0.6434384537131231,
+          "macro_f1": 0.6412658095392538,
+          "confusion_matrix[neg,pos]": [
+            [
+              709,
+              17
+            ],
+            [
+              684,
+              556
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "gini",
+            "max_depth": 5,
+            "min_samples_leaf": 5
+          },
+          "accuracy": 0.6429298067141404,
+          "macro_f1": 0.6407253529926278,
+          "confusion_matrix[neg,pos]": [
+            [
+              709,
+              17
+            ],
+            [
+              685,
+              555
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "gini",
+            "max_depth": 5,
+            "min_samples_leaf": 20
+          },
+          "accuracy": 0.6434384537131231,
+          "macro_f1": 0.6413785745604619,
+          "confusion_matrix[neg,pos]": [
+            [
+              707,
+              19
+            ],
+            [
+              682,
+              558
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "gini",
+            "max_depth": 10,
+            "min_samples_leaf": 1
+          },
+          "accuracy": 0.7141403865717192,
+          "macro_f1": 0.7140098649062793,
+          "confusion_matrix[neg,pos]": [
+            [
+              681,
+              45
+            ],
+            [
+              517,
+              723
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "gini",
+            "max_depth": 10,
+            "min_samples_leaf": 5
+          },
+          "accuracy": 0.711088504577823,
+          "macro_f1": 0.7109688587404971,
+          "confusion_matrix[neg,pos]": [
+            [
+              679,
+              47
+            ],
+            [
+              521,
+              719
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "gini",
+            "max_depth": 10,
+            "min_samples_leaf": 20
+          },
+          "accuracy": 0.7131230925737538,
+          "macro_f1": 0.7129519846993879,
+          "confusion_matrix[neg,pos]": [
+            [
+              677,
+              49
+            ],
+            [
+              515,
+              725
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "gini",
+            "max_depth": 15,
+            "min_samples_leaf": 1
+          },
+          "accuracy": 0.737029501525941,
+          "macro_f1": 0.7361578678362273,
+          "confusion_matrix[neg,pos]": [
+            [
+              668,
+              58
+            ],
+            [
+              459,
+              781
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "gini",
+            "max_depth": 15,
+            "min_samples_leaf": 5
+          },
+          "accuracy": 0.7390640895218719,
+          "macro_f1": 0.7383459067952732,
+          "confusion_matrix[neg,pos]": [
+            [
+              675,
+              51
+            ],
+            [
+              462,
+              778
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "gini",
+            "max_depth": 15,
+            "min_samples_leaf": 20
+          },
+          "accuracy": 0.7416073245167853,
+          "macro_f1": 0.7407958773503422,
+          "confusion_matrix[neg,pos]": [
+            [
+              674,
+              52
+            ],
+            [
+              456,
+              784
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "gini",
+            "max_depth": 20,
+            "min_samples_leaf": 1
+          },
+          "accuracy": 0.7482197355035606,
+          "macro_f1": 0.7467256409155323,
+          "confusion_matrix[neg,pos]": [
+            [
+              660,
+              66
+            ],
+            [
+              429,
+              811
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "gini",
+            "max_depth": 20,
+            "min_samples_leaf": 5
+          },
+          "accuracy": 0.7492370295015259,
+          "macro_f1": 0.7480133954279691,
+          "confusion_matrix[neg,pos]": [
+            [
+              668,
+              58
+            ],
+            [
+              435,
+              805
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "gini",
+            "max_depth": 20,
+            "min_samples_leaf": 20
+          },
+          "accuracy": 0.754323499491353,
+          "macro_f1": 0.752865625378186,
+          "confusion_matrix[neg,pos]": [
+            [
+              666,
+              60
+            ],
+            [
+              423,
+              817
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "gini",
+            "max_depth": 30,
+            "min_samples_leaf": 1
+          },
+          "accuracy": 0.7955239064089522,
+          "macro_f1": 0.7908466358978702,
+          "confusion_matrix[neg,pos]": [
+            [
+              635,
+              91
+            ],
+            [
+              311,
+              929
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "gini",
+            "max_depth": 30,
+            "min_samples_leaf": 5
+          },
+          "accuracy": 0.7939979654120041,
+          "macro_f1": 0.7896391265993442,
+          "confusion_matrix[neg,pos]": [
+            [
+              639,
+              87
+            ],
+            [
+              318,
+              922
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "gini",
+            "max_depth": 30,
+            "min_samples_leaf": 20
+          },
+          "accuracy": 0.7985757884028484,
+          "macro_f1": 0.7923658161126277,
+          "confusion_matrix[neg,pos]": [
+            [
+              615,
+              111
+            ],
+            [
+              285,
+              955
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "gini",
+            "max_depth": 50,
+            "min_samples_leaf": 1
+          },
+          "accuracy": 0.8168870803662258,
+          "macro_f1": 0.8088137571111362,
+          "confusion_matrix[neg,pos]": [
+            [
+              601,
+              125
+            ],
+            [
+              235,
+              1005
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "gini",
+            "max_depth": 50,
+            "min_samples_leaf": 5
+          },
+          "accuracy": 0.8204476093591048,
+          "macro_f1": 0.8131317088669798,
+          "confusion_matrix[neg,pos]": [
+            [
+              612,
+              114
+            ],
+            [
+              239,
+              1001
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "gini",
+            "max_depth": 50,
+            "min_samples_leaf": 20
+          },
+          "accuracy": 0.8077314343845371,
+          "macro_f1": 0.7971013384822381,
+          "confusion_matrix[neg,pos]": [
+            [
+              569,
+              157
+            ],
+            [
+              221,
+              1019
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "gini",
+            "max_depth": null,
+            "min_samples_leaf": 1
+          },
+          "accuracy": 0.830620549338759,
+          "macro_f1": 0.8197406457890666,
+          "confusion_matrix[neg,pos]": [
+            [
+              575,
+              151
+            ],
+            [
+              182,
+              1058
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "gini",
+            "max_depth": null,
+            "min_samples_leaf": 5
+          },
+          "accuracy": 0.8173957273652085,
+          "macro_f1": 0.806673465200791,
+          "confusion_matrix[neg,pos]": [
+            [
+              572,
+              154
+            ],
+            [
+              205,
+              1035
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "gini",
+            "max_depth": null,
+            "min_samples_leaf": 20
+          },
+          "accuracy": 0.8107833163784334,
+          "macro_f1": 0.7992099653742122,
+          "confusion_matrix[neg,pos]": [
+            [
+              561,
+              165
+            ],
+            [
+              207,
+              1033
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "entropy",
+            "max_depth": 5,
+            "min_samples_leaf": 1
+          },
+          "accuracy": 0.6429298067141404,
+          "macro_f1": 0.640667357491369,
+          "confusion_matrix[neg,pos]": [
+            [
+              710,
+              16
+            ],
+            [
+              686,
+              554
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "entropy",
+            "max_depth": 5,
+            "min_samples_leaf": 5
+          },
+          "accuracy": 0.6429298067141404,
+          "macro_f1": 0.640667357491369,
+          "confusion_matrix[neg,pos]": [
+            [
+              710,
+              16
+            ],
+            [
+              686,
+              554
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "entropy",
+            "max_depth": 5,
+            "min_samples_leaf": 20
+          },
+          "accuracy": 0.6429298067141404,
+          "macro_f1": 0.6407825818078465,
+          "confusion_matrix[neg,pos]": [
+            [
+              708,
+              18
+            ],
+            [
+              684,
+              556
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "entropy",
+            "max_depth": 10,
+            "min_samples_leaf": 1
+          },
+          "accuracy": 0.6932858596134283,
+          "macro_f1": 0.6932438757996567,
+          "confusion_matrix[neg,pos]": [
+            [
+              693,
+              33
+            ],
+            [
+              570,
+              670
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "entropy",
+            "max_depth": 10,
+            "min_samples_leaf": 5
+          },
+          "accuracy": 0.6948118006103764,
+          "macro_f1": 0.6947663135450683,
+          "confusion_matrix[neg,pos]": [
+            [
+              695,
+              31
+            ],
+            [
+              569,
+              671
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "entropy",
+            "max_depth": 10,
+            "min_samples_leaf": 20
+          },
+          "accuracy": 0.6963377416073245,
+          "macro_f1": 0.6963093773408422,
+          "confusion_matrix[neg,pos]": [
+            [
+              694,
+              32
+            ],
+            [
+              565,
+              675
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "entropy",
+            "max_depth": 15,
+            "min_samples_leaf": 1
+          },
+          "accuracy": 0.7182095625635809,
+          "macro_f1": 0.7179968101412652,
+          "confusion_matrix[neg,pos]": [
+            [
+              679,
+              47
+            ],
+            [
+              507,
+              733
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "entropy",
+            "max_depth": 15,
+            "min_samples_leaf": 5
+          },
+          "accuracy": 0.7182095625635809,
+          "macro_f1": 0.7179968101412652,
+          "confusion_matrix[neg,pos]": [
+            [
+              679,
+              47
+            ],
+            [
+              507,
+              733
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "entropy",
+            "max_depth": 15,
+            "min_samples_leaf": 20
+          },
+          "accuracy": 0.719735503560529,
+          "macro_f1": 0.7195612975712931,
+          "confusion_matrix[neg,pos]": [
+            [
+              683,
+              43
+            ],
+            [
+              508,
+              732
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "entropy",
+            "max_depth": 20,
+            "min_samples_leaf": 1
+          },
+          "accuracy": 0.7344862665310274,
+          "macro_f1": 0.7336825923084829,
+          "confusion_matrix[neg,pos]": [
+            [
+              668,
+              58
+            ],
+            [
+              464,
+              776
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "entropy",
+            "max_depth": 20,
+            "min_samples_leaf": 5
+          },
+          "accuracy": 0.7375381485249237,
+          "macro_f1": 0.7368843683083512,
+          "confusion_matrix[neg,pos]": [
+            [
+              676,
+              50
+            ],
+            [
+              466,
+              774
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "entropy",
+            "max_depth": 20,
+            "min_samples_leaf": 20
+          },
+          "accuracy": 0.7405900305188199,
+          "macro_f1": 0.7399171395398785,
+          "confusion_matrix[neg,pos]": [
+            [
+              678,
+              48
+            ],
+            [
+              462,
+              778
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "entropy",
+            "max_depth": 30,
+            "min_samples_leaf": 1
+          },
+          "accuracy": 0.7761953204476093,
+          "macro_f1": 0.7733047649397045,
+          "confusion_matrix[neg,pos]": [
+            [
+              652,
+              74
+            ],
+            [
+              366,
+              874
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "entropy",
+            "max_depth": 30,
+            "min_samples_leaf": 5
+          },
+          "accuracy": 0.7787385554425229,
+          "macro_f1": 0.7762581603204557,
+          "confusion_matrix[neg,pos]": [
+            [
+              662,
+              64
+            ],
+            [
+              371,
+              869
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "entropy",
+            "max_depth": 30,
+            "min_samples_leaf": 20
+          },
+          "accuracy": 0.7833163784333672,
+          "macro_f1": 0.7805177951461684,
+          "confusion_matrix[neg,pos]": [
+            [
+              659,
+              67
+            ],
+            [
+              359,
+              881
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "entropy",
+            "max_depth": 50,
+            "min_samples_leaf": 1
+          },
+          "accuracy": 0.8209562563580874,
+          "macro_f1": 0.8104910792526903,
+          "confusion_matrix[neg,pos]": [
+            [
+              576,
+              150
+            ],
+            [
+              202,
+              1038
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "entropy",
+            "max_depth": 50,
+            "min_samples_leaf": 5
+          },
+          "accuracy": 0.8189216683621566,
+          "macro_f1": 0.8098240991930996,
+          "confusion_matrix[neg,pos]": [
+            [
+              590,
+              136
+            ],
+            [
+              220,
+              1020
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "entropy",
+            "max_depth": 50,
+            "min_samples_leaf": 20
+          },
+          "accuracy": 0.8194303153611394,
+          "macro_f1": 0.8052213178462239,
+          "confusion_matrix[neg,pos]": [
+            [
+              540,
+              186
+            ],
+            [
+              169,
+              1071
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "entropy",
+            "max_depth": null,
+            "min_samples_leaf": 1
+          },
+          "accuracy": 0.8214649033570702,
+          "macro_f1": 0.8113610474857242,
+          "confusion_matrix[neg,pos]": [
+            [
+              580,
+              146
+            ],
+            [
+              205,
+              1035
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "entropy",
+            "max_depth": null,
+            "min_samples_leaf": 5
+          },
+          "accuracy": 0.8245167853509664,
+          "macro_f1": 0.8144931484145068,
+          "confusion_matrix[neg,pos]": [
+            [
+              582,
+              144
+            ],
+            [
+              201,
+              1039
+            ]
+          ]
+        },
+        {
+          "family": "Decision Tree",
+          "params": {
+            "criterion": "entropy",
+            "max_depth": null,
+            "min_samples_leaf": 20
+          },
+          "accuracy": 0.818413021363174,
+          "macro_f1": 0.8098587829057069,
+          "confusion_matrix[neg,pos]": [
+            [
+              596,
+              130
+            ],
+            [
+              227,
+              1013
+            ]
+          ]
+        },
+        {
+          "family": "Linear SVM",
+          "params": {
+            "C": 0.001
+          },
+          "accuracy": 0.8326551373346898,
+          "macro_f1": 0.826544685632456,
+          "confusion_matrix[neg,pos]": [
+            [
+              634,
+              92
+            ],
+            [
+              237,
+              1003
+            ]
+          ]
+        },
+        {
+          "family": "Linear SVM",
+          "params": {
+            "C": 0.003
+          },
+          "accuracy": 0.8494404883011191,
+          "macro_f1": 0.8435332885929139,
+          "confusion_matrix[neg,pos]": [
+            [
+              644,
+              82
+            ],
+            [
+              214,
+              1026
+            ]
+          ]
+        },
+        {
+          "family": "Linear SVM",
+          "params": {
+            "C": 0.005
+          },
+          "accuracy": 0.8575788402848423,
+          "macro_f1": 0.8514926275078559,
+          "confusion_matrix[neg,pos]": [
+            [
+              644,
+              82
+            ],
+            [
+              198,
+              1042
+            ]
+          ]
+        },
+        {
+          "family": "Linear SVM",
+          "params": {
+            "C": 0.01
+          },
+          "accuracy": 0.87029501525941,
+          "macro_f1": 0.8640614005474638,
+          "confusion_matrix[neg,pos]": [
+            [
+              645,
+              81
+            ],
+            [
+              174,
+              1066
+            ]
+          ]
+        },
+        {
+          "family": "Linear SVM",
+          "params": {
+            "C": 0.02
+          },
+          "accuracy": 0.8830111902339777,
+          "macro_f1": 0.877075963998682,
+          "confusion_matrix[neg,pos]": [
+            [
+              652,
+              74
+            ],
+            [
+              156,
+              1084
+            ]
+          ]
+        },
+        {
+          "family": "Linear SVM",
+          "params": {
+            "C": 0.05
+          },
+          "accuracy": 0.897761953204476,
+          "macro_f1": 0.8921886522613003,
+          "confusion_matrix[neg,pos]": [
+            [
+              659,
+              67
+            ],
+            [
+              134,
+              1106
+            ]
+          ]
+        },
+        {
+          "family": "Linear SVM",
+          "params": {
+            "C": 0.1
+          },
+          "accuracy": 0.901322482197355,
+          "macro_f1": 0.8956074575016778,
+          "confusion_matrix[neg,pos]": [
+            [
+              656,
+              70
+            ],
+            [
+              124,
+              1116
+            ]
+          ]
+        },
+        {
+          "family": "Linear SVM",
+          "params": {
+            "C": 0.2
+          },
+          "accuracy": 0.9028484231943031,
+          "macro_f1": 0.8970389082514798,
+          "confusion_matrix[neg,pos]": [
+            [
+              654,
+              72
+            ],
+            [
+              119,
+              1121
+            ]
+          ]
+        },
+        {
+          "family": "Linear SVM",
+          "params": {
+            "C": 0.5
+          },
+          "accuracy": 0.901322482197355,
+          "macro_f1": 0.8950675093458818,
+          "confusion_matrix[neg,pos]": [
+            [
+              646,
+              80
+            ],
+            [
+              114,
+              1126
+            ]
+          ]
+        },
+        {
+          "family": "Linear SVM",
+          "params": {
+            "C": 1
+          },
+          "accuracy": 0.9003051881993896,
+          "macro_f1": 0.8935865146694946,
+          "confusion_matrix[neg,pos]": [
+            [
+              638,
+              88
+            ],
+            [
+              108,
+              1132
+            ]
+          ]
+        },
+        {
+          "family": "Linear SVM",
+          "params": {
+            "C": 2
+          },
+          "accuracy": 0.8972533062054934,
+          "macro_f1": 0.8903289589961116,
+          "confusion_matrix[neg,pos]": [
+            [
+              635,
+              91
+            ],
+            [
+              111,
+              1129
+            ]
+          ]
+        },
+        {
+          "family": "Linear SVM",
+          "params": {
+            "C": 5
+          },
+          "accuracy": 0.896236012207528,
+          "macro_f1": 0.8891825129726951,
+          "confusion_matrix[neg,pos]": [
+            [
+              633,
+              93
+            ],
+            [
+              111,
+              1129
+            ]
+          ]
+        },
+        {
+          "family": "Linear SVM",
+          "params": {
+            "C": 10
+          },
+          "accuracy": 0.8931841302136317,
+          "macro_f1": 0.8859855514316013,
+          "confusion_matrix[neg,pos]": [
+            [
+              631,
+              95
+            ],
+            [
+              115,
+              1125
+            ]
+          ]
+        }
+      ],
+      "rows": {
+        "Decision Tree": {
+          "paper_accuracy": 0.712,
+          "closest_run": {
+            "family": "Decision Tree",
+            "params": {
+              "criterion": "gini",
+              "max_depth": 10,
+              "min_samples_leaf": 5
+            },
+            "accuracy": 0.711088504577823,
+            "macro_f1": 0.7109688587404971,
+            "confusion_matrix[neg,pos]": [
+              [
+                679,
+                47
+              ],
+              [
+                521,
+                719
+              ]
+            ]
+          },
+          "macro_f1_range_within_1pt": [
+            0.7109688587404971,
+            0.7195612975712931
+          ],
+          "n_runs_within_1pt": 6
+        },
+        "Linear SVM": {
+          "paper_accuracy": 0.855,
+          "closest_run": {
+            "family": "Linear SVM",
+            "params": {
+              "C": 0.005
+            },
+            "accuracy": 0.8575788402848423,
+            "macro_f1": 0.8514926275078559,
+            "confusion_matrix[neg,pos]": [
+              [
+                644,
+                82
+              ],
+              [
+                198,
+                1042
+              ]
+            ]
+          },
+          "macro_f1_range_within_1pt": [
+            0.8435332885929139,
+            0.8514926275078559
+          ],
+          "n_runs_within_1pt": 2
+        }
+      }
+    }
+  },
+  "paper": {
+    "table8_accuracy": {
+      "english": {
+        "Decision Tree": 0.765,
+        "Linear SVM": 0.782
+      },
+      "arabic": {
+        "Decision Tree": 0.712,
+        "Linear SVM": 0.855
+      }
+    }
+  }
+}

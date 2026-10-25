@@ -1,0 +1,109 @@
+{
+  "experiment": "r03_english_aspect_classification",
+  "run_at": "2026-10-25T21:12:43",
+  "python": "3.10.11",
+  "sklearn": "1.6.1",
+  "results": {
+    "filter_total": 8325,
+    "filter_kept": 8274,
+    "n_binary": 18178,
+    "class_counts": {
+      "negative": 9175,
+      "positive": 9003
+    },
+    "top5_aspects": [
+      {
+        "term": "book",
+        "conflict": 0,
+        "negative": 326,
+        "neutral": 56,
+        "positive": 410,
+        "Total": 792
+      },
+      {
+        "term": "movie",
+        "conflict": 0,
+        "negative": 121,
+        "neutral": 16,
+        "positive": 94,
+        "Total": 231
+      },
+      {
+        "term": "story",
+        "conflict": 0,
+        "negative": 86,
+        "neutral": 9,
+        "positive": 104,
+        "Total": 199
+      },
+      {
+        "term": "price",
+        "conflict": 2,
+        "negative": 45,
+        "neutral": 7,
+        "positive": 144,
+        "Total": 198
+      },
+      {
+        "term": "product",
+        "conflict": 0,
+        "negative": 88,
+        "neutral": 6,
+        "positive": 63,
+        "Total": 157
+      }
+    ],
+    "test_accuracy": 0.8017051705170517,
+    "macro_f1": 0.8016774334014669,
+    "confusion_matrix": [
+      [
+        1479,
+        356
+      ],
+      [
+        365,
+        1436
+      ]
+    ]
+  },
+  "paper": {
+    "test_accuracy": 0.8,
+    "class_counts": {
+      "positive": 9175,
+      "negative": 9003
+    },
+    "cv5_mean_stacking": 0.7922,
+    "table10": {
+      "book": [
+        326,
+        56,
+        410,
+        792
+      ],
+      "movie": [
+        121,
+        16,
+        94,
+        231
+      ],
+      "story": [
+        86,
+        9,
+        104,
+        199
+      ],
+      "price": [
+        45,
+        7,
+        144,
+        198
+      ],
+      "product": [
+        88,
+        6,
+        63,
+        157
+      ]
+    }
+  }
+}

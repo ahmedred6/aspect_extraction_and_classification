@@ -1,0 +1,106 @@
+{
+  "experiment": "r05_english_aspect_extraction_laptop",
+  "run_at": "2026-10-25T13:15:00",
+  "python": "3.10.11",
+  "sklearn": "1.6.1",
+  "results": {
+    "source": "C:\\Users\\ahmed\\Downloads\\AI_Semantic_Classification\\repo\\repro\\data\\Laptop_Train_v2.jsonl",
+    "n_tokens": 51690,
+    "token_distribution": {
+      "O": 49640,
+      "B-ASP": 1422,
+      "I-ASP": 628
+    },
+    "n_sentences": 3030,
+    "best_params": {
+      "C": 0.01,
+      "class_weight": "balanced",
+      "loss": "squared_hinge",
+      "max_iter": 2000
+    },
+    "token_accuracy": 0.9539562778100212,
+    "per_class": {
+      "B-ASP": {
+        "precision": 0.41346153846153844,
+        "recall": 0.45422535211267606,
+        "f1-score": 0.43288590604026844,
+        "support": 284.0
+      },
+      "I-ASP": {
+        "precision": 0.3333333333333333,
+        "recall": 0.3888888888888889,
+        "f1-score": 0.358974358974359,
+        "support": 126.0
+      },
+      "O": {
+        "precision": 0.9802611600364409,
+        "recall": 0.9754230459307011,
+        "f1-score": 0.9778361185439491,
+        "support": 9928.0
+      }
+    },
+    "single_prf_candidates": {
+      "token_micro_B+I": [
+        0.3877995642701525,
+        0.43414634146341463,
+        0.4096662830840046
+      ],
+      "token_binary_aspect_vs_O": [
+        0.4684095860566449,
+        0.524390243902439,
+        0.4948216340621404
+      ],
+      "token_macro_all": [
+        0.5756853439437709,
+        0.6061790956440887,
+        0.5898987945195255
+      ],
+      "token_weighted_all": [
+        0.9568055594665179,
+        0.9539562778100212,
+        0.9553228237038627
+      ]
+    },
+    "sentence_split_exact_span": {
+      "precision": 0.27163461538461536,
+      "recall": 0.37666666666666665,
+      "f1": 0.31564245810055863,
+      "tp": 113,
+      "fp": 303,
+      "fn": 187
+    }
+  },
+  "paper": {
+    "prf": [
+      0.8347,
+      0.7803,
+      0.8066
+    ],
+    "token_accuracy": 0.97,
+    "B-ASP": [
+      0.8,
+      0.75,
+      0.77
+    ],
+    "I-ASP": [
+      0.73,
+      0.68,
+      0.7
+    ],
+    "O": [
+      0.99,
+      0.99,
+      0.99
+    ],
+    "fig3_confusion_binary": [
+      [
+        91709,
+        1587
+      ],
+      [
+        5103,
+        2606
+      ]
+    ]
+  }
+}

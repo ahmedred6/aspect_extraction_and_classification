@@ -1,31 +1,31 @@
-# Ignore Python virtual environment
+# ---------------- Python / editors ----------------
 .venv/
 venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.vscode/
 
-# Ignore huge FastText models
+# ---------------- secrets (API keys for the LLM scripts) ----------------
+.env
+*.env
+
+# ---------------- generated / large data ----------------
+# Everything a script produces goes to data/processed/ and can be regenerated.
+data/processed/*
+!data/processed/.gitkeep
+# Amazon Review Polarity (1.7 GB): download it, see data/README.md
+data/raw/amazon_polarity/
+# Intermediate files of the reviewer-revision experiments
+experiments/reviewer_revision/data/
+experiments/reviewer_revision/logs/
+*.log
+
+# ---------------- trained models (re-create with the training scripts) ----------------
+*.pkl
+*.joblib
 *.bin
 *.bin.gz
 
-
-# Ignore Jupyter notebook checkpoints
-.ipynb_checkpoints/
-
-# Ignore Python cache
-__pycache__/
-*.pyc
-
-# Ignore environment files
-*.env
-*.csv
-*.json
-*.jsonl
-*.zip
-*.pkl
-# Ignore your multi-GB word embeddings
-cc.en.300.bin
-cc.en.300.bin.gz
-
-
-
-# Optional: ignore notebook metadata
-
+# ---------------- local scraping / labeling state ----------------
+amazon_cookies.pkl

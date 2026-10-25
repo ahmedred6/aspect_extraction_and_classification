@@ -1,0 +1,144 @@
+{
+  "experiment": "r04_arabic_aspect_extraction",
+  "run_at": "2026-10-25T21:11:38",
+  "python": "3.10.11",
+  "sklearn": "1.6.1",
+  "results": {
+    "xml_variants": {
+      "include_sentences_without_opinions=True": {
+        "sentences": 4802,
+        "tokens": 106876,
+        "O": 97235,
+        "B-ASP": 8139,
+        "I-ASP": 1502
+      },
+      "include_sentences_without_opinions=False": {
+        "sentences": 4802,
+        "tokens": 106876,
+        "O": 97235,
+        "B-ASP": 8139,
+        "I-ASP": 1502
+      }
+    },
+    "chosen_variant": "include_sentences_without_opinions=True",
+    "token_distribution": {
+      "O": 97235,
+      "B-ASP": 8139,
+      "I-ASP": 1502
+    },
+    "n_tokens": 106876,
+    "held_out": {
+      "accuracy": 0.9302956586826348,
+      "macro_f1": 0.716451525752675,
+      "per_class": {
+        "B-ASP": {
+          "precision": 0.5927456382001837,
+          "recall": 0.792997542997543,
+          "f1-score": 0.6784025223331581,
+          "support": 1628.0
+        },
+        "I-ASP": {
+          "precision": 0.47277936962750716,
+          "recall": 0.55,
+          "f1-score": 0.5084745762711864,
+          "support": 300.0
+        },
+        "O": {
+          "precision": 0.9777707040161282,
+          "recall": 0.94765528589058,
+          "f1-score": 0.9624774786536805,
+          "support": 19448.0
+        }
+      }
+    },
+    "cv5": {
+      "folds": [
+        {
+          "macro_f1": 0.7126537337291016,
+          "accuracy": 0.9302020958083832
+        },
+        {
+          "macro_f1": 0.7129003270465768,
+          "accuracy": 0.9289824561403509
+        },
+        {
+          "macro_f1": 0.7138906644004726,
+          "accuracy": 0.9320701754385965
+        },
+        {
+          "macro_f1": 0.7082170984042241,
+          "accuracy": 0.9300584795321637
+        },
+        {
+          "macro_f1": 0.7040898850951812,
+          "accuracy": 0.9297777777777778
+        }
+      ],
+      "mean_macro_f1": 0.7103503417351112,
+      "mean_accuracy": 0.9302181969394544
+    },
+    "ablation": {
+      "with": {
+        "macro_f1": 0.7184888935664863,
+        "B-ASP_f1": 0.6761546723952739,
+        "I-ASP_f1": 0.516030534351145
+      },
+      "without": {
+        "macro_f1": 0.7131719277026405,
+        "B-ASP_f1": 0.6794284173631706,
+        "I-ASP_f1": 0.49493487698986977
+      }
+    }
+  },
+  "paper": {
+    "token_distribution": {
+      "O": 97235,
+      "B-ASP": 8139,
+      "I-ASP": 1502
+    },
+    "n_tokens": 106876,
+    "held_out": {
+      "accuracy": 0.9302,
+      "macro_f1": 0.7163,
+      "B-ASP": [
+        0.59,
+        0.79,
+        0.68,
+        1628
+      ],
+      "I-ASP": [
+        0.47,
+        0.55,
+        0.51,
+        300
+      ],
+      "O": [
+        0.98,
+        0.95,
+        0.96,
+        19448
+      ]
+    },
+    "cv5": {
+      "mean_macro_f1": 0.7104,
+      "mean_accuracy": 0.9302,
+      "folds_macro_f1": [
+        0.7127,
+        0.7129,
+        0.7139,
+        0.7082,
+        0.7041
+      ]
+    },
+    "ablation": {
+      "with": {
+        "macro_f1": 0.7185,
+        "B-ASP_f1": 0.6762
+      },
+      "without": {
+        "macro_f1": 0.7132,
+        "B-ASP_f1": 0.6794
+      }
+    }
+  }
+}

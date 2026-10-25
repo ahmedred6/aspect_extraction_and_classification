@@ -1,0 +1,96 @@
+{
+  "experiment": "e03_latency_benchmark",
+  "run_at": "2026-10-25T14:25:11",
+  "python": "3.10.11",
+  "sklearn": "1.6.1",
+  "results": {
+    "hardware": {
+      "cpu": "AMD Ryzen 7 7445HS w/ Radeon 740M Graphics",
+      "physical_cores": "6",
+      "logical_processors": "12",
+      "ram_gb": "15.3",
+      "os": "Microsoft Windows 11 Home",
+      "python": "3.10.11",
+      "threads": 1,
+      "gpu_used": false
+    },
+    "protocol": {
+      "reviews_per_pipeline": 105,
+      "warmup_excluded": 5
+    },
+    "llm_included_in_totals": false,
+    "router_stage_note": "timing proxy (real router data not available)",
+    "arabic": {
+      "language_detection": {
+        "mean_ms": 0.1290899989544414,
+        "std_ms": 0.06490198186241257,
+        "p95_ms": 0.21994499402353535
+      },
+      "dialect_routing": {
+        "mean_ms": 0.8227530002477579,
+        "std_ms": 0.35506282864151484,
+        "p95_ms": 1.6133949997310992
+      },
+      "aspect_extraction": {
+        "mean_ms": 0.5606180003087502,
+        "std_ms": 0.3501244961235173,
+        "p95_ms": 1.1223449961107688
+      },
+      "aspect_classification": {
+        "mean_ms": 5.8650999996461906,
+        "std_ms": 4.640128016070672,
+        "p95_ms": 14.52249999638297
+      },
+      "total": {
+        "mean_ms": 7.37756099915714,
+        "std_ms": 4.951934745820758,
+        "p95_ms": 16.398644990113095,
+        "reviews_per_sec": 135.5461513790596
+      },
+      "mean_aspects_per_review": 2.25
+    },
+    "english": {
+      "language_detection": {
+        "mean_ms": 0.14305399992736056,
+        "std_ms": 0.1043132413361436,
+        "p95_ms": 0.31306500386563124
+      },
+      "aspect_extraction": {
+        "mean_ms": 0.8934520013281144,
+        "std_ms": 0.6098771579205303,
+        "p95_ms": 2.0648450088629025
+      },
+      "aspect_classification": {
+        "mean_ms": 2.210021999926539,
+        "std_ms": 3.067176276078831,
+        "p95_ms": 9.121450004749926
+      },
+      "total": {
+        "mean_ms": 3.246528001182014,
+        "std_ms": 3.317244768348514,
+        "p95_ms": 11.95803000300657,
+        "reviews_per_sec": 308.02136917836975
+      },
+      "mean_aspects_per_review": 0.83
+    },
+    "llm_dialect_to_msa": {
+      "measured": false,
+      "reason": "no QWEN_API_KEY in environment"
+    }
+  },
+  "paper": {
+    "arabic_ms": {
+      "language_detection": 0.13,
+      "dialect_routing": 0.79,
+      "aspect_extraction": 0.49,
+      "aspect_classification": 5.02,
+      "total": 6.44
+    },
+    "english_ms": {
+      "language_detection": 0.15,
+      "aspect_extraction": 0.82,
+      "aspect_classification": 2.51,
+      "total": 3.48
+    }
+  }
+}

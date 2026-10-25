@@ -1,0 +1,84 @@
+{
+  "experiment": "e08_ate_split_leakage",
+  "run_at": "2026-10-25T20:55:00",
+  "python": "3.10.11",
+  "sklearn": "1.6.1",
+  "results": {
+    "arabic": {
+      "token_split_holdout": {
+        "accuracy": 0.9302956586826348,
+        "macro_f1": 0.716451525752675,
+        "B-ASP_f1": 0.6784025223331581,
+        "I-ASP_f1": 0.5084745762711864,
+        "macro_precision": 0.6810985706146063,
+        "macro_recall": 0.7635509429627078
+      },
+      "token_split_cv5_mean": {
+        "accuracy": 0.9302181969394544,
+        "macro_f1": 0.7103503417351112,
+        "B-ASP_f1": 0.6768335254450774,
+        "I-ASP_f1": 0.4916388797172358,
+        "macro_precision": 0.6756634715298738,
+        "macro_recall": 0.756026948367361
+      },
+      "sentence_split_holdout": {
+        "accuracy": 0.9321234119782215,
+        "macro_f1": 0.7205540947608698,
+        "B-ASP_f1": 0.6863874345549739,
+        "I-ASP_f1": 0.5116279069767442,
+        "macro_precision": 0.6860512392115905,
+        "macro_recall": 0.7643677661207287
+      },
+      "sentence_split_cv5_mean": {
+        "accuracy": 0.9293105827818048,
+        "macro_f1": 0.7072817657762134,
+        "B-ASP_f1": 0.6723254767227218,
+        "I-ASP_f1": 0.4874289239778161,
+        "macro_precision": 0.6724208421675802,
+        "macro_recall": 0.753340204401652
+      }
+    },
+    "english": {
+      "token_split_holdout": {
+        "accuracy": 0.9610370296931542,
+        "macro_f1": 0.7830448825425074,
+        "B-ASP_f1": 0.7719298245614035,
+        "I-ASP_f1": 0.5950590762620838,
+        "macro_precision": 0.8344316508095894,
+        "macro_recall": 0.746639414351248
+      },
+      "token_split_cv5_mean": {
+        "accuracy": 0.9615213226137239,
+        "macro_f1": 0.7876530388288268,
+        "B-ASP_f1": 0.7700220813220022,
+        "I-ASP_f1": 0.6107388478282181,
+        "macro_precision": 0.8448610776623419,
+        "macro_recall": 0.7470960369620734
+      },
+      "sentence_split_holdout": {
+        "accuracy": 0.9597774089622181,
+        "macro_f1": 0.7682348087535117,
+        "B-ASP_f1": 0.7583262169086251,
+        "I-ASP_f1": 0.5649202733485194,
+        "macro_precision": 0.8186498784431219,
+        "macro_recall": 0.7311658676082263
+      },
+      "sentence_split_cv5_mean": {
+        "accuracy": 0.9610751492943169,
+        "macro_f1": 0.7855079089341682,
+        "B-ASP_f1": 0.7684377856074587,
+        "I-ASP_f1": 0.6061569754955524,
+        "macro_precision": 0.8423571027340124,
+        "macro_recall": 0.745306535364861
+      }
+    }
+  },
+  "paper": {
+    "arabic_holdout_macro_f1": 0.7163,
+    "arabic_cv5_macro_f1": 0.7104,
+    "arabic_accuracy": 0.9302,
+    "english_overall_f1": 0.8066,
+    "english_B-ASP_f1": 0.77,
+    "english_I-ASP_f1": 0.7
+  }
+}

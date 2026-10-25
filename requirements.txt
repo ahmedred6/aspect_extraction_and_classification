@@ -1,0 +1,30 @@
+# Core (all training / evaluation scripts)
+scikit-learn==1.6.1
+imbalanced-learn==0.13.0
+numpy<2            # fasttext's predict() breaks on NumPy 2
+scipy
+pandas
+lxml
+joblib
+tqdm
+matplotlib
+seaborn
+
+# Language identification (lid.176.ftz)
+fasttext-wheel
+
+# Notebooks
+jupyter
+
+# Optional: LLM scripts (dialect normalization, data labeling) — need OPENAI_API_KEY / QWEN_API_KEY in .env
+langchain-openai
+python-dotenv
+pydantic
+
+# Optional: dashboard
+streamlit
+plotly
+
+# Optional: web scraping (src/data_labeling/scrape_*.py)
+selenium
+webdriver-manager

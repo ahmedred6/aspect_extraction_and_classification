@@ -1,0 +1,36 @@
+{
+  "experiment": "e07_smote_significance",
+  "run_at": "2026-10-25T17:22:14",
+  "python": "3.10.11",
+  "sklearn": "1.6.1",
+  "results": {
+    "with_smote": {
+      "accuracy": 0.901322482197355,
+      "macro_f1": 0.8939611302390549,
+      "negative_recall": 0.8636363636363636,
+      "positive_recall": 0.9233870967741935
+    },
+    "without_smote": {
+      "accuracy": 0.9028484231943031,
+      "macro_f1": 0.8980386534583351,
+      "negative_recall": 0.928374655647383,
+      "positive_recall": 0.8879032258064516
+    },
+    "mcnemar_overall": {
+      "with_smote_only_correct": 44,
+      "without_smote_only_correct": 47,
+      "p_value": 0.8340810393049415
+    },
+    "mcnemar_negative_class": {
+      "with_smote_only_correct": 0,
+      "without_smote_only_correct": 47,
+      "p_value": 1.4210854715202004e-14
+    },
+    "mcnemar_positive_class": {
+      "with_smote_only_correct": 44,
+      "without_smote_only_correct": 0,
+      "p_value": 1.1368683772161603e-13
+    }
+  },
+  "paper": {}
+}

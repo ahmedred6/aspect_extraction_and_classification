@@ -1,0 +1,1147 @@
+{
+  "experiment": "e04_table8_config_search",
+  "run_at": "2026-10-25T15:53:58",
+  "python": "3.10.11",
+  "sklearn": "1.6.1",
+  "results": {
+    "runs": [
+      {
+        "lang": "english",
+        "family": "DT",
+        "features": "final",
+        "model": "max_depth=15",
+        "smote": true,
+        "protocol": "test",
+        "accuracy": 0.6421892189218922,
+        "macro_f1": 0.6398182932752507
+      },
+      {
+        "lang": "english",
+        "family": "DT",
+        "features": "final",
+        "model": "max_depth=15",
+        "smote": true,
+        "protocol": "cv5",
+        "accuracy": 0.6433087467958615,
+        "macro_f1": 0.6360086992501458
+      },
+      {
+        "lang": "english",
+        "family": "DT",
+        "features": "final",
+        "model": "max_depth=15",
+        "smote": false,
+        "protocol": "test",
+        "accuracy": 0.6427392739273927,
+        "macro_f1": 0.6332454876900789
+      },
+      {
+        "lang": "english",
+        "family": "DT",
+        "features": "final",
+        "model": "max_depth=15",
+        "smote": false,
+        "protocol": "cv5",
+        "accuracy": 0.6406953849529256,
+        "macro_f1": 0.632034213560714
+      },
+      {
+        "lang": "english",
+        "family": "DT",
+        "features": "final",
+        "model": "max_depth=20,balanced",
+        "smote": true,
+        "protocol": "test",
+        "accuracy": 0.6476897689768977,
+        "macro_f1": 0.6430849000151495
+      },
+      {
+        "lang": "english",
+        "family": "DT",
+        "features": "final",
+        "model": "max_depth=20,balanced",
+        "smote": true,
+        "protocol": "cv5",
+        "accuracy": 0.6498410283883957,
+        "macro_f1": 0.6435271196539385
+      },
+      {
+        "lang": "english",
+        "family": "DT",
+        "features": "final",
+        "model": "max_depth=20,balanced",
+        "smote": false,
+        "protocol": "test",
+        "accuracy": 0.6487898789878987,
+        "macro_f1": 0.6439713111162179
+      },
+      {
+        "lang": "english",
+        "family": "DT",
+        "features": "final",
+        "model": "max_depth=20,balanced",
+        "smote": false,
+        "protocol": "cv5",
+        "accuracy": 0.6498415485215687,
+        "macro_f1": 0.6447632565480783
+      },
+      {
+        "lang": "english",
+        "family": "DT",
+        "features": "final",
+        "model": "default",
+        "smote": true,
+        "protocol": "test",
+        "accuracy": 0.6438393839383938,
+        "macro_f1": 0.6438333223275075
+      },
+      {
+        "lang": "english",
+        "family": "DT",
+        "features": "final",
+        "model": "default",
+        "smote": true,
+        "protocol": "cv5",
+        "accuracy": 0.6400085254555539,
+        "macro_f1": 0.6399275333926058
+      },
+      {
+        "lang": "english",
+        "family": "DT",
+        "features": "final",
+        "model": "default",
+        "smote": false,
+        "protocol": "test",
+        "accuracy": 0.644939493949395,
+        "macro_f1": 0.6449362442442064
+      },
+      {
+        "lang": "english",
+        "family": "DT",
+        "features": "final",
+        "model": "default",
+        "smote": false,
+        "protocol": "cv5",
+        "accuracy": 0.6433775935140339,
+        "macro_f1": 0.6432734449334252
+      },
+      {
+        "lang": "english",
+        "family": "DT",
+        "features": "final",
+        "model": "balanced",
+        "smote": true,
+        "protocol": "test",
+        "accuracy": 0.6438393839383938,
+        "macro_f1": 0.6438333223275075
+      },
+      {
+        "lang": "english",
+        "family": "DT",
+        "features": "final",
+        "model": "balanced",
+        "smote": true,
+        "protocol": "cv5",
+        "accuracy": 0.6400085254555539,
+        "macro_f1": 0.6399275333926058
+      },
+      {
+        "lang": "english",
+        "family": "DT",
+        "features": "final",
+        "model": "balanced",
+        "smote": false,
+        "protocol": "test",
+        "accuracy": 0.6441144114411441,
+        "macro_f1": 0.6440669195804862
+      },
+      {
+        "lang": "english",
+        "family": "DT",
+        "features": "final",
+        "model": "balanced",
+        "smote": false,
+        "protocol": "cv5",
+        "accuracy": 0.6535554648737518,
+        "macro_f1": 0.6534456859989978
+      },
+      {
+        "lang": "english",
+        "family": "SVM",
+        "features": "final",
+        "model": "C=1",
+        "smote": true,
+        "protocol": "test",
+        "accuracy": 0.7918041804180418,
+        "macro_f1": 0.7917826192304529
+      },
+      {
+        "lang": "english",
+        "family": "SVM",
+        "features": "final",
+        "model": "C=1",
+        "smote": true,
+        "protocol": "cv5",
+        "accuracy": 0.7845549054941667,
+        "macro_f1": 0.7844940817631603
+      },
+      {
+        "lang": "english",
+        "family": "SVM",
+        "features": "final",
+        "model": "C=1",
+        "smote": false,
+        "protocol": "test",
+        "accuracy": 0.7931793179317932,
+        "macro_f1": 0.7931542845938118
+      },
+      {
+        "lang": "english",
+        "family": "SVM",
+        "features": "final",
+        "model": "C=1",
+        "smote": false,
+        "protocol": "cv5",
+        "accuracy": 0.7836608674970199,
+        "macro_f1": 0.7835941727539034
+      },
+      {
+        "lang": "english",
+        "family": "SVM",
+        "features": "final",
+        "model": "balanced",
+        "smote": true,
+        "protocol": "test",
+        "accuracy": 0.7918041804180418,
+        "macro_f1": 0.7917826192304529
+      },
+      {
+        "lang": "english",
+        "family": "SVM",
+        "features": "final",
+        "model": "balanced",
+        "smote": true,
+        "protocol": "cv5",
+        "accuracy": 0.7845549054941667,
+        "macro_f1": 0.7844940817631603
+      },
+      {
+        "lang": "english",
+        "family": "SVM",
+        "features": "final",
+        "model": "balanced",
+        "smote": false,
+        "protocol": "test",
+        "accuracy": 0.7926292629262927,
+        "macro_f1": 0.7926066105194229
+      },
+      {
+        "lang": "english",
+        "family": "SVM",
+        "features": "final",
+        "model": "balanced",
+        "smote": false,
+        "protocol": "cv5",
+        "accuracy": 0.7840047464516278,
+        "macro_f1": 0.7839469571058204
+      },
+      {
+        "lang": "english",
+        "family": "SVM",
+        "features": "final",
+        "model": "C=0.5,balanced",
+        "smote": true,
+        "protocol": "test",
+        "accuracy": 0.7989548954895489,
+        "macro_f1": 0.7989153340982055
+      },
+      {
+        "lang": "english",
+        "family": "SVM",
+        "features": "final",
+        "model": "C=0.5,balanced",
+        "smote": true,
+        "protocol": "cv5",
+        "accuracy": 0.7915001491836511,
+        "macro_f1": 0.7914285797509338
+      },
+      {
+        "lang": "english",
+        "family": "SVM",
+        "features": "final",
+        "model": "C=0.5,balanced",
+        "smote": false,
+        "protocol": "test",
+        "accuracy": 0.7995049504950495,
+        "macro_f1": 0.7994742357115282
+      },
+      {
+        "lang": "english",
+        "family": "SVM",
+        "features": "final",
+        "model": "C=0.5,balanced",
+        "smote": false,
+        "protocol": "cv5",
+        "accuracy": 0.7909501083531969,
+        "macro_f1": 0.7908865266609935
+      },
+      {
+        "lang": "english",
+        "family": "DT",
+        "features": "absa",
+        "model": "max_depth=15",
+        "smote": true,
+        "protocol": "test",
+        "accuracy": 0.6432893289328933,
+        "macro_f1": 0.6329238139902352
+      },
+      {
+        "lang": "english",
+        "family": "DT",
+        "features": "absa",
+        "model": "max_depth=15",
+        "smote": true,
+        "protocol": "cv5",
+        "accuracy": 0.6413151945558134,
+        "macro_f1": 0.6332722423073445
+      },
+      {
+        "lang": "english",
+        "family": "DT",
+        "features": "absa",
+        "model": "max_depth=15",
+        "smote": false,
+        "protocol": "test",
+        "accuracy": 0.6443894389438944,
+        "macro_f1": 0.6359064039717882
+      },
+      {
+        "lang": "english",
+        "family": "DT",
+        "features": "absa",
+        "model": "max_depth=15",
+        "smote": false,
+        "protocol": "cv5",
+        "accuracy": 0.6414521314348157,
+        "macro_f1": 0.6342966610653255
+      },
+      {
+        "lang": "english",
+        "family": "DT",
+        "features": "absa",
+        "model": "max_depth=20,balanced",
+        "smote": true,
+        "protocol": "test",
+        "accuracy": 0.6490649064906491,
+        "macro_f1": 0.6422455286242996
+      },
+      {
+        "lang": "english",
+        "family": "DT",
+        "features": "absa",
+        "model": "max_depth=20,balanced",
+        "smote": true,
+        "protocol": "cv5",
+        "accuracy": 0.6457160413326191,
+        "macro_f1": 0.6395639359694845
+      },
+      {
+        "lang": "english",
+        "family": "DT",
+        "features": "absa",
+        "model": "max_depth=20,balanced",
+        "smote": false,
+        "protocol": "test",
+        "accuracy": 0.6498899889988999,
+        "macro_f1": 0.6447585549344961
+      },
+      {
+        "lang": "english",
+        "family": "DT",
+        "features": "absa",
+        "model": "max_depth=20,balanced",
+        "smote": false,
+        "protocol": "cv5",
+        "accuracy": 0.6451653621569072,
+        "macro_f1": 0.6398922710866446
+      },
+      {
+        "lang": "english",
+        "family": "DT",
+        "features": "absa",
+        "model": "default",
+        "smote": true,
+        "protocol": "test",
+        "accuracy": 0.6474147414741475,
+        "macro_f1": 0.6473187047851477
+      },
+      {
+        "lang": "english",
+        "family": "DT",
+        "features": "absa",
+        "model": "default",
+        "smote": true,
+        "protocol": "cv5",
+        "accuracy": 0.6419345313103622,
+        "macro_f1": 0.6419235457012118
+      },
+      {
+        "lang": "english",
+        "family": "DT",
+        "features": "absa",
+        "model": "default",
+        "smote": false,
+        "protocol": "test",
+        "accuracy": 0.6507150715071507,
+        "macro_f1": 0.6507124294915221
+      },
+      {
+        "lang": "english",
+        "family": "DT",
+        "features": "absa",
+        "model": "default",
+        "smote": false,
+        "protocol": "cv5",
+        "accuracy": 0.642002077695602,
+        "macro_f1": 0.6418655336702757
+      },
+      {
+        "lang": "english",
+        "family": "DT",
+        "features": "absa",
+        "model": "balanced",
+        "smote": true,
+        "protocol": "test",
+        "accuracy": 0.6474147414741475,
+        "macro_f1": 0.6473187047851477
+      },
+      {
+        "lang": "english",
+        "family": "DT",
+        "features": "absa",
+        "model": "balanced",
+        "smote": true,
+        "protocol": "cv5",
+        "accuracy": 0.6419345313103622,
+        "macro_f1": 0.6419235457012118
+      },
+      {
+        "lang": "english",
+        "family": "DT",
+        "features": "absa",
+        "model": "balanced",
+        "smote": false,
+        "protocol": "test",
+        "accuracy": 0.6402640264026402,
+        "macro_f1": 0.6400719267654752
+      },
+      {
+        "lang": "english",
+        "family": "DT",
+        "features": "absa",
+        "model": "balanced",
+        "smote": false,
+        "protocol": "cv5",
+        "accuracy": 0.648603631569814,
+        "macro_f1": 0.6484700741967262
+      },
+      {
+        "lang": "english",
+        "family": "SVM",
+        "features": "absa",
+        "model": "C=1",
+        "smote": true,
+        "protocol": "test",
+        "accuracy": 0.7882288228822882,
+        "macro_f1": 0.7882103039939967
+      },
+      {
+        "lang": "english",
+        "family": "SVM",
+        "features": "absa",
+        "model": "C=1",
+        "smote": true,
+        "protocol": "cv5",
+        "accuracy": 0.7692887840846815,
+        "macro_f1": 0.7692041629326529
+      },
+      {
+        "lang": "english",
+        "family": "SVM",
+        "features": "absa",
+        "model": "C=1",
+        "smote": false,
+        "protocol": "test",
+        "accuracy": 0.7871287128712872,
+        "macro_f1": 0.7871100977809784
+      },
+      {
+        "lang": "english",
+        "family": "SVM",
+        "features": "absa",
+        "model": "C=1",
+        "smote": false,
+        "protocol": "cv5",
+        "accuracy": 0.7697013915453772,
+        "macro_f1": 0.7696153784024602
+      },
+      {
+        "lang": "english",
+        "family": "SVM",
+        "features": "absa",
+        "model": "balanced",
+        "smote": true,
+        "protocol": "test",
+        "accuracy": 0.7882288228822882,
+        "macro_f1": 0.7882103039939967
+      },
+      {
+        "lang": "english",
+        "family": "SVM",
+        "features": "absa",
+        "model": "balanced",
+        "smote": true,
+        "protocol": "cv5",
+        "accuracy": 0.7692887840846815,
+        "macro_f1": 0.7692041629326529
+      },
+      {
+        "lang": "english",
+        "family": "SVM",
+        "features": "absa",
+        "model": "balanced",
+        "smote": false,
+        "protocol": "test",
+        "accuracy": 0.7865786578657866,
+        "macro_f1": 0.7865641279809156
+      },
+      {
+        "lang": "english",
+        "family": "SVM",
+        "features": "absa",
+        "model": "balanced",
+        "smote": false,
+        "protocol": "cv5",
+        "accuracy": 0.7697014151877941,
+        "macro_f1": 0.7696208578175489
+      },
+      {
+        "lang": "english",
+        "family": "SVM",
+        "features": "absa",
+        "model": "C=0.5,balanced",
+        "smote": true,
+        "protocol": "test",
+        "accuracy": 0.7876787678767877,
+        "macro_f1": 0.7876555746962792
+      },
+      {
+        "lang": "english",
+        "family": "SVM",
+        "features": "absa",
+        "model": "C=0.5,balanced",
+        "smote": true,
+        "protocol": "cv5",
+        "accuracy": 0.7780222219805442,
+        "macro_f1": 0.777937356581132
+      },
+      {
+        "lang": "english",
+        "family": "SVM",
+        "features": "absa",
+        "model": "C=0.5,balanced",
+        "smote": false,
+        "protocol": "test",
+        "accuracy": 0.7893289328932893,
+        "macro_f1": 0.7893059199706605
+      },
+      {
+        "lang": "english",
+        "family": "SVM",
+        "features": "absa",
+        "model": "C=0.5,balanced",
+        "smote": false,
+        "protocol": "cv5",
+        "accuracy": 0.7776096381622656,
+        "macro_f1": 0.7775273584958278
+      },
+      {
+        "lang": "arabic",
+        "family": "DT",
+        "features": "final",
+        "model": "max_depth=15",
+        "smote": true,
+        "protocol": "test",
+        "accuracy": 0.737029501525941,
+        "macro_f1": 0.7361578678362273
+      },
+      {
+        "lang": "arabic",
+        "family": "DT",
+        "features": "final",
+        "model": "max_depth=15",
+        "smote": true,
+        "protocol": "cv5",
+        "accuracy": 0.7502544529262086,
+        "macro_f1": 0.7484542893097108
+      },
+      {
+        "lang": "arabic",
+        "family": "DT",
+        "features": "final",
+        "model": "max_depth=15",
+        "smote": false,
+        "protocol": "test",
+        "accuracy": 0.7685656154628687,
+        "macro_f1": 0.7202554237198557
+      },
+      {
+        "lang": "arabic",
+        "family": "DT",
+        "features": "final",
+        "model": "max_depth=15",
+        "smote": false,
+        "protocol": "cv5",
+        "accuracy": 0.7723918575063613,
+        "macro_f1": 0.7250735740991769
+      },
+      {
+        "lang": "arabic",
+        "family": "DT",
+        "features": "final",
+        "model": "max_depth=20,balanced",
+        "smote": true,
+        "protocol": "test",
+        "accuracy": 0.7482197355035606,
+        "macro_f1": 0.7467256409155323
+      },
+      {
+        "lang": "arabic",
+        "family": "DT",
+        "features": "final",
+        "model": "max_depth=20,balanced",
+        "smote": true,
+        "protocol": "cv5",
+        "accuracy": 0.7704834605597964,
+        "macro_f1": 0.7642943723417257
+      },
+      {
+        "lang": "arabic",
+        "family": "DT",
+        "features": "final",
+        "model": "max_depth=20,balanced",
+        "smote": false,
+        "protocol": "test",
+        "accuracy": 0.7731434384537131,
+        "macro_f1": 0.7705754113407705
+      },
+      {
+        "lang": "arabic",
+        "family": "DT",
+        "features": "final",
+        "model": "max_depth=20,balanced",
+        "smote": false,
+        "protocol": "cv5",
+        "accuracy": 0.7680661577608141,
+        "macro_f1": 0.7654207588473871
+      },
+      {
+        "lang": "arabic",
+        "family": "DT",
+        "features": "final",
+        "model": "default",
+        "smote": true,
+        "protocol": "test",
+        "accuracy": 0.830620549338759,
+        "macro_f1": 0.8197406457890666
+      },
+      {
+        "lang": "arabic",
+        "family": "DT",
+        "features": "final",
+        "model": "default",
+        "smote": true,
+        "protocol": "cv5",
+        "accuracy": 0.8246819338422391,
+        "macro_f1": 0.8124134576203271
+      },
+      {
+        "lang": "arabic",
+        "family": "DT",
+        "features": "final",
+        "model": "default",
+        "smote": false,
+        "protocol": "test",
+        "accuracy": 0.8224821973550356,
+        "macro_f1": 0.8110795356768296
+      },
+      {
+        "lang": "arabic",
+        "family": "DT",
+        "features": "final",
+        "model": "default",
+        "smote": false,
+        "protocol": "cv5",
+        "accuracy": 0.8100508905852418,
+        "macro_f1": 0.7956690207782967
+      },
+      {
+        "lang": "arabic",
+        "family": "DT",
+        "features": "final",
+        "model": "balanced",
+        "smote": true,
+        "protocol": "test",
+        "accuracy": 0.830620549338759,
+        "macro_f1": 0.8197406457890666
+      },
+      {
+        "lang": "arabic",
+        "family": "DT",
+        "features": "final",
+        "model": "balanced",
+        "smote": true,
+        "protocol": "cv5",
+        "accuracy": 0.8246819338422391,
+        "macro_f1": 0.8124134576203271
+      },
+      {
+        "lang": "arabic",
+        "family": "DT",
+        "features": "final",
+        "model": "balanced",
+        "smote": false,
+        "protocol": "test",
+        "accuracy": 0.8280773143438453,
+        "macro_f1": 0.816985320443967
+      },
+      {
+        "lang": "arabic",
+        "family": "DT",
+        "features": "final",
+        "model": "balanced",
+        "smote": false,
+        "protocol": "cv5",
+        "accuracy": 0.8221374045801527,
+        "macro_f1": 0.8102100736771295
+      },
+      {
+        "lang": "arabic",
+        "family": "SVM",
+        "features": "final",
+        "model": "C=1",
+        "smote": true,
+        "protocol": "test",
+        "accuracy": 0.9003051881993896,
+        "macro_f1": 0.8935865146694946
+      },
+      {
+        "lang": "arabic",
+        "family": "SVM",
+        "features": "final",
+        "model": "C=1",
+        "smote": true,
+        "protocol": "cv5",
+        "accuracy": 0.8994910941475827,
+        "macro_f1": 0.891976034007987
+      },
+      {
+        "lang": "arabic",
+        "family": "SVM",
+        "features": "final",
+        "model": "C=1",
+        "smote": false,
+        "protocol": "test",
+        "accuracy": 0.8987792472024415,
+        "macro_f1": 0.8915680715677223
+      },
+      {
+        "lang": "arabic",
+        "family": "SVM",
+        "features": "final",
+        "model": "C=1",
+        "smote": false,
+        "protocol": "cv5",
+        "accuracy": 0.8980916030534353,
+        "macro_f1": 0.8900102770012394
+      },
+      {
+        "lang": "arabic",
+        "family": "SVM",
+        "features": "final",
+        "model": "balanced",
+        "smote": true,
+        "protocol": "test",
+        "accuracy": 0.9003051881993896,
+        "macro_f1": 0.8935865146694946
+      },
+      {
+        "lang": "arabic",
+        "family": "SVM",
+        "features": "final",
+        "model": "balanced",
+        "smote": true,
+        "protocol": "cv5",
+        "accuracy": 0.8994910941475827,
+        "macro_f1": 0.891976034007987
+      },
+      {
+        "lang": "arabic",
+        "family": "SVM",
+        "features": "final",
+        "model": "balanced",
+        "smote": false,
+        "protocol": "test",
+        "accuracy": 0.8997965412004069,
+        "macro_f1": 0.8935289407077747
+      },
+      {
+        "lang": "arabic",
+        "family": "SVM",
+        "features": "final",
+        "model": "balanced",
+        "smote": false,
+        "protocol": "cv5",
+        "accuracy": 0.899618320610687,
+        "macro_f1": 0.8924559820330813
+      },
+      {
+        "lang": "arabic",
+        "family": "SVM",
+        "features": "final",
+        "model": "C=0.5,balanced",
+        "smote": true,
+        "protocol": "test",
+        "accuracy": 0.901322482197355,
+        "macro_f1": 0.8950675093458818
+      },
+      {
+        "lang": "arabic",
+        "family": "SVM",
+        "features": "final",
+        "model": "C=0.5,balanced",
+        "smote": true,
+        "protocol": "cv5",
+        "accuracy": 0.9024173027989821,
+        "macro_f1": 0.8952988218145921
+      },
+      {
+        "lang": "arabic",
+        "family": "SVM",
+        "features": "final",
+        "model": "C=0.5,balanced",
+        "smote": false,
+        "protocol": "test",
+        "accuracy": 0.9053916581892166,
+        "macro_f1": 0.8998617634687511
+      },
+      {
+        "lang": "arabic",
+        "family": "SVM",
+        "features": "final",
+        "model": "C=0.5,balanced",
+        "smote": false,
+        "protocol": "cv5",
+        "accuracy": 0.9022900763358779,
+        "macro_f1": 0.895613935415156
+      },
+      {
+        "lang": "arabic",
+        "family": "DT",
+        "features": "absa",
+        "model": "max_depth=15",
+        "smote": true,
+        "protocol": "test",
+        "accuracy": 0.7817904374364191,
+        "macro_f1": 0.7762634709888783
+      },
+      {
+        "lang": "arabic",
+        "family": "DT",
+        "features": "absa",
+        "model": "max_depth=15",
+        "smote": true,
+        "protocol": "cv5",
+        "accuracy": 0.7667938931297711,
+        "macro_f1": 0.7597915449661746
+      },
+      {
+        "lang": "arabic",
+        "family": "DT",
+        "features": "absa",
+        "model": "max_depth=15",
+        "smote": false,
+        "protocol": "test",
+        "accuracy": 0.7670396744659207,
+        "macro_f1": 0.7588642226049995
+      },
+      {
+        "lang": "arabic",
+        "family": "DT",
+        "features": "absa",
+        "model": "max_depth=15",
+        "smote": false,
+        "protocol": "cv5",
+        "accuracy": 0.7647582697201017,
+        "macro_f1": 0.7236032411827387
+      },
+      {
+        "lang": "arabic",
+        "family": "DT",
+        "features": "absa",
+        "model": "max_depth=20,balanced",
+        "smote": true,
+        "protocol": "test",
+        "accuracy": 0.7848423194303153,
+        "macro_f1": 0.7787974085065398
+      },
+      {
+        "lang": "arabic",
+        "family": "DT",
+        "features": "absa",
+        "model": "max_depth=20,balanced",
+        "smote": true,
+        "protocol": "cv5",
+        "accuracy": 0.7865139949109415,
+        "macro_f1": 0.7771997297112596
+      },
+      {
+        "lang": "arabic",
+        "family": "DT",
+        "features": "absa",
+        "model": "max_depth=20,balanced",
+        "smote": false,
+        "protocol": "test",
+        "accuracy": 0.7695829094608342,
+        "macro_f1": 0.7676568534990471
+      },
+      {
+        "lang": "arabic",
+        "family": "DT",
+        "features": "absa",
+        "model": "max_depth=20,balanced",
+        "smote": false,
+        "protocol": "cv5",
+        "accuracy": 0.7688295165394401,
+        "macro_f1": 0.7644410614690095
+      },
+      {
+        "lang": "arabic",
+        "family": "DT",
+        "features": "absa",
+        "model": "default",
+        "smote": true,
+        "protocol": "test",
+        "accuracy": 0.8153611393692777,
+        "macro_f1": 0.803914845072071
+      },
+      {
+        "lang": "arabic",
+        "family": "DT",
+        "features": "absa",
+        "model": "default",
+        "smote": true,
+        "protocol": "cv5",
+        "accuracy": 0.8064885496183207,
+        "macro_f1": 0.7941604655392394
+      },
+      {
+        "lang": "arabic",
+        "family": "DT",
+        "features": "absa",
+        "model": "default",
+        "smote": false,
+        "protocol": "test",
+        "accuracy": 0.8026449643947101,
+        "macro_f1": 0.7897998324588863
+      },
+      {
+        "lang": "arabic",
+        "family": "DT",
+        "features": "absa",
+        "model": "default",
+        "smote": false,
+        "protocol": "cv5",
+        "accuracy": 0.8061068702290075,
+        "macro_f1": 0.7925120974724317
+      },
+      {
+        "lang": "arabic",
+        "family": "DT",
+        "features": "absa",
+        "model": "balanced",
+        "smote": true,
+        "protocol": "test",
+        "accuracy": 0.8153611393692777,
+        "macro_f1": 0.803914845072071
+      },
+      {
+        "lang": "arabic",
+        "family": "DT",
+        "features": "absa",
+        "model": "balanced",
+        "smote": true,
+        "protocol": "cv5",
+        "accuracy": 0.8064885496183207,
+        "macro_f1": 0.7941604655392394
+      },
+      {
+        "lang": "arabic",
+        "family": "DT",
+        "features": "absa",
+        "model": "balanced",
+        "smote": false,
+        "protocol": "test",
+        "accuracy": 0.8062054933875891,
+        "macro_f1": 0.7942987735302671
+      },
+      {
+        "lang": "arabic",
+        "family": "DT",
+        "features": "absa",
+        "model": "balanced",
+        "smote": false,
+        "protocol": "cv5",
+        "accuracy": 0.8104325699745546,
+        "macro_f1": 0.7972494559553684
+      },
+      {
+        "lang": "arabic",
+        "family": "SVM",
+        "features": "absa",
+        "model": "C=1",
+        "smote": true,
+        "protocol": "test",
+        "accuracy": 0.8931841302136317,
+        "macro_f1": 0.8861093456211435
+      },
+      {
+        "lang": "arabic",
+        "family": "SVM",
+        "features": "absa",
+        "model": "C=1",
+        "smote": true,
+        "protocol": "cv5",
+        "accuracy": 0.9007633587786259,
+        "macro_f1": 0.8934449107191084
+      },
+      {
+        "lang": "arabic",
+        "family": "SVM",
+        "features": "absa",
+        "model": "C=1",
+        "smote": false,
+        "protocol": "test",
+        "accuracy": 0.8931841302136317,
+        "macro_f1": 0.8856064636254821
+      },
+      {
+        "lang": "arabic",
+        "family": "SVM",
+        "features": "absa",
+        "model": "C=1",
+        "smote": false,
+        "protocol": "cv5",
+        "accuracy": 0.9013994910941475,
+        "macro_f1": 0.893627146844653
+      },
+      {
+        "lang": "arabic",
+        "family": "SVM",
+        "features": "absa",
+        "model": "balanced",
+        "smote": true,
+        "protocol": "test",
+        "accuracy": 0.8931841302136317,
+        "macro_f1": 0.8861093456211435
+      },
+      {
+        "lang": "arabic",
+        "family": "SVM",
+        "features": "absa",
+        "model": "balanced",
+        "smote": true,
+        "protocol": "cv5",
+        "accuracy": 0.9007633587786259,
+        "macro_f1": 0.8934449107191084
+      },
+      {
+        "lang": "arabic",
+        "family": "SVM",
+        "features": "absa",
+        "model": "balanced",
+        "smote": false,
+        "protocol": "test",
+        "accuracy": 0.8992878942014242,
+        "macro_f1": 0.893072342108733
+      },
+      {
+        "lang": "arabic",
+        "family": "SVM",
+        "features": "absa",
+        "model": "balanced",
+        "smote": false,
+        "protocol": "cv5",
+        "accuracy": 0.9001272264631044,
+        "macro_f1": 0.893238580047887
+      },
+      {
+        "lang": "arabic",
+        "family": "SVM",
+        "features": "absa",
+        "model": "C=0.5,balanced",
+        "smote": true,
+        "protocol": "test",
+        "accuracy": 0.9023397761953205,
+        "macro_f1": 0.8962040019006388
+      },
+      {
+        "lang": "arabic",
+        "family": "SVM",
+        "features": "absa",
+        "model": "C=0.5,balanced",
+        "smote": true,
+        "protocol": "cv5",
+        "accuracy": 0.9040712468193384,
+        "macro_f1": 0.8971983113129809
+      },
+      {
+        "lang": "arabic",
+        "family": "SVM",
+        "features": "absa",
+        "model": "C=0.5,balanced",
+        "smote": false,
+        "protocol": "test",
+        "accuracy": 0.9023397761953205,
+        "macro_f1": 0.8965790468675511
+      },
+      {
+        "lang": "arabic",
+        "family": "SVM",
+        "features": "absa",
+        "model": "C=0.5,balanced",
+        "smote": false,
+        "protocol": "cv5",
+        "accuracy": 0.9039440203562341,
+        "macro_f1": 0.8974431516298651
+      }
+    ],
+    "matches_both_languages": {
+      "DT": [],
+      "SVM": []
+    }
+  },
+  "paper": {
+    "table8": {
+      "english": {
+        "DT": 0.765,
+        "SVM": 0.782
+      },
+      "arabic": {
+        "DT": 0.712,
+        "SVM": 0.855
+      }
+    },
+    "tolerance": 0.003
+  }
+}

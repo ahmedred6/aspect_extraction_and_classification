@@ -1,0 +1,84 @@
+{
+  "experiment": "r01_arabic_aspect_classification",
+  "run_at": "2026-10-25T21:12:14",
+  "python": "3.10.11",
+  "sklearn": "1.6.1",
+  "results": {
+    "n_opinion_rows": 10509,
+    "n_binary": 9826,
+    "class_counts": {
+      "positive": 6197,
+      "negative": 3629
+    },
+    "n_null_target_rows": 889,
+    "top5_aspects": [
+      {
+        "term": "NULL",
+        "negative": 488,
+        "neutral": 23,
+        "positive": 378,
+        "Total": 889
+      },
+      {
+        "term": "الفندق",
+        "negative": 215,
+        "neutral": 43,
+        "positive": 450,
+        "Total": 708
+      },
+      {
+        "term": "فندق",
+        "negative": 139,
+        "neutral": 73,
+        "positive": 491,
+        "Total": 703
+      },
+      {
+        "term": "الغرف",
+        "negative": 174,
+        "neutral": 38,
+        "positive": 233,
+        "Total": 445
+      },
+      {
+        "term": "الخدمة",
+        "negative": 65,
+        "neutral": 23,
+        "positive": 151,
+        "Total": 239
+      }
+    ],
+    "test_accuracy": 0.901322482197355,
+    "macro_f1": 0.8939611302390549,
+    "negative_recall": 0.8636363636363636,
+    "confusion_matrix": [
+      [
+        627,
+        99
+      ],
+      [
+        95,
+        1145
+      ]
+    ]
+  },
+  "paper": {
+    "n_binary": 9826,
+    "class_counts": {
+      "positive": 6197,
+      "negative": 3629
+    },
+    "test_accuracy": 0.9018,
+    "negative_recall": 0.8623,
+    "confusion_matrix": [
+      [
+        626,
+        100
+      ],
+      [
+        93,
+        1147
+      ]
+    ]
+  }
+}
