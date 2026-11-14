@@ -12,6 +12,23 @@ The paper's LaTeX source lives in a separate private repo: `ahmedred6/dual-langu
 
 ---
 
+## Working on the paper revision? Start here
+
+The paper is being revised after the reviewers' comments. The LaTeX source, the reviewer-comment tracker and a live review viewer live in a separate private repo, **`ahmedred6/dual-language-absa-paper`** (see its README). This repo holds the evidence behind the revision, in [`experiments/reviewer_revision/`](experiments/reviewer_revision/):
+
+| File | What it gives you |
+|---|---|
+| [`RESULTS_SUMMARY.md`](experiments/reviewer_revision/RESULTS_SUMMARY.md) | Every number from the reruns and new experiments, plus the **decisions log (D1–D11)** of what the authors agreed to change in the paper |
+| [`CODE_FINDINGS.md`](experiments/reviewer_revision/CODE_FINDINGS.md) | What the code actually does (TF-IDF settings, features, models, splits), which answers the Architecture / Methodology / Datasets comments |
+| [`LITERATURE_NOTES.md`](experiments/reviewer_revision/LITERATURE_NOTES.md) | Published results of related work, read from the PDFs, with page references |
+| `r01`–`r07_*.py` | Reproductions of the paper's original numbers |
+| `e01`–`e08_*.py` | New experiments requested by the reviewers |
+| `results/*.json` | Saved outputs of every script above |
+
+To rerun an experiment: `python experiments/reviewer_revision/r01_arabic_aspect_classification.py` (any script; outputs go to `results/`). Some scripts need data that must be downloaded first, see `data/README.md`.
+
+---
+
 ## Quick start
 
 ```bash
