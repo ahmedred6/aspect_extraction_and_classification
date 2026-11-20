@@ -1,0 +1,138 @@
+{
+  "experiment": "e10_table8_fair_baselines",
+  "run_at": "2026-11-18T21:39:03",
+  "python": "3.10.11",
+  "sklearn": "1.6.1",
+  "results": {
+    "english": {
+      "n_train": 14542,
+      "n_test": 3636,
+      "rows": {
+        "Decision Tree": {
+          "params": {
+            "max_depth": 50,
+            "min_samples_leaf": 1
+          },
+          "test_accuracy": 0.6331133113311331,
+          "test_macro_f1": 0.6326143302728111,
+          "paper_accuracy": 0.765,
+          "cv5": {
+            "accuracy_mean": 0.6510617347842075,
+            "accuracy_std": 0.00508123239897202,
+            "macro_f1_mean": 0.6505612701552799,
+            "macro_f1_std": 0.00480487112706813
+          }
+        },
+        "Linear SVM": {
+          "params": {
+            "C": 0.5
+          },
+          "test_accuracy": 0.7989548954895489,
+          "test_macro_f1": 0.7989153340982055,
+          "paper_accuracy": 0.782,
+          "cv5": {
+            "accuracy_mean": 0.7943670887033683,
+            "accuracy_std": 0.004657776934407993,
+            "macro_f1_mean": 0.7942868446467015,
+            "macro_f1_std": 0.00466666554670167
+          }
+        },
+        "Stacking Ensemble": {
+          "params": {},
+          "test_accuracy": 0.8017051705170517,
+          "test_macro_f1": 0.8016774334014669,
+          "paper_accuracy": 0.8,
+          "cv5": {
+            "accuracy_mean": 0.7990428740260546,
+            "accuracy_std": 0.003477231824412702,
+            "macro_f1_mean": 0.7989529709740452,
+            "macro_f1_std": 0.003475101614216566
+          }
+        }
+      },
+      "mcnemar_vs_stacking": {
+        "Decision Tree": {
+          "only_baseline_correct": 297,
+          "only_stacking_correct": 910,
+          "p_value": 1.0934559713705279e-72
+        },
+        "Linear SVM": {
+          "only_baseline_correct": 57,
+          "only_stacking_correct": 67,
+          "p_value": 0.41907374251663604
+        }
+      }
+    },
+    "arabic": {
+      "n_train": 7860,
+      "n_test": 1966,
+      "rows": {
+        "Decision Tree": {
+          "params": {
+            "max_depth": null,
+            "min_samples_leaf": 1
+          },
+          "test_accuracy": 0.830620549338759,
+          "test_macro_f1": 0.8197406457890666,
+          "paper_accuracy": 0.712,
+          "cv5": {
+            "accuracy_mean": 0.8229193490353828,
+            "accuracy_std": 0.008020748177150093,
+            "macro_f1_mean": 0.811156618429718,
+            "macro_f1_std": 0.007599051239368838
+          }
+        },
+        "Linear SVM": {
+          "params": {
+            "C": 0.1
+          },
+          "test_accuracy": 0.901322482197355,
+          "test_macro_f1": 0.8956074575016778,
+          "paper_accuracy": 0.855,
+          "cv5": {
+            "accuracy_mean": 0.9042336514642045,
+            "accuracy_std": 0.006792875492165111,
+            "macro_f1_mean": 0.8981442563719197,
+            "macro_f1_std": 0.007209619086210324
+          }
+        },
+        "Stacking Ensemble": {
+          "params": {},
+          "test_accuracy": 0.901322482197355,
+          "test_macro_f1": 0.8939611302390549,
+          "paper_accuracy": 0.902,
+          "cv5": {
+            "accuracy_mean": 0.9036231197533645,
+            "accuracy_std": 0.007221790646915151,
+            "macro_f1_mean": 0.8950798252321033,
+            "macro_f1_std": 0.0076454871536322045
+          }
+        }
+      },
+      "mcnemar_vs_stacking": {
+        "Decision Tree": {
+          "only_baseline_correct": 87,
+          "only_stacking_correct": 226,
+          "p_value": 2.118788221964413e-15
+        },
+        "Linear SVM": {
+          "only_baseline_correct": 39,
+          "only_stacking_correct": 39,
+          "p_value": 1.0
+        }
+      }
+    }
+  },
+  "paper": {
+    "english": {
+      "Decision Tree": 0.765,
+      "Linear SVM": 0.782,
+      "Stacking Ensemble": 0.8
+    },
+    "arabic": {
+      "Decision Tree": 0.712,
+      "Linear SVM": 0.855,
+      "Stacking Ensemble": 0.902
+    }
+  }
+}

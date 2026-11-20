@@ -1,0 +1,51 @@
+{
+  "experiment": "e11_llm_dialect_normalization",
+  "run_at": "2026-11-20T21:03:45",
+  "python": "3.10.11",
+  "sklearn": "1.6.1",
+  "results": {
+    "model_requested": "qwen-plus",
+    "models_returned": [
+      "qwen-plus"
+    ],
+    "run_date": "2026-11-20",
+    "polarity_model_full_test_accuracy": 0.8737813109344533,
+    "n_sample": 2000,
+    "n_labelled": 2000,
+    "variety_counts": {
+      "DIALECT": 1084,
+      "MSA": 916
+    },
+    "rejected_by_api": {
+      "labelling": 0,
+      "normalization": 6
+    },
+    "dialect_share": 0.542,
+    "dialect_raw": {
+      "n": 1078,
+      "accuracy": 0.8998144712430427,
+      "macro_f1": 0.8988732423727577
+    },
+    "dialect_normalized": {
+      "n": 1078,
+      "accuracy": 0.8840445269016698,
+      "macro_f1": 0.8826140777735092
+    },
+    "mcnemar_raw_vs_normalized": {
+      "only_raw_correct": 48,
+      "only_normalized_correct": 31,
+      "p_value": 0.07116340869529121
+    },
+    "msa_raw": {
+      "n": 916,
+      "accuracy": 0.8679039301310044,
+      "macro_f1": 0.8660065886904222
+    },
+    "label_balance_dialect": {
+      "0": 590,
+      "1": 488
+    },
+    "human_check_sheet": "experiments\\reviewer_revision\\results\\e11_human_check.csv"
+  },
+  "paper": {}
+}

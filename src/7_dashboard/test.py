@@ -3,8 +3,15 @@ import streamlit as st
 import plotly.express as px
 import pandas as pd
 
+import os
+import sys
+
 from load_dataset import load_all_datasets
 from whole_pipeline import analyze_sentence_global
+
+# Guided summarization (paper §3.5) lives in src/6_pipeline/summarizer.py
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "6_pipeline"))
+from summarizer import summarize  # noqa: E402
 
 # ---------------- PAGE CONFIG ----------------
 st.set_page_config(
@@ -100,7 +107,7 @@ st.sidebar.title("🔍 Navigation")
 
 page = st.sidebar.radio(
     "Go to",
-    ["🏠 Overview", "📝 Review Analyzer", "📊 Dataset Overview"],
+    ["🏠 Overview", "📝 Review Analyzer", "🧾 Aspect Summary", "📊 Dataset Overview"],
 )
 
 st.sidebar.markdown("---")
@@ -309,6 +316,63 @@ elif page == "📝 Review Analyzer":
         # Optional: show raw JSON
         with st.expander("🔧 Debug: raw pipeline output"):
             st.json(result)
+
+
+# ---------------- PAGE: ASPECT SUMMARY (paper §3.5) -----------------
+elif page == "🧾 Aspect Summary":
+    st.markdown('<div class="main-title">Aspect Summary</div>', unsafe_allow_html=True)
+    st.markdown(
+        '<div class="subtitle">Analyze many reviews, aggregate aspect sentiment, and let the LLM '
+        'summarize the aggregated statistics. The summary is checked against the table.</div>',
+        unsafe_allow_html=True,
+    )
+
+    reviews_text = st.text_area(
+        "Enter reviews, one per line (English or Arabic):",
+        height=220,
+        placeholder="The battery dies fast but the screen is great\nالغرفة نظيفة والخدمة سيئة",
+    )
+    sum_btn = st.button("🧾 Analyze and summarize")
+
+    if sum_btn:
+        reviews = [line.strip() for line in reviews_text.splitlines() if line.strip()]
+        if not reviews:
+            st.warning("Please enter at least one review.")
+            st.stop()
+
+        with st.spinner(f"Analyzing {len(reviews)} review(s)..."):
+            results = [analyze_sentence_global(r) for r in reviews]
+
+        try:
+            with st.spinner("Generating the summary..."):
+                out = summarize(results)
+        except Exception as exc:  # e.g. missing QWEN_API_KEY
+            st.error(f"Summarization failed: {exc}")
+            st.stop()
+
+        stats = out["stats"]
+        rv = stats["reviews"]
+        c1, c2, c3 = st.columns(3)
+        c1.metric("Reviews", rv["total"])
+        c2.metric("With aspects", rv["with_aspects"])
+        c3.metric("Without aspects", rv["without_aspects"])
+
+        st.markdown("### 📋 Aggregated aspect sentiment")
+        if stats["aspects"]:
+            st.dataframe(pd.DataFrame(stats["aspects"]), width="stretch")
+
+        st.markdown("### 🧠 LLM summary")
+        st.markdown(f'<div class="section-card">{out["summary"]}</div>', unsafe_allow_html=True)
+
+        check = out["check"]
+        if check["passed"]:
+            st.success("Consistency check passed: every aspect, count and sentiment in the "
+                       "summary matches the aggregated statistics.")
+        else:
+            st.error("Consistency check failed:\n\n" + "\n".join(f"- {e}" for e in check["errors"]))
+
+        with st.expander("🔧 Debug: claims and raw LLM output"):
+            st.json({"claims": out["claims"], "raw": out["raw"]})
 
 
 # ---------------- PAGE: DATASET OVERVIEW -----------------

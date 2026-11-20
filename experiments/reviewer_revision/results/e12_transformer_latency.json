@@ -1,0 +1,97 @@
+{
+  "experiment": "e12_transformer_latency",
+  "run_at": "2026-11-20T21:28:20",
+  "python": "3.10.11",
+  "sklearn": "1.6.1",
+  "results": {
+    "hardware": {
+      "cpu": "AMD Ryzen 7 7445HS w/ Radeon 740M Graphics",
+      "physical_cores": "6",
+      "logical_processors": "12",
+      "ram_gb": "15.3",
+      "os": "Microsoft Windows 11 Home",
+      "python": "3.10.11",
+      "threads": 1,
+      "gpu_used": false
+    },
+    "protocol": {
+      "reviews": 105,
+      "warmup_excluded": 5,
+      "batch_size": 1,
+      "all_threads": 12,
+      "torch": "2.14.1+cpu"
+    },
+    "english": {
+      "ours_absa_stages": {
+        "mean_ms": 5.620883000046888,
+        "std_ms": 5.569768017849131,
+        "p95_ms": 18.391314998916638
+      },
+      "mean_aspects_per_review": 0.83,
+      "transformers": {
+        "bert-base-uncased": {
+          "1_thread": {
+            "mean_ms": 230.7623469999089,
+            "std_ms": 158.77024301218177,
+            "p95_ms": 520.9932949999709,
+            "threads": 1,
+            "slowdown_vs_ours": 41.05446546351951
+          },
+          "all_threads": {
+            "mean_ms": 120.43346100042982,
+            "std_ms": 75.30535668850167,
+            "p95_ms": 286.6323500020371,
+            "threads": 12,
+            "slowdown_vs_ours": 21.426075048960314
+          },
+          "parameters": 109483778
+        },
+        "distilbert-base-uncased": {
+          "1_thread": {
+            "mean_ms": 114.43223500005843,
+            "std_ms": 78.55851842006096,
+            "p95_ms": 259.8986399996646,
+            "threads": 1,
+            "slowdown_vs_ours": 20.358408990029478
+          },
+          "all_threads": {
+            "mean_ms": 62.62913799993839,
+            "std_ms": 40.54441784815092,
+            "p95_ms": 161.26804500072464,
+            "threads": 12,
+            "slowdown_vs_ours": 11.142224095291782
+          },
+          "parameters": 66955010
+        }
+      }
+    },
+    "arabic": {
+      "ours_absa_stages": {
+        "mean_ms": 5.502048999951512,
+        "std_ms": 3.9394622196608875,
+        "p95_ms": 12.67969500095205
+      },
+      "mean_aspects_per_review": 2.25,
+      "transformers": {
+        "aubmindlab/bert-base-arabertv02": {
+          "1_thread": {
+            "mean_ms": 310.01721999993606,
+            "std_ms": 190.05481891266476,
+            "p95_ms": 633.8480600019465,
+            "threads": 1,
+            "slowdown_vs_ours": 56.34577591051409
+          },
+          "all_threads": {
+            "mean_ms": 211.86743600006594,
+            "std_ms": 126.81721128693235,
+            "p95_ms": 464.6259149996694,
+            "threads": 12,
+            "slowdown_vs_ours": 38.50700639015266
+          },
+          "parameters": 135194882
+        }
+      }
+    }
+  },
+  "paper": {}
+}

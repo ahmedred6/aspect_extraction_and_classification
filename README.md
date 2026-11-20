@@ -22,7 +22,7 @@ The paper is being revised after the reviewers' comments. The LaTeX source, the 
 | [`CODE_FINDINGS.md`](experiments/reviewer_revision/CODE_FINDINGS.md) | What the code actually does (TF-IDF settings, features, models, splits), which answers the Architecture / Methodology / Datasets comments |
 | [`LITERATURE_NOTES.md`](experiments/reviewer_revision/LITERATURE_NOTES.md) | Published results of related work, read from the PDFs, with page references |
 | `r01`–`r07_*.py` | Reproductions of the paper's original numbers |
-| `e01`–`e08_*.py` | New experiments requested by the reviewers |
+| `e01`–`e12_*.py` | New experiments requested by the reviewers (e09–e12 answer Hamzah's internal review: exact-span F1, fair Table 8 baselines, LLM-normalization check, same-CPU transformer latency) |
 | `results/*.json` | Saved outputs of every script above |
 
 To rerun an experiment: `python experiments/reviewer_revision/r01_arabic_aspect_classification.py` (any script; outputs go to `results/`). Some scripts need data that must be downloaded first, see `data/README.md`.
@@ -89,6 +89,7 @@ archive/                   superseded experiments, kept for reference (see archi
 | **§6.8 Polarity, Arabic**, Tables 13–14 | `src/5_general_polarity/arabic_polarity.ipynb` | `arabic_100k_reviews.tsv` |
 | **§6.9 Latency**, Table 15 | `src/6_pipeline/benchmark_latency.py` (needs trained models) | |
 | **§3 Full pipeline** | `src/6_pipeline/whole_pipeline.py` (needs trained models + LLM key) | |
+| **§3.5 Guided summarization** | `src/6_pipeline/summarizer.py` (aggregation → Qwen → consistency check; `--demo --dry-run` works without a key; tests: `test_summarizer.py`). Dashboard page "Aspect Summary" in `src/7_dashboard/test.py` | pipeline outputs |
 | **§4 LLM-labelled English ABSA data** | `src/data_labeling/label_english_absa_gpt41.py` → `filter_invalid_offsets.py` | `amazon_reviews_8000.txt` |
 
 Exact, verified reproductions of every number above (with the data rebuilt where needed) are in `experiments/reviewer_revision/` as scripts `r01`–`r07`.
@@ -100,7 +101,7 @@ Exact, verified reproductions of every number above (with the data rebuilt where
 - **Router training data (`router_dataset.csv`, 5,360 LLM-labelled LABR/HARD samples) is not in the repo.** Ask the teammate who built the router.
 - **Baselines not in the repo:** the spaCy noun-chunk baseline (§6.2.1) and the CAMeL rule-based baseline (Table 4).
 - **Arabic polarity model not saved:** the Arabic polarity notebook never saves its model, but `src/6_pipeline` expects `models/arabic_polarity/arabic_polarity_model.pkl`.
-- **No summarization code:** the Qwen guided summarization (§3.5) and the Streamlit dashboard pages are not implemented; `src/7_dashboard` is a prototype.
+- **Summarization not yet run on real data:** `src/6_pipeline/summarizer.py` implements §3.5 and passes its offline tests, but has not been evaluated with Qwen. `src/7_dashboard` is a prototype.
 - **LLM API keys:** the LLM scripts need `OPENAI_API_KEY` / `QWEN_API_KEY` in a `.env` file at the repo root, which is git-ignored.
 
 ---
