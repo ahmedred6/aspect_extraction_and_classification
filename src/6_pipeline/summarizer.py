@@ -20,7 +20,7 @@ Input format: a list of dicts as returned by
 
 The LLM is any callable `llm(messages) -> str`, where messages is a list of
 {"role", "content"} dicts. make_qwen_llm() builds the Qwen one with the same
-settings the repo already uses (qwen-plus-2025-04-28 via DashScope,
+settings the repo already uses (Qwen via DashScope,
 temperature 0); it needs QWEN_API_KEY in a .env file at the repo root.
 
 Run from the repo root:
@@ -35,7 +35,7 @@ import os
 import re
 from collections import Counter, defaultdict
 
-QWEN_MODEL = "qwen-plus-2025-04-28"
+QWEN_MODEL = "qwen-plus"  # same model as the e11 normalization run (D23)
 QWEN_BASE_URL = "https://dashscope-intl.aliyuncs.com/compatible-mode/v1"
 
 POSITIVE, NEGATIVE, MIXED = "positive", "negative", "mixed"
@@ -44,9 +44,20 @@ POSITIVE, NEGATIVE, MIXED = "positive", "negative", "mixed"
 # =====================================================
 # 1. AGGREGATION
 # =====================================================
+_AR_DIACRITICS = re.compile(r"[ؗ-ًؚ-ْـ]")  # harakat + tatweel
+
+
+def _normalize_text(text: str) -> str:
+    """Case-fold, collapse spaces, and unify Arabic spelling variants (alef forms, taa marbuta,
+    alef maqsura, diacritics), so that e.g. الإنترنت and الانترنت match."""
+    text = _AR_DIACRITICS.sub("", str(text))
+    text = re.sub("[أإآ]", "ا", text).replace("ة", "ه").replace("ى", "ي")
+    return re.sub(r"\s+", " ", text).strip().casefold()
+
+
 def _aspect_key(term: str) -> str:
-    """Grouping key: case-folded, whitespace-collapsed aspect term."""
-    return re.sub(r"\s+", " ", str(term)).strip().casefold()
+    """Grouping key: normalized aspect term (see _normalize_text)."""
+    return _normalize_text(term)
 
 
 def _dominant(pos: int, neg: int) -> str:
@@ -130,6 +141,7 @@ Rules:
 2. Describe the dominant sentiment patterns: which aspects are mostly praised, which are mostly criticised, and which are mixed.
 3. Every number you write must be copied from the table.
 4. Write 3 to 6 sentences in English. Arabic aspect names may be written as they appear in the table.
+5. Mention at most 8 aspects: the most frequent ones and any with a clear sentiment pattern.
 
 Return ONLY a JSON object, with no other text:
 {
@@ -139,7 +151,8 @@ Return ONLY a JSON object, with no other text:
      "positive": <int>, "negative": <int>, "dominant": "positive" | "negative" | "mixed"}
   ]
 }
-"claims" must contain one entry for EVERY aspect the summary mentions, with the counts from the table."""
+"claims" must contain one entry for EVERY aspect the summary mentions, with the counts from the table, without exception.
+Before answering, check every aspect name in your summary and make sure it appears in "claims"."""
 
 
 def llm_input(stats):
@@ -281,12 +294,19 @@ def check_summary(summary, claims, stats):
             errors.append(f"{row['aspect']!r}: dominant {c['dominant']!r} != {row['dominant']!r}")
 
     allowed = _allowed_numbers(stats)
-    text_numbers = [int(x) for x in re.findall(r"\d+", summary.translate(_AR_DIGITS))]
+    normalized = _normalize_text(summary.translate(_AR_DIGITS))
+    # Blank out aspect names first, so digits that belong to a name ("MP3 player", "IEEE 1394") are not
+    # read as numbers; then only count stand-alone numbers (not digits glued to letters, e.g. "P1000").
+    without_names = normalized
+    for key in sorted((k for _, k in index), key=len, reverse=True):
+        if key:
+            without_names = re.sub(r"(?<!\w)" + re.escape(key) + r"(?!\w)", " ", without_names)
+    text_numbers = [int(x) for x in re.findall(r"(?<![\w.])\d+(?![\w])", without_names)]
     unverified = sorted({x for x in text_numbers if x not in allowed})
     for x in unverified:
         errors.append(f"number in summary not found in the statistics: {x}")
 
-    lowered = summary.casefold()
+    lowered = normalized
     for (lang, key), a in index.items():
         if key and re.search(r"(?<!\w)" + re.escape(key) + r"(?!\w)", lowered) and key not in claimed_keys:
             errors.append(f"aspect {a['aspect']!r} is mentioned but not listed in the claims")

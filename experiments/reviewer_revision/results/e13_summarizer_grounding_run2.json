@@ -1,0 +1,4525 @@
+{
+  "experiment": "e13_summarizer_grounding_run2",
+  "run_at": "2026-11-20T22:15:34",
+  "python": "3.10.11",
+  "sklearn": "1.6.1",
+  "results": {
+    "model": "qwen-plus",
+    "batches_per_language": 25,
+    "reviews_per_batch": 30,
+    "english": {
+      "n_reviews_available": 6353,
+      "passed": 13,
+      "total": 25,
+      "pass_rate": 0.52,
+      "error_types": {
+        "mentioned but not claimed": 82
+      },
+      "mean_claims": 11.4,
+      "runs": [
+        {
+          "passed": true,
+          "n_claims": 15,
+          "errors": [],
+          "n_aspects_in_table": 15,
+          "summary": "The aspects 'book', 'price', 'value', 'Anthony Starke', 'DVD's', 'Italian countryside', 'Italian food', 'J. Stephen \"Rock\" Peace', and 'MS version' are all praised with no negative mentions. In contrast, 'trackpad', 'DVD Series', 'Hawthorne's style', 'LCD', and 'MP3 player' are exclusively criticized. The 'story' aspect shows mixed sentiment, with one positive and one negative mention.",
+          "claims": [
+            {
+              "aspect": "book",
+              "language": "en",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "price",
+              "language": "en",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "story",
+              "language": "en",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "trackpad",
+              "language": "en",
+              "positive": 0,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "value",
+              "language": "en",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "Anthony Starke",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "DVD Series",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "DVD's",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "Hawthorne's style",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "Italian countryside",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "Italian food",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "J. Stephen \"Rock\" Peace",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "LCD",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "MP3 player",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "MS version",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            }
+          ]
+        },
+        {
+          "passed": false,
+          "n_claims": 8,
+          "errors": [
+            "aspect 'Christmas tree' is mentioned but not listed in the claims",
+            "aspect 'Emmy' is mentioned but not listed in the claims",
+            "aspect 'Eyewitness Travel' is mentioned but not listed in the claims",
+            "aspect 'Hester' is mentioned but not listed in the claims",
+            "aspect 'PUBLISHER' is mentioned but not listed in the claims",
+            "aspect 'abuse' is mentioned but not listed in the claims",
+            "aspect 'acting' is mentioned but not listed in the claims"
+          ],
+          "n_aspects_in_table": 15,
+          "summary": "The aspect 'book' is mixed, with 3 positive and 3 negative mentions. 'Story' is consistently criticised, with 0 positive and 3 negative mentions. 'Product' and 'size' are mostly praised, with 2 positive and 1 negative, and 2 positive and 0 negative mentions respectively. 'Movie' and 'special effects' are mixed, each with 1 positive and 1 negative mention. 'A Charlie Brown Christmas', 'Christmas special', 'Emmy', 'Hester', 'PUBLISHER', and 'abuse' are all negatively mentioned once each. 'Christmas tree' and 'Eyewitness Travel' are positively mentioned once each, as is 'acting'.",
+          "claims": [
+            {
+              "aspect": "book",
+              "language": "en",
+              "positive": 3,
+              "negative": 3,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "story",
+              "language": "en",
+              "positive": 0,
+              "negative": 3,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "product",
+              "language": "en",
+              "positive": 2,
+              "negative": 1,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "size",
+              "language": "en",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "movie",
+              "language": "en",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "special effects",
+              "language": "en",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "A Charlie Brown Christmas",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "Christmas special",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            }
+          ]
+        },
+        {
+          "passed": true,
+          "n_claims": 15,
+          "errors": [],
+          "n_aspects_in_table": 15,
+          "summary": "The 'book' aspect is mixed, with 2 positive and 2 negative mentions. 'Plot' is consistently criticised, with 2 negative and 0 positive mentions. 'Skin', 'use', 'CD', 'Directory of Words Cited', 'Navigation', and 'album' are all praised, each having only positive mentions. 'DVD', 'DVD player', 'Windows operating systems', 'acting', and 'action scenes' are all criticised, each having only negative mentions. 'Sound' and 'story line' show mixed sentiment, each with 1 positive and 1 negative mention.",
+          "claims": [
+            {
+              "aspect": "book",
+              "language": "en",
+              "positive": 2,
+              "negative": 2,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "plot",
+              "language": "en",
+              "positive": 0,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "skin",
+              "language": "en",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "use",
+              "language": "en",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "CD",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "Directory of Words Cited",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "Navigation",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "album",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "DVD",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "DVD player",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "Windows operating systems",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "acting",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "action scenes",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "sound",
+              "language": "en",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "story line",
+              "language": "en",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            }
+          ]
+        },
+        {
+          "passed": false,
+          "n_claims": 10,
+          "errors": [
+            "aspect 'Anchor Hocking' is mentioned but not listed in the claims",
+            "aspect 'CD' is mentioned but not listed in the claims",
+            "aspect 'Hamburger Helper' is mentioned but not listed in the claims",
+            "aspect 'Mouse Cable' is mentioned but not listed in the claims",
+            "aspect 'Setting' is mentioned but not listed in the claims"
+          ],
+          "n_aspects_in_table": 15,
+          "summary": "The 'book' aspect is predominantly criticized, with 3 negative mentions versus 1 positive. 'Motherboard' is also consistently criticized, with 2 negative mentions and no positive ones. Several aspects—'characters', 'movie', 'plot', and 'story'—show mixed sentiment, each having exactly 1 positive and 1 negative mention. Among less-frequent aspects, 'FOOD OF LOVE', 'Italian', 'Mexican food', and 'The music' are all praised (1 positive, 0 negative), while 'Anchor Hocking', 'CD', 'Hamburger Helper', 'Mouse Cable', and 'Setting' are all criticized (0 positive, 1 negative each).",
+          "claims": [
+            {
+              "aspect": "book",
+              "language": "en",
+              "positive": 1,
+              "negative": 3,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "motherboard",
+              "language": "en",
+              "positive": 0,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "characters",
+              "language": "en",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "movie",
+              "language": "en",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "plot",
+              "language": "en",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "story",
+              "language": "en",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "FOOD OF LOVE",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "Italian",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "Mexican food",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "The music",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            }
+          ]
+        },
+        {
+          "passed": false,
+          "n_claims": 8,
+          "errors": [
+            "aspect 'POWER SUPPLY' is mentioned but not listed in the claims",
+            "aspect 'SD cards' is mentioned but not listed in the claims",
+            "aspect 'Wishmaster' is mentioned but not listed in the claims",
+            "aspect \"Your Child's Self-Esteem\" is mentioned but not listed in the claims",
+            "aspect 'accessories' is mentioned but not listed in the claims",
+            "aspect 'album' is mentioned but not listed in the claims",
+            "aspect 'arm' is mentioned but not listed in the claims"
+          ],
+          "n_aspects_in_table": 15,
+          "summary": "Most criticism is directed at 'this book' (2 negative, 1 positive), 'quality' (2 negative), and several single-mention aspects including 'HP customer service', 'Kill a Mokingbird', 'POWER SUPPLY', 'accessories', and 'arm', all with 1 negative mention each. Positively reviewed single-mention aspects include 'Briggs book', 'Christmas present', 'SD cards', 'Wishmaster', 'Your Child's Self-Esteem', and 'album', each with 1 positive mention. 'Battery life' and 'movie' show mixed sentiment, each with 1 positive and 1 negative mention.",
+          "claims": [
+            {
+              "aspect": "this book",
+              "language": "en",
+              "positive": 1,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "battery life",
+              "language": "en",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "movie",
+              "language": "en",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "quality",
+              "language": "en",
+              "positive": 0,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "Briggs book",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "Christmas present",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "HP customer service",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "Kill a Mokingbird",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            }
+          ]
+        },
+        {
+          "passed": true,
+          "n_claims": 15,
+          "errors": [],
+          "n_aspects_in_table": 15,
+          "summary": "The aspects 'quality', 'Amsterdam concert', 'DVD', 'DVD distributor', 'PART HOLDING IT ALL TOGETHER', 'SERVICE FACILITY', and 'THESE CLIPPERS' are all exclusively criticized, with each having 1 or 2 negative mentions and zero positive ones. In contrast, 'Kid Peligro's Brazilian Jiu-jitsu series', 'Mad Max', 'Mario Sperry Vale Tudo tapes', 'Moby Dick', and 'RPM Sensor Assembly' are all exclusively praised, each with exactly 1 positive mention and no negative ones. The aspects 'book', 'picture', 'story', and 'quality' appear most frequently, but only 'quality' shows a consistently negative sentiment; the others are mixed.",
+          "claims": [
+            {
+              "aspect": "quality",
+              "language": "en",
+              "positive": 0,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "Amsterdam concert",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "DVD",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "DVD distributor",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "PART HOLDING IT ALL TOGETHER",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "SERVICE FACILITY",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "THESE CLIPPERS",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "Kid Peligro's Brazilian Jiu-jitsu series",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "Mad Max",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "Mario Sperry Vale Tudo tapes",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "Moby Dick",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "RPM Sensor Assembly",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "book",
+              "language": "en",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "picture",
+              "language": "en",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "story",
+              "language": "en",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            }
+          ]
+        },
+        {
+          "passed": true,
+          "n_claims": 15,
+          "errors": [],
+          "n_aspects_in_table": 15,
+          "summary": "The aspect 'price' is consistently praised, with 2 positive and 0 negative mentions. Several niche aspects — 'Alphabet blocks', 'Andrew Garfield in The Amazing Spider-Man', 'Andrew's reboot of the franchise', 'Delonghi TRD0715T', 'TV programmes', 'art', and 'blu ray trilogy set' — each received only positive feedback. In contrast, '3 earlier McGuyre Spider-Man films', 'Toby McGuyre', and 'bottom' are exclusively criticized. The broader categories 'book', 'movie', 'music', and 'photos' show mixed sentiment, each with equal positive and negative mentions.",
+          "claims": [
+            {
+              "aspect": "price",
+              "language": "en",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "Alphabet blocks",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "Andrew Garfield in The Amazing Spider-Man",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "Andrew's reboot of the franchise",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "Delonghi TRD0715T",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "TV programmes",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "art",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "blu ray trilogy set",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "3 earlier McGuyre Spider-Man films",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "Toby McGuyre",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "bottom",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "book",
+              "language": "en",
+              "positive": 2,
+              "negative": 2,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "movie",
+              "language": "en",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "music",
+              "language": "en",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "photos",
+              "language": "en",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            }
+          ]
+        },
+        {
+          "passed": false,
+          "n_claims": 8,
+          "errors": [
+            "aspect 'Civil War CDs' is mentioned but not listed in the claims",
+            "aspect 'Educational Projects' is mentioned but not listed in the claims",
+            "aspect 'OS' is mentioned but not listed in the claims",
+            "aspect \"Theraou's book Walden\" is mentioned but not listed in the claims",
+            "aspect 'USB power' is mentioned but not listed in the claims",
+            "aspect 'agricultural considerations' is mentioned but not listed in the claims",
+            "aspect 'ancient traditions and contemporary creativity' is mentioned but not listed in the claims"
+          ],
+          "n_aspects_in_table": 15,
+          "summary": "The 'book' aspect is mostly praised, with 3 positive and 1 negative mention. 'Features' is also strongly positive (2 positive, 0 negative). In contrast, 'songs' is entirely criticised (0 positive, 2 negative), and 'album' is negatively mentioned once. 'CD' and 'battery life' show mixed sentiment, each with 1 positive and 1 negative mention. Several niche aspects—including 'American literature', 'Civil War Battlefield Preservation', 'Civil War CDs', 'Educational Projects', 'OS', 'Theraou's book Walden', 'USB power', 'agricultural considerations', and 'ancient traditions and contemporary creativity'—are each mentioned once and uniformly praised.",
+          "claims": [
+            {
+              "aspect": "book",
+              "language": "en",
+              "positive": 3,
+              "negative": 1,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "features",
+              "language": "en",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "songs",
+              "language": "en",
+              "positive": 0,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "album",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "CD",
+              "language": "en",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "battery life",
+              "language": "en",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "American literature",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "Civil War Battlefield Preservation",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            }
+          ]
+        },
+        {
+          "passed": false,
+          "n_claims": 8,
+          "errors": [
+            "aspect 'CD burners' is mentioned but not listed in the claims",
+            "aspect 'Christian legacy' is mentioned but not listed in the claims",
+            "aspect 'Claber' is mentioned but not listed in the claims",
+            "aspect 'Ray Padula Time It Deluxe Water Timer' is mentioned but not listed in the claims",
+            "aspect 'Ray Padula deluxe water timer' is mentioned but not listed in the claims",
+            "aspect 'Sci-Fi' is mentioned but not listed in the claims",
+            "aspect 'Sizes' is mentioned but not listed in the claims"
+          ],
+          "n_aspects_in_table": 15,
+          "summary": "The 'book' aspect is mostly praised, with 3 positive and 2 negative mentions. 'DVD' and 'price' are both fully praised (2 positive, 0 negative each). In contrast, 'film' and 'story' are entirely criticized (0 positive, 2 negative each). 'music' shows mixed sentiment (1 positive, 1 negative). Several low-frequency aspects like 'Armand Assante', 'Ray Padula Time It Deluxe Water Timer', 'Ray Padula deluxe water timer', 'Sci-Fi', and 'Sizes' are all criticized, while 'Athena's portrayal', 'CD burners', 'Christian legacy', and 'Claber' are all praised.",
+          "claims": [
+            {
+              "aspect": "book",
+              "language": "en",
+              "positive": 3,
+              "negative": 2,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "DVD",
+              "language": "en",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "film",
+              "language": "en",
+              "positive": 0,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "music",
+              "language": "en",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "price",
+              "language": "en",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "story",
+              "language": "en",
+              "positive": 0,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "Armand Assante",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "Athena's portrayal",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            }
+          ]
+        },
+        {
+          "passed": true,
+          "n_claims": 15,
+          "errors": [],
+          "n_aspects_in_table": 15,
+          "summary": "The 'book' aspect is mixed, with 2 positive and 2 negative mentions. 'Features' is consistently praised (2 positive, 0 negative). 'Story' and 'video' are both mixed, each with 1 positive and 1 negative mention. Several aspects appear only once and are predominantly criticized: 'Airbed', 'English course', 'Launcher', 'Marine Corp', 'Rosa Mundi and Other Stories', and 'The Lamp In The Desert' each have 0 positive and 1 negative mention. In contrast, 'Cliff Notes version', 'IEEE port', 'Movie Shaker software', 'Prime discount', and 'Sony VIAO PC' are all positively reviewed with 1 positive and 0 negative mentions.",
+          "claims": [
+            {
+              "aspect": "book",
+              "language": "en",
+              "positive": 2,
+              "negative": 2,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "features",
+              "language": "en",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "story",
+              "language": "en",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "video",
+              "language": "en",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "Airbed",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "English course",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "Launcher",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "Marine Corp",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "Rosa Mundi and Other Stories",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "The Lamp In The Desert",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "Cliff Notes version",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "IEEE port",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "Movie Shaker software",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "Prime discount",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "Sony VIAO PC",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            }
+          ]
+        },
+        {
+          "passed": false,
+          "n_claims": 8,
+          "errors": [
+            "aspect 'Ash' is mentioned but not listed in the claims",
+            "aspect 'Band of Gypsy DVD' is mentioned but not listed in the claims",
+            "aspect 'Caribes' is mentioned but not listed in the claims",
+            "aspect 'Concert Footage' is mentioned but not listed in the claims",
+            "aspect \"DVD's\" is mentioned but not listed in the claims",
+            "aspect 'David' is mentioned but not listed in the claims",
+            "aspect 'EL BOX' is mentioned but not listed in the claims"
+          ],
+          "n_aspects_in_table": 15,
+          "summary": "The aspect 'size' is consistently praised, with all 2 mentions being positive. In contrast, 'music' is uniformly criticised, with both mentions negative. 'DVD' is also negatively reviewed, with 1 negative mention. Several aspects—including 'book' and 'characters'—are mixed, each having 1 positive and 1 negative mention. Other aspects like 'ATT products', 'Alastors kingdom', 'Apple products', 'Ash', 'Band of Gypsy DVD', 'Caribes', 'Concert Footage', 'DVD's', and 'EL BOX' are all positively mentioned once. 'David' is the only aspect with a single negative mention.",
+          "claims": [
+            {
+              "aspect": "book",
+              "language": "en",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "characters",
+              "language": "en",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "music",
+              "language": "en",
+              "positive": 0,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "size",
+              "language": "en",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "ATT products",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "Alastors kingdom",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "Apple products",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "DVD",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            }
+          ]
+        },
+        {
+          "passed": false,
+          "n_claims": 8,
+          "errors": [
+            "aspect 'DGK cards' is mentioned but not listed in the claims",
+            "aspect 'EarGels' is mentioned but not listed in the claims",
+            "aspect 'Jawbone headset' is mentioned but not listed in the claims",
+            "aspect 'Jobst UltraSheer' is mentioned but not listed in the claims",
+            "aspect 'Jobst adhesive' is mentioned but not listed in the claims",
+            "aspect 'POW camps' is mentioned but not listed in the claims",
+            "aspect 'Sony 4Pin to 4Pin Digital Video cable' is mentioned but not listed in the claims"
+          ],
+          "n_aspects_in_table": 15,
+          "summary": "The 'book' aspect is predominantly criticized, with 4 negative mentions out of 5. In contrast, 'CD', 'songs', and 'sound' are all uniformly praised, each with 2 positive and 0 negative mentions. 'Order' is entirely negatively reviewed (2 negative, 0 positive), while 'power supply' shows mixed sentiment (1 positive, 1 negative). Several low-frequency aspects like 'Amazons customer service', 'Digital Grey Kard', 'EarGels', 'Jawbone headset', and 'Jobst UltraSheer' are all positively mentioned once, whereas 'DGK cards', 'Jobst adhesive', 'POW camps', and 'Sony 4Pin to 4Pin Digital Video cable' each have one negative mention.",
+          "claims": [
+            {
+              "aspect": "book",
+              "language": "en",
+              "positive": 1,
+              "negative": 4,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "CD",
+              "language": "en",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "order",
+              "language": "en",
+              "positive": 0,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "power supply",
+              "language": "en",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "songs",
+              "language": "en",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "sound",
+              "language": "en",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "Amazons customer service",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "Digital Grey Kard",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            }
+          ]
+        },
+        {
+          "passed": false,
+          "n_claims": 8,
+          "errors": [
+            "aspect 'Foundation series' is mentioned but not listed in the claims",
+            "aspect 'ISS Research' is mentioned but not listed in the claims",
+            "aspect 'Jabra bluetooth' is mentioned but not listed in the claims",
+            "aspect 'activities available for our children' is mentioned but not listed in the claims",
+            "aspect 'album' is mentioned but not listed in the claims",
+            "aspect 'amazon price' is mentioned but not listed in the claims",
+            "aspect 'backlights' is mentioned but not listed in the claims"
+          ],
+          "n_aspects_in_table": 15,
+          "summary": "Most aspects are praised, including book (3 positive, 1 negative), CD (2 positive), music (2 positive), and several one-time mentions like Dark series, Foundation series, ISS Research, Jabra bluetooth, activities available for our children, album, and amazon price — all with 1 positive review each. Criticism is limited to Don, TV-mix, TV-special, back fat, and backlights, each with 1 negative review and no positive ones. The book stands out as the most frequently mentioned aspect and is predominantly positive.",
+          "claims": [
+            {
+              "aspect": "book",
+              "language": "en",
+              "positive": 3,
+              "negative": 1,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "CD",
+              "language": "en",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "music",
+              "language": "en",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "Dark series",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "Don",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "TV-mix",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "TV-special",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "back fat",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            }
+          ]
+        },
+        {
+          "passed": true,
+          "n_claims": 13,
+          "errors": [],
+          "n_aspects_in_table": 15,
+          "summary": "The aspect 'book' received mixed feedback, with 2 positive and 2 negative mentions. 'pump' was consistently criticised (0 positive, 2 negative), as were 'DVD', 'North America', 'Sony cable', 'Squeem \"Magical\" Lingerie Shapewear', and 'Vendor', each with 1 negative mention and 0 positive. Several niche items were exclusively praised: '4pin to 4pin 1394 firewire cable', 'Belly Dance Fast Moves', 'Cliff Notes', 'Diana Krall's Christmas album', 'Jazz Piano Chrristmas', and 'Slow Moves', each with 1 positive and 0 negative mentions.",
+          "claims": [
+            {
+              "aspect": "book",
+              "language": "en",
+              "positive": 2,
+              "negative": 2,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "pump",
+              "language": "en",
+              "positive": 0,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "DVD",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "North America",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "Sony cable",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "Squeem \"Magical\" Lingerie Shapewear",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "Vendor",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "4pin to 4pin 1394 firewire cable",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "Belly Dance Fast Moves",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "Cliff Notes",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "Diana Krall's Christmas album",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "Jazz Piano Chrristmas",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "Slow Moves",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            }
+          ]
+        },
+        {
+          "passed": false,
+          "n_claims": 8,
+          "errors": [
+            "aspect 'Amsterdam concert' is mentioned but not listed in the claims",
+            "aspect 'Macally PS-AC4 Power Adapter' is mentioned but not listed in the claims",
+            "aspect 'PUBLISHER' is mentioned but not listed in the claims",
+            "aspect 'Sure Temp Plus 690' is mentioned but not listed in the claims",
+            "aspect 'Wild Animals lunchbox' is mentioned but not listed in the claims",
+            "aspect 'amateur boxing' is mentioned but not listed in the claims",
+            "aspect 'best moments from the box' is mentioned but not listed in the claims"
+          ],
+          "n_aspects_in_table": 15,
+          "summary": "The 'characters' aspect is mostly praised, with 2 positive and 1 negative mention. In contrast, 'book' is predominantly criticized, with 2 negative and 1 positive mention. 'Movie', 'programs', and 'resolution' each have mixed sentiment, with 1 positive and 1 negative mention each. Several aspects appear only once: 'AA batteries', 'Boots up', 'Penguin cloth covered books', 'Sure Temp Plus 690', 'Wild Animals lunchbox', and 'best moments from the box' are all positively mentioned, while 'Amsterdam concert', 'Macally PS-AC4 Power Adapter', 'PUBLISHER', and 'amateur boxing' are all negatively mentioned.",
+          "claims": [
+            {
+              "aspect": "book",
+              "language": "en",
+              "positive": 1,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "characters",
+              "language": "en",
+              "positive": 2,
+              "negative": 1,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "movie",
+              "language": "en",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "programs",
+              "language": "en",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "resolution",
+              "language": "en",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "AA batteries",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "Boots up",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "Penguin cloth covered books",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            }
+          ]
+        },
+        {
+          "passed": false,
+          "n_claims": 8,
+          "errors": [
+            "aspect 'Beast graphics' is mentioned but not listed in the claims",
+            "aspect 'IEEE port' is mentioned but not listed in the claims",
+            "aspect 'Movie Shaker software' is mentioned but not listed in the claims",
+            "aspect 'Sony VIAO PC' is mentioned but not listed in the claims",
+            "aspect 'Thai soundtrack' is mentioned but not listed in the claims",
+            "aspect 'The Haiku Year' is mentioned but not listed in the claims",
+            "aspect 'Transformers movie' is mentioned but not listed in the claims"
+          ],
+          "n_aspects_in_table": 15,
+          "summary": "The 'book' aspect is mostly praised, with 5 positive and 2 negative mentions. 'Album' and several niche items—'Amish community', 'Belkin OmniView', 'Sweetest Punch', 'Thai soundtrack', and 'The Haiku Year'—are each criticised once or twice, all with zero positive mentions. 'Form' and 'recipes' show mixed sentiment, each with 1 positive and 1 negative mention. 'Tape' is uniformly praised (2 positive, 0 negative), as are several tech-related aspects: 'Beast graphics', 'IEEE port', 'Movie Shaker software', 'Sony VIAO PC', and 'Transformers movie', each with 1 positive and 0 negative mentions.",
+          "claims": [
+            {
+              "aspect": "book",
+              "language": "en",
+              "positive": 5,
+              "negative": 2,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "album",
+              "language": "en",
+              "positive": 0,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "form",
+              "language": "en",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "recipes",
+              "language": "en",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "tape",
+              "language": "en",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "Amish community",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "Belkin OmniView",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "Sweetest Punch",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            }
+          ]
+        },
+        {
+          "passed": true,
+          "n_claims": 9,
+          "errors": [],
+          "n_aspects_in_table": 15,
+          "summary": "The 'book' aspect is predominantly criticized, with 4 negative and only 1 positive mention. Similarly, 'movie', 'characters', and 'cords' each have only negative mentions (2 or more) and no positive ones. 'Music' and 'reviews' show mixed sentiment, with 1 positive and 1 negative mention each. In contrast, 'voice' is entirely praised (2 positive, 0 negative), while 'CD' and 'Dark series' each have 1 positive and 0 negative mentions.",
+          "claims": [
+            {
+              "aspect": "book",
+              "language": "en",
+              "positive": 1,
+              "negative": 4,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "movie",
+              "language": "en",
+              "positive": 1,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "characters",
+              "language": "en",
+              "positive": 0,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "cords",
+              "language": "en",
+              "positive": 0,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "music",
+              "language": "en",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "reviews",
+              "language": "en",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "voice",
+              "language": "en",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "CD",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "Dark series",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            }
+          ]
+        },
+        {
+          "passed": true,
+          "n_claims": 15,
+          "errors": [],
+          "n_aspects_in_table": 15,
+          "summary": "Battery life is mostly praised, with 2 positive and 1 negative mention. Money is consistently criticised, with 2 negative mentions and no positive ones. Quality is mixed, with 1 positive and 1 negative mention. Several aspects—Disney advertising, Eight Crazy Nights, Footnotes, HP product, OS X, P1000, and USB cable—are each mentioned once and all negatively. In contrast, 'With the lights out box', air mattress, airbeds, album, and band are each mentioned once and all positively.",
+          "claims": [
+            {
+              "aspect": "battery life",
+              "language": "en",
+              "positive": 2,
+              "negative": 1,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "money",
+              "language": "en",
+              "positive": 0,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "quality",
+              "language": "en",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "'With the lights out box'",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "Disney advertising",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "Eight Crazy Nights",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "Footnotes",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "HP product",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "OS X",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "P1000",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "USB cable",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "air mattress",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "airbeds",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "album",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "band",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            }
+          ]
+        },
+        {
+          "passed": true,
+          "n_claims": 15,
+          "errors": [],
+          "n_aspects_in_table": 15,
+          "summary": "The 'book' aspect is mostly praised, with 4 positive and 1 negative mention. 'Album' is also positively viewed (2 positive, 0 negative). 'Film' shows mixed sentiment (1 positive, 1 negative), while 'movie' is entirely negatively reviewed (0 positive, 2 negative). Several single-mention aspects are either fully positive—'Crocodile Creek Lunchboxes', 'EarGels', 'Jawbone I', 'Megan Fox', and 'Screen'—or fully negative—'DVD', 'Documate line of scanners', 'LG service center', 'Paperport', 'Peck's performance', and 'Rosie-my-plastic-surgeon-went-berserk-with-the-silicone-and-that's-why-I-have-ginormous-lips-that-don't-move-Huntington-Whiteley'.",
+          "claims": [
+            {
+              "aspect": "book",
+              "language": "en",
+              "positive": 4,
+              "negative": 1,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "album",
+              "language": "en",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "film",
+              "language": "en",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "movie",
+              "language": "en",
+              "positive": 0,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "Crocodile Creek Lunchboxes",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "DVD",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "Documate line of scanners",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "EarGels",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "Jawbone I",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "LG service center",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "Megan Fox",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "Paperport",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "Peck's performance",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "Rosie-my-plastic-surgeon-went-berserk-with-the-silicone-and-that's-why-I-have-ginormous-lips-that-don't-move-Huntington-Whiteley",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "Screen",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            }
+          ]
+        },
+        {
+          "passed": true,
+          "n_claims": 15,
+          "errors": [],
+          "n_aspects_in_table": 15,
+          "summary": "The 'book' aspect is mostly criticised, with 2 negative mentions versus 1 positive. 'Acting' and 'product' show mixed sentiment, each with 1 positive and 1 negative mention. Several aspects are exclusively praised: '256MB memories', 'Amazon MP3s', 'Dell Dimension XPS-T450', 'MIDI standard', and 'Screen size', each with 1 positive and 0 negative mentions. In contrast, 'ANTONLINE site', 'Adobe Flash player', 'HP Deskjet 960Cse Color printer', 'Innovera Solid ink sticks/cartridge', 'Internet Explore', 'Vista', and 'Windows update' are all exclusively criticised, each with 1 negative and 0 positive mentions.",
+          "claims": [
+            {
+              "aspect": "book",
+              "language": "en",
+              "positive": 1,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "acting",
+              "language": "en",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "product",
+              "language": "en",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "256MB memories",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "ANTONLINE site",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "Adobe Flash player",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "Amazon MP3s",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "Dell Dimension XPS-T450",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "HP Deskjet 960Cse Color printer",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "Innovera Solid ink sticks/cartridge",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "Internet Explore",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "MIDI standard",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "Screen size",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "Vista",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "Windows update",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            }
+          ]
+        },
+        {
+          "passed": false,
+          "n_claims": 8,
+          "errors": [
+            "aspect 'Civil War CDs' is mentioned but not listed in the claims",
+            "aspect 'Educational Projects' is mentioned but not listed in the claims",
+            "aspect 'ICON' is mentioned but not listed in the claims",
+            "aspect \"Lane's acting\" is mentioned but not listed in the claims",
+            "aspect \"Reader's Digest edition\" is mentioned but not listed in the claims",
+            "aspect 'Special Edition' is mentioned but not listed in the claims",
+            "aspect 'blade gaurd' is mentioned but not listed in the claims"
+          ],
+          "n_aspects_in_table": 15,
+          "summary": "The 'book' aspect is mostly praised, with 3 positive and 1 negative mention. The 'story' and 'price' aspects show mixed sentiment, each with 2 positive and 2 negative mentions for story, and 1 positive and 1 negative for price. Several aspects are exclusively praised, including '15 inch', 'CD', 'Civil War Battlefield Preservation', 'Civil War CDs', 'Educational Projects', 'ICON', 'Lane's acting', 'Reader's Digest edition', and 'Special Edition'. Two aspects are exclusively criticized: '12 red bull' and 'blade gaurd'. 'Windows' is also criticized, with 1 negative mention and no positive ones.",
+          "claims": [
+            {
+              "aspect": "book",
+              "language": "en",
+              "positive": 3,
+              "negative": 1,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "story",
+              "language": "en",
+              "positive": 2,
+              "negative": 2,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "price",
+              "language": "en",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "12 red bull",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "15 inch",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "CD",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "Civil War Battlefield Preservation",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "Windows",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            }
+          ]
+        },
+        {
+          "passed": true,
+          "n_claims": 15,
+          "errors": [],
+          "n_aspects_in_table": 15,
+          "summary": "The aspect 'quality' is mostly criticised, with 2 negative mentions versus 1 positive. Several aspects are uniformly criticised: 'book', 'characters', 'movie', 'screen', '3D', 'Adam Sandler movie', 'Anchor Hocking', and 'USB output' each have 1 or 2 negative mentions and zero positive ones. In contrast, 'acting' and 'advice' are exclusively praised, each with 1 positive and 0 negative mentions. Mixed sentiment appears for 'battery', 'display', 'novel', and 'packaging', each with 1 positive and 1 negative mention.",
+          "claims": [
+            {
+              "aspect": "quality",
+              "language": "en",
+              "positive": 1,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "book",
+              "language": "en",
+              "positive": 0,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "characters",
+              "language": "en",
+              "positive": 0,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "movie",
+              "language": "en",
+              "positive": 0,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "screen",
+              "language": "en",
+              "positive": 0,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "3D",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "Adam Sandler movie",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "Anchor Hocking",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "USB output",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "acting",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "advice",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "battery",
+              "language": "en",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "display",
+              "language": "en",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "novel",
+              "language": "en",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "packaging",
+              "language": "en",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            }
+          ]
+        },
+        {
+          "passed": false,
+          "n_claims": 8,
+          "errors": [
+            "aspect 'Christmas video' is mentioned but not listed in the claims",
+            "aspect 'Eight Crazy Nights' is mentioned but not listed in the claims",
+            "aspect 'Gainsbourg' is mentioned but not listed in the claims",
+            "aspect 'GarageBand' is mentioned but not listed in the claims",
+            "aspect 'Hand Bookbinding: A Manual Of Instruction by Aldren Watson' is mentioned but not listed in the claims",
+            "aspect 'Macally' is mentioned but not listed in the claims",
+            "aspect 'Night World books' is mentioned but not listed in the claims"
+          ],
+          "n_aspects_in_table": 15,
+          "summary": "Music and book are strongly praised, with all 3 music mentions and both book mentions being positive. Story and software are predominantly criticised, with 2 out of 3 story mentions and both software mentions negative. CD receives mixed feedback, with one positive and one negative mention. Several other aspects—3D computer animation, Apple power supply, Cartoons, Christmas video, GarageBand, Hand Bookbinding: A Manual Of Instruction by Aldren Watson, and Night World books—are each mentioned once and all positively. Eight Crazy Nights, Gainsbourg, and Macally are each mentioned once and all negatively.",
+          "claims": [
+            {
+              "aspect": "music",
+              "language": "en",
+              "positive": 3,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "story",
+              "language": "en",
+              "positive": 1,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "CD",
+              "language": "en",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "book",
+              "language": "en",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "software",
+              "language": "en",
+              "positive": 0,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "3D computer animation",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "Apple power supply",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "Cartoons",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            }
+          ]
+        },
+        {
+          "passed": true,
+          "n_claims": 15,
+          "errors": [],
+          "n_aspects_in_table": 15,
+          "summary": "Customers mostly praised CD, design, video, Rhapsody in Blue, Super Strut, Troma goodies, actors, and articles, each with positive sentiment. The book was mostly criticized, with 1 positive and 2 negative mentions. DVD set, Kingston products, Kingston technical support, PC, and background setting were each mentioned once and received only negative feedback. Screen had mixed sentiment, with 1 positive and 1 negative mention.",
+          "claims": [
+            {
+              "aspect": "CD",
+              "language": "en",
+              "positive": 2,
+              "negative": 1,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "book",
+              "language": "en",
+              "positive": 1,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "design",
+              "language": "en",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "screen",
+              "language": "en",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "video",
+              "language": "en",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "DVD set",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "Kingston products",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "Kingston technical support",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "PC",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "Rhapsody in Blue",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "Super Strut",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "Troma goodies",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "actors",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "articles",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "background setting",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            }
+          ]
+        },
+        {
+          "passed": true,
+          "n_claims": 15,
+          "errors": [],
+          "n_aspects_in_table": 15,
+          "summary": "Customers mostly praised DVD, price, Alphabet blocks, Jabra gels, Jackass 2, and Tess of the d'Urbervilles, each receiving only positive feedback. In contrast, DVD player, G.I. Joe film, IT support technicians, LCD screens, Nicholas Cage movie, O-ring, Paxton Quigley's book, and baby poncho pattern were all criticised with no positive mentions. The aspect 'this book' showed mixed sentiment, with one positive and one negative review.",
+          "claims": [
+            {
+              "aspect": "DVD",
+              "language": "en",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "price",
+              "language": "en",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "Alphabet blocks",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "Jabra gels",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "Jackass 2",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "Tess of the d'Urbervilles",
+              "language": "en",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "DVD player",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "G.I. Joe film",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "IT support technicians",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "LCD screens",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "Nicholas Cage movie",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "O-ring",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "Paxton Quigley's book",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "baby poncho pattern",
+              "language": "en",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "this book",
+              "language": "en",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            }
+          ]
+        }
+      ]
+    },
+    "arabic": {
+      "n_reviews_available": 4330,
+      "passed": 11,
+      "total": 25,
+      "pass_rate": 0.44,
+      "error_types": {
+        "mentioned but not claimed": 77
+      },
+      "mean_claims": 10.36,
+      "runs": [
+        {
+          "passed": true,
+          "n_claims": 13,
+          "errors": [],
+          "n_aspects_in_table": 15,
+          "summary": "The most frequently mentioned aspects are 'الغرف' (5 mentions, mostly negative), 'الفندق' (4 mentions, mixed sentiment), and 'غرفة' and 'فندق' (3 mentions each, both mostly negative). Several aspects received only negative feedback, including 'التكييف', 'الحمام', 'الخدمه', and 'حمام السباحة' (all 2 mentions, 0 positive, 2 negative). 'المسبح' and 'الموقع' showed mixed sentiment (2 mentions each, 1 positive, 1 negative). Positive-only feedback appeared for 'استقبال', 'اقامة', and 'الإقامة' (1 mention each, all positive).",
+          "claims": [
+            {
+              "aspect": "الغرف",
+              "language": "ar",
+              "positive": 2,
+              "negative": 3,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الفندق",
+              "language": "ar",
+              "positive": 2,
+              "negative": 2,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "غرفة",
+              "language": "ar",
+              "positive": 1,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "فندق",
+              "language": "ar",
+              "positive": 1,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "التكييف",
+              "language": "ar",
+              "positive": 0,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الحمام",
+              "language": "ar",
+              "positive": 0,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الخدمه",
+              "language": "ar",
+              "positive": 0,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "حمام السباحة",
+              "language": "ar",
+              "positive": 0,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "المسبح",
+              "language": "ar",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "الموقع",
+              "language": "ar",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "استقبال",
+              "language": "ar",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "اقامة",
+              "language": "ar",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الإقامة",
+              "language": "ar",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            }
+          ]
+        },
+        {
+          "passed": true,
+          "n_claims": 10,
+          "errors": [],
+          "n_aspects_in_table": 15,
+          "summary": "The most frequently mentioned aspects are 'الغرف' (6 mentions, mostly positive), 'الفندق' (5 mentions, mostly positive), and 'فندق' (4 mentions, mostly positive). 'الموقع' and 'موقع' are also positively viewed, with 3 and 2 mentions respectively. Mixed sentiment appears for 'تلفزيون' and 'خدمة', each with 1 positive and 1 negative mention. Criticism is limited to low-frequency aspects: 'أثاث الفندق', 'الحمام', and 'الخدمة' each have 1 negative mention and no positive ones.",
+          "claims": [
+            {
+              "aspect": "الغرف",
+              "language": "ar",
+              "positive": 4,
+              "negative": 2,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الفندق",
+              "language": "ar",
+              "positive": 3,
+              "negative": 2,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "فندق",
+              "language": "ar",
+              "positive": 3,
+              "negative": 1,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الموقع",
+              "language": "ar",
+              "positive": 2,
+              "negative": 1,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "موقع",
+              "language": "ar",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "تلفزيون",
+              "language": "ar",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "خدمة",
+              "language": "ar",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "أثاث الفندق",
+              "language": "ar",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الحمام",
+              "language": "ar",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الخدمة",
+              "language": "ar",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            }
+          ]
+        },
+        {
+          "passed": false,
+          "n_claims": 8,
+          "errors": [
+            "aspect 'إطلالة' is mentioned but not listed in the claims",
+            "aspect 'اسعاره' is mentioned but not listed in the claims",
+            "aspect 'الأسلوب' is mentioned but not listed in the claims",
+            "aspect 'الارضية' is mentioned but not listed in the claims",
+            "aspect 'التاكسي المائي' is mentioned but not listed in the claims",
+            "aspect 'الحمام' is mentioned but not listed in the claims",
+            "aspect 'الخدمات' is mentioned but not listed in the claims"
+          ],
+          "n_aspects_in_table": 15,
+          "summary": "The most frequently mentioned aspects—الغرفة, خدمة, and فندق—are all predominantly praised, with 3 positive and 1 negative mention for الغرفة, and 2 positive and 1 negative for both خدمة and فندق. الأسعار and الفندق also received only positive feedback (2 and 2 positive mentions respectively). The aspect التعامل is mixed, with 1 positive and 1 negative mention. Several low-frequency aspects like أثاث و ديكورات, أداره الفندق, الارضية, and الحمام are exclusively criticized, each with 1 negative mention. إطلالة, اسعاره, الأسلوب, التاكسي المائي, and الخدمات are each praised once with no negative mentions.",
+          "claims": [
+            {
+              "aspect": "الغرفة",
+              "language": "ar",
+              "positive": 3,
+              "negative": 1,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "خدمة",
+              "language": "ar",
+              "positive": 2,
+              "negative": 1,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "فندق",
+              "language": "ar",
+              "positive": 2,
+              "negative": 1,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الأسعار",
+              "language": "ar",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الفندق",
+              "language": "ar",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "التعامل",
+              "language": "ar",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "أثاث و ديكورات",
+              "language": "ar",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "أداره الفندق",
+              "language": "ar",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            }
+          ]
+        },
+        {
+          "passed": false,
+          "n_claims": 8,
+          "errors": [
+            "aspect 'الاستقبال' is mentioned but not listed in the claims",
+            "aspect 'فندق' is mentioned but not listed in the claims"
+          ],
+          "n_aspects_in_table": 15,
+          "summary": "The service (الخدمة), hotel (الفندق), location (الموقع), and hotel management (فندق) are mostly praised, with positive counts of 2, 2, 2, and 2 respectively. Rooms (الغرف) and room-related aspects (غرف, الغرفة) are mostly criticised, with negative counts of 2, 2, and 1. Price (السعر) and pricing (الاسعار) are entirely criticised, with negative counts of 2 and 1. Reception (الاستقبال) and room (الغرفة) show mixed sentiment, each with 1 positive and 1 negative mention.",
+          "claims": [
+            {
+              "aspect": "الخدمة",
+              "language": "ar",
+              "positive": 2,
+              "negative": 1,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الغرف",
+              "language": "ar",
+              "positive": 1,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الفندق",
+              "language": "ar",
+              "positive": 2,
+              "negative": 1,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الموقع",
+              "language": "ar",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "غرف",
+              "language": "ar",
+              "positive": 0,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الغرفة",
+              "language": "ar",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "السعر",
+              "language": "ar",
+              "positive": 0,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الاسعار",
+              "language": "ar",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            }
+          ]
+        },
+        {
+          "passed": false,
+          "n_claims": 8,
+          "errors": [
+            "aspect 'المطعم' is mentioned but not listed in the claims",
+            "aspect 'غرف' is mentioned but not listed in the claims",
+            "aspect 'مكان' is mentioned but not listed in the claims",
+            "aspect 'أسلاك عارية' is mentioned but not listed in the claims",
+            "aspect 'الأنترنت' is mentioned but not listed in the claims",
+            "aspect 'الافطار' is mentioned but not listed in the claims",
+            "aspect 'الاماكن الرياضية' is mentioned but not listed in the claims"
+          ],
+          "n_aspects_in_table": 15,
+          "summary": "The most frequently criticized aspect is الغرف, with all 4 mentions negative. The service (الخدمه) is also mostly criticized (2 negative, 1 positive). In contrast, الفندف, الموظون, فندق, الشاطئ, غرف, الافطار, and الاماكن الرياضية are all praised, each having only positive or predominantly positive mentions. Aspects like الطعام, الغرفة, المطعم, and مكان show mixed sentiment with equal positive and negative mentions. أسلاك عارية and الأنترنت each have one negative mention.",
+          "claims": [
+            {
+              "aspect": "الغرف",
+              "language": "ar",
+              "positive": 0,
+              "negative": 4,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الخدمه",
+              "language": "ar",
+              "positive": 1,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الفندق",
+              "language": "ar",
+              "positive": 2,
+              "negative": 1,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الموظفون",
+              "language": "ar",
+              "positive": 2,
+              "negative": 1,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "فندق",
+              "language": "ar",
+              "positive": 3,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الشاطئ",
+              "language": "ar",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الطعام",
+              "language": "ar",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "الغرفة",
+              "language": "ar",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            }
+          ]
+        },
+        {
+          "passed": true,
+          "n_claims": 15,
+          "errors": [],
+          "n_aspects_in_table": 15,
+          "summary": "The hotel (الفندق) and hotel (فندق) are mostly praised, with 3 positive and 2 negative mentions for الفندق, and 3 positive and 1 negative for فندق. إقامة, المسبح, الموقع, إطلالة, اكل, and الإدارة are all exclusively praised (each with 1 or 2 positive mentions and 0 negative). The service (الخدمة), staff (الموظفين), and staff team (طاقم العمل) show mixed sentiment, each with 1 positive and 1 negative mention. Maintenance (الصيانة) is consistently criticised (0 positive, 2 negative), while breakfast (الإفطار), reception (الاستقبال), and customer handling (التعامل مع العملاء) are each criticised once with no positive mentions.",
+          "claims": [
+            {
+              "aspect": "الفندق",
+              "language": "ar",
+              "positive": 3,
+              "negative": 2,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "فندق",
+              "language": "ar",
+              "positive": 3,
+              "negative": 1,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "إقامة",
+              "language": "ar",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "المسبح",
+              "language": "ar",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الموقع",
+              "language": "ar",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "إطلالة",
+              "language": "ar",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "اكل",
+              "language": "ar",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الإدارة",
+              "language": "ar",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الخدمة",
+              "language": "ar",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "الموظفين",
+              "language": "ar",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "طاقم العمل",
+              "language": "ar",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "الصيانة",
+              "language": "ar",
+              "positive": 0,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الإفطار",
+              "language": "ar",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الاستقبال",
+              "language": "ar",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "التعامل مع العملاء",
+              "language": "ar",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            }
+          ]
+        },
+        {
+          "passed": false,
+          "n_claims": 9,
+          "errors": [
+            "aspect 'غرف' is mentioned but not listed in the claims",
+            "aspect 'الافطار' is mentioned but not listed in the claims"
+          ],
+          "n_aspects_in_table": 15,
+          "summary": "The hotel (الفندق) is the most frequently mentioned aspect and is mostly praised, with 7 positive and 4 negative reviews. Location-related aspects—الموقع, المكان, and الحرم والكعبه المشرفة—are also predominantly positive, though المكان shows mixed sentiment. Cleanliness (النظافة), service (الخدمه), rooms (الغرف and غرف), and breakfast (الافطار) are all positively rated with no negative mentions. Staff (العاملين) and food (الاكل) show contrasting patterns: staff sentiment is mixed (1 positive, 1 negative), while food is entirely criticised (0 positive, 1 negative).",
+          "claims": [
+            {
+              "aspect": "الفندق",
+              "language": "ar",
+              "positive": 7,
+              "negative": 4,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الموقع",
+              "language": "ar",
+              "positive": 3,
+              "negative": 1,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "المكان",
+              "language": "ar",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "الحرم والكعبه المشرفة",
+              "language": "ar",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "النظافة",
+              "language": "ar",
+              "positive": 2,
+              "negative": 1,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الخدمه",
+              "language": "ar",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الغرف",
+              "language": "ar",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "العاملين",
+              "language": "ar",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "الاكل",
+              "language": "ar",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            }
+          ]
+        },
+        {
+          "passed": true,
+          "n_claims": 14,
+          "errors": [],
+          "n_aspects_in_table": 15,
+          "summary": "The hotel (الفندق) and hotel (فندق) are strongly praised, with 6 and 3 positive mentions respectively and no negative ones for فندق. Service (الخدمة) and resort (منتجع) are also consistently positive, each with 2 positive mentions and zero negative. In contrast, price (السعر) and rooms (الغرف) are mostly criticized, with 2 negative mentions each. Beds (الأسرّة), food (الطعام), staff (العاملين), location (المكان), and cleanliness (نظافة) show mixed sentiment, each with 1 positive and 1 negative mention. Buses (الاتوبيسات), reception (الاستقبال), and dishes (الاطباق) are exclusively criticized, each with 1 negative mention.",
+          "claims": [
+            {
+              "aspect": "الفندق",
+              "language": "ar",
+              "positive": 6,
+              "negative": 1,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "السعر",
+              "language": "ar",
+              "positive": 1,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الغرف",
+              "language": "ar",
+              "positive": 1,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "فندق",
+              "language": "ar",
+              "positive": 3,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الأسرّة",
+              "language": "ar",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "الخدمة",
+              "language": "ar",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الطعام",
+              "language": "ar",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "العاملين",
+              "language": "ar",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "المكان",
+              "language": "ar",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "منتجع",
+              "language": "ar",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "نظافة",
+              "language": "ar",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "الاتوبيسات",
+              "language": "ar",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الاستقبال",
+              "language": "ar",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الاطباق",
+              "language": "ar",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            }
+          ]
+        },
+        {
+          "passed": true,
+          "n_claims": 14,
+          "errors": [],
+          "n_aspects_in_table": 15,
+          "summary": "The hotel (فندق) and its variant (الفندق) are mostly praised, with 5 positive and 2 negative mentions for 'فندق', and 4 positive and 1 negative for 'الفندق'. Rooms ('الغرف' and 'غرفه') also receive predominantly positive feedback: 'الغرف' has 2 positive and 1 negative mention, while 'غرفه' has 2 positive and 0 negative. Location-related aspects — 'المكان', 'موقع' — show mixed or positive sentiment: 'موقع' is fully positive (2/0), whereas 'المكان' is mixed (1/1). In contrast, 'حمام السباحة' is uniformly criticised (0/2), and several low-frequency aspects — 'إرسال الهواتف', 'الأثاث', 'الأضواء', 'الإنترنت', 'الاهتمام' — each have only negative mentions. 'الاستقبال', 'الاكل', and 'الإنترنت' show mixed sentiment.",
+          "claims": [
+            {
+              "aspect": "فندق",
+              "language": "ar",
+              "positive": 5,
+              "negative": 2,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الفندق",
+              "language": "ar",
+              "positive": 4,
+              "negative": 1,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الغرف",
+              "language": "ar",
+              "positive": 2,
+              "negative": 1,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "غرفه",
+              "language": "ar",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "موقع",
+              "language": "ar",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "المكان",
+              "language": "ar",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "حمام السباحة",
+              "language": "ar",
+              "positive": 0,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "إرسال الهواتف",
+              "language": "ar",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الأثاث",
+              "language": "ar",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الأضواء",
+              "language": "ar",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الإنترنت",
+              "language": "ar",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الاهتمام",
+              "language": "ar",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الاستقبال",
+              "language": "ar",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "الاكل",
+              "language": "ar",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            }
+          ]
+        },
+        {
+          "passed": false,
+          "n_claims": 8,
+          "errors": [
+            "aspect 'الخدمة' is mentioned but not listed in the claims",
+            "aspect 'المكان' is mentioned but not listed in the claims",
+            "aspect 'خدمه الغرف' is mentioned but not listed in the claims",
+            "aspect 'سوق' is mentioned but not listed in the claims"
+          ],
+          "n_aspects_in_table": 15,
+          "summary": "The hotel (فندق) is mostly praised, with 4 positive and 1 negative mention. Internet (الانترنت), services (الخدمات), restaurant (المطعم), location (موقع), place (المكان), and market (سوق) are all consistently praised, each with 2 positive and 0 negative mentions. Food (الطعام) and rooms (الغرف) are mostly criticised, each with 2 negative and 1 positive mention. Breakfast (الافطار), service (الخدمة), and room service (خدمه الغرف) show mixed sentiment, each with 1 positive and 1 negative mention.",
+          "claims": [
+            {
+              "aspect": "فندق",
+              "language": "ar",
+              "positive": 4,
+              "negative": 1,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الطعام",
+              "language": "ar",
+              "positive": 1,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الغرف",
+              "language": "ar",
+              "positive": 1,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الافطار",
+              "language": "ar",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "الانترنت",
+              "language": "ar",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الخدمات",
+              "language": "ar",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "المطعم",
+              "language": "ar",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "موقع",
+              "language": "ar",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            }
+          ]
+        },
+        {
+          "passed": false,
+          "n_claims": 8,
+          "errors": [
+            "aspect 'إقامه' is mentioned but not listed in the claims",
+            "aspect 'الأثاث' is mentioned but not listed in the claims",
+            "aspect 'الأسعار' is mentioned but not listed in the claims",
+            "aspect 'الأصطف' is mentioned but not listed in the claims",
+            "aspect 'الاداء والاستقبال' is mentioned but not listed in the claims",
+            "aspect 'الاكل' is mentioned but not listed in the claims",
+            "aspect 'الجبل' is mentioned but not listed in the claims"
+          ],
+          "n_aspects_in_table": 15,
+          "summary": "The most frequently praised aspects are الغرف, فندق, موقع, الطعام, المكان, شقة, الأصطف, الاداء والاستقبال, الاكل, and الجبل — all with exclusively positive reviews (each has positive count equal to mentions and zero negative counts). In contrast, الخدمة and إقامه are entirely criticised, with 3 and 1 negative mentions respectively and no positive ones. The aspect الفندق shows a mixed reception: 1 positive and 2 negative mentions. الأثاث and الأسعار are also negatively reviewed, each with 1 negative mention and no positive ones.",
+          "claims": [
+            {
+              "aspect": "الغرف",
+              "language": "ar",
+              "positive": 4,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الخدمة",
+              "language": "ar",
+              "positive": 0,
+              "negative": 3,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الفندق",
+              "language": "ar",
+              "positive": 1,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "فندق",
+              "language": "ar",
+              "positive": 3,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "موقع",
+              "language": "ar",
+              "positive": 3,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الطعام",
+              "language": "ar",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "المكان",
+              "language": "ar",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "شقة",
+              "language": "ar",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            }
+          ]
+        },
+        {
+          "passed": false,
+          "n_claims": 8,
+          "errors": [
+            "aspect 'الأرضيات' is mentioned but not listed in the claims",
+            "aspect 'الإفطار' is mentioned but not listed in the claims",
+            "aspect 'الاثاث' is mentioned but not listed in the claims",
+            "aspect 'الانترنت' is mentioned but not listed in the claims",
+            "aspect 'التلفاز' is mentioned but not listed in the claims"
+          ],
+          "n_aspects_in_table": 15,
+          "summary": "The hotel (فندق) is mostly praised, with 4 positive and 1 negative mention. The pool (المسبح), location (الموقع), place (المكان), and site (موقع) are all positively rated, each with 2 positive and 0 negative mentions. The room (الغرفة) is mostly criticised, with 1 positive and 2 negative mentions. Prices (أسعار), staff (الموظفين), and site (موقع) show mixed sentiment. Flooring (الأرضيات), internet (الانترنت), and TV (التلفاز) are each mentioned once negatively, while breakfast (الإفطار) and furniture (الاثاث) are each mentioned once positively.",
+          "claims": [
+            {
+              "aspect": "فندق",
+              "language": "ar",
+              "positive": 4,
+              "negative": 1,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "المسبح",
+              "language": "ar",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الموقع",
+              "language": "ar",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "المكان",
+              "language": "ar",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الغرفة",
+              "language": "ar",
+              "positive": 1,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "أسعار",
+              "language": "ar",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "الموظفين",
+              "language": "ar",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "موقع",
+              "language": "ar",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            }
+          ]
+        },
+        {
+          "passed": false,
+          "n_claims": 8,
+          "errors": [
+            "aspect 'إقامة' is mentioned but not listed in the claims",
+            "aspect 'الزيت' is mentioned but not listed in the claims",
+            "aspect 'السجاد' is mentioned but not listed in the claims",
+            "aspect 'الشاطئ' is mentioned but not listed in the claims",
+            "aspect 'الشقق الفندقيه' is mentioned but not listed in the claims",
+            "aspect 'الطاقم القائم' is mentioned but not listed in the claims",
+            "aspect 'الطعام' is mentioned but not listed in the claims"
+          ],
+          "n_aspects_in_table": 15,
+          "summary": "The aspect 'الغرفة' is mostly praised, with 4 positive and 3 negative mentions. Several other aspects are exclusively criticized, including 'الغرف', 'اسعاره', 'الإنترنت', 'الاطعمة', 'الاكل', 'الخدمة', 'الزيت', 'السجاد', and 'الطعام', each with 1 negative mention and 0 positive. In contrast, 'إقامة', 'السعر', 'الشاطئ', 'الشقق الفندقيه', and 'الطاقم القائم' are each mentioned once and all positively. The data shows a clear split: 'الغرفة' is the only frequently mentioned aspect, and it leans positive; most other aspects have low frequency and are uniformly negative or positive.",
+          "claims": [
+            {
+              "aspect": "الغرفة",
+              "language": "ar",
+              "positive": 4,
+              "negative": 3,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الغرف",
+              "language": "ar",
+              "positive": 0,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "اسعاره",
+              "language": "ar",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الإنترنت",
+              "language": "ar",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الاطعمة",
+              "language": "ar",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الاكل",
+              "language": "ar",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الخدمة",
+              "language": "ar",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "السعر",
+              "language": "ar",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            }
+          ]
+        },
+        {
+          "passed": true,
+          "n_claims": 13,
+          "errors": [],
+          "n_aspects_in_table": 15,
+          "summary": "The most frequently mentioned aspects are 'الفندق' (mixed sentiment, 3 positive and 3 negative), 'فندق' (all positive, 4 mentions), and 'الغرف' (mostly praised, 2 positive, 1 negative). Location-related aspects — 'الموقع', 'موقع', and 'المكان' — show mostly positive sentiment except for 'المكان', which is mostly criticised (1 positive, 2 negative). Food-related aspects — 'الإفطار', 'الاكل', and 'الطعام' — are generally praised, with 'الإفطار' and 'الاكل' fully positive (2 each) and 'الطعام' mixed (1 positive, 1 negative). Several low-frequency aspects like 'أغطية', 'الأريكة', 'الإنترنت اللاسلكي', and 'الاقامة' are exclusively criticised.",
+          "claims": [
+            {
+              "aspect": "الفندق",
+              "language": "ar",
+              "positive": 3,
+              "negative": 3,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "فندق",
+              "language": "ar",
+              "positive": 4,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الغرف",
+              "language": "ar",
+              "positive": 2,
+              "negative": 1,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "المكان",
+              "language": "ar",
+              "positive": 1,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الموقع",
+              "language": "ar",
+              "positive": 2,
+              "negative": 1,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "موقع",
+              "language": "ar",
+              "positive": 2,
+              "negative": 1,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الإفطار",
+              "language": "ar",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الاكل",
+              "language": "ar",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الطعام",
+              "language": "ar",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "أغطية",
+              "language": "ar",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الأريكة",
+              "language": "ar",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الإنترنت اللاسلكي",
+              "language": "ar",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الاقامة",
+              "language": "ar",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            }
+          ]
+        },
+        {
+          "passed": false,
+          "n_claims": 8,
+          "errors": [
+            "aspect 'المطاعم' is mentioned but not listed in the claims",
+            "aspect 'إطلالته' is mentioned but not listed in the claims",
+            "aspect 'الإفطار' is mentioned but not listed in the claims",
+            "aspect 'الاكل' is mentioned but not listed in the claims",
+            "aspect 'الانترنت' is mentioned but not listed in the claims",
+            "aspect 'البحر' is mentioned but not listed in the claims",
+            "aspect 'الحمامات' is mentioned but not listed in the claims"
+          ],
+          "n_aspects_in_table": 15,
+          "summary": "The most frequently praised aspects are فريق العمل (5 positive, 0 negative) and الفنادق-related terms like الفندق (3 positive, 3 negative, mixed) and فندق (2 positive, 3 negative, negative). Rooms (الغرف) are mostly praised (2 positive, 1 negative), while المطعم and موظفي الاستقبال are mostly criticised (2 and 2 negative mentions respectively). The الحرم and several minor aspects like إطلالته، الإفطار، الإنترنت، and البحر each have only positive mentions. الطعام and المطاعم show mixed sentiment, and الحمامات and الاكل are solely criticised.",
+          "claims": [
+            {
+              "aspect": "الفندق",
+              "language": "ar",
+              "positive": 3,
+              "negative": 3,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "فريق العمل",
+              "language": "ar",
+              "positive": 5,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "فندق",
+              "language": "ar",
+              "positive": 2,
+              "negative": 3,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الغرف",
+              "language": "ar",
+              "positive": 2,
+              "negative": 1,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "المطعم",
+              "language": "ar",
+              "positive": 1,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "موظفي الاستقبال",
+              "language": "ar",
+              "positive": 0,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الحرم",
+              "language": "ar",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الطعام",
+              "language": "ar",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            }
+          ]
+        },
+        {
+          "passed": true,
+          "n_claims": 12,
+          "errors": [],
+          "n_aspects_in_table": 15,
+          "summary": "The most frequently mentioned aspects are 'الغرفة', 'غرفة', and 'الغرف', with mixed or negative sentiment overall. 'الفندق', 'الموظفون', 'سعر', 'غرفٌ', and 'موقع' are mostly praised, each having 2 or 3 mentions with only positive reviews. In contrast, 'الأثاث' and 'الأكل' are consistently criticised, with 2 negative mentions each and no positive ones. 'الخدمة' and 'الموظفين' show mixed sentiment, while 'الغرفة' stands out as the most negatively reviewed aspect with 3 negative and only 1 positive mention.",
+          "claims": [
+            {
+              "aspect": "الغرفة",
+              "language": "ar",
+              "positive": 1,
+              "negative": 3,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "غرفة",
+              "language": "ar",
+              "positive": 2,
+              "negative": 2,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "الغرف",
+              "language": "ar",
+              "positive": 2,
+              "negative": 1,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الفندق",
+              "language": "ar",
+              "positive": 2,
+              "negative": 1,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الأثاث",
+              "language": "ar",
+              "positive": 0,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الأكل",
+              "language": "ar",
+              "positive": 0,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الخدمة",
+              "language": "ar",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "الموظفون",
+              "language": "ar",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الموظفين",
+              "language": "ar",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "سعر",
+              "language": "ar",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "غرفٌ",
+              "language": "ar",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "موقع",
+              "language": "ar",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            }
+          ]
+        },
+        {
+          "passed": false,
+          "n_claims": 8,
+          "errors": [
+            "aspect 'الإفطار' is mentioned but not listed in the claims",
+            "aspect 'البستنة' is mentioned but not listed in the claims",
+            "aspect 'الحمامات' is mentioned but not listed in the claims",
+            "aspect 'الخدمه' is mentioned but not listed in the claims",
+            "aspect 'الخزائن' is mentioned but not listed in the claims",
+            "aspect 'الدور' is mentioned but not listed in the claims"
+          ],
+          "n_aspects_in_table": 15,
+          "summary": "The most frequently mentioned aspects—الغرف, الفندق, and الاستقبال—are all predominantly praised, with 3 positive and 2 negative mentions for الغرف, 3 positive and 1 negative for الفندق, and 2 positive and 1 negative for الاستقبال. مكان is mixed, with 1 positive and 1 negative mention. Several aspects are criticized exclusively: اسعاره, الأريكة, الاكل, التلفاز, الخدمة, الخزائن, and الدور each have 1 negative mention and 0 positive. الإفطار, البستنة, and الحمامات are each praised once with no negative mentions.",
+          "claims": [
+            {
+              "aspect": "الغرف",
+              "language": "ar",
+              "positive": 3,
+              "negative": 2,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الفندق",
+              "language": "ar",
+              "positive": 3,
+              "negative": 1,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الاستقبال",
+              "language": "ar",
+              "positive": 2,
+              "negative": 1,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "مكان",
+              "language": "ar",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "اسعاره",
+              "language": "ar",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الأريكة",
+              "language": "ar",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الاكل",
+              "language": "ar",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "التلفاز",
+              "language": "ar",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            }
+          ]
+        },
+        {
+          "passed": false,
+          "n_claims": 8,
+          "errors": [
+            "aspect 'أسعاره' is mentioned but not listed in the claims",
+            "aspect 'اثاث' is mentioned but not listed in the claims",
+            "aspect 'استقبال' is mentioned but not listed in the claims",
+            "aspect 'الأبواب' is mentioned but not listed in the claims",
+            "aspect 'الإفطار' is mentioned but not listed in the claims",
+            "aspect 'الاستقبال' is mentioned but not listed in the claims",
+            "aspect 'الانترنت' is mentioned but not listed in the claims"
+          ],
+          "n_aspects_in_table": 15,
+          "summary": "The hotel (فندق) is mostly praised, with 4 positive and 1 negative mention. Service (الخدمة) and room (الغرفة) are also predominantly positive, each with 2 positive and 1 negative mention. In contrast, rooms (الغرف) and staff (الموظفين) are mostly criticized, with 3 negative and 1 positive, and 2 negative and 1 positive mentions respectively. The aspect 'الفندق' shows mixed sentiment (2 positive, 2 negative), while food (الاكل) and decor (الديكور) are also mixed (1 positive, 1 negative each). Price (أسعاره), internet (الانترنت), breakfast (الإفطار), reception (الاستقبال), doors (الأبواب), furniture (اثاث), and lobby (استقبال) each have only one mention, split between positive and negative.",
+          "claims": [
+            {
+              "aspect": "فندق",
+              "language": "ar",
+              "positive": 4,
+              "negative": 1,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الغرف",
+              "language": "ar",
+              "positive": 1,
+              "negative": 3,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الفندق",
+              "language": "ar",
+              "positive": 2,
+              "negative": 2,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "الخدمة",
+              "language": "ar",
+              "positive": 2,
+              "negative": 1,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الغرفة",
+              "language": "ar",
+              "positive": 2,
+              "negative": 1,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الموظفين",
+              "language": "ar",
+              "positive": 1,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الاكل",
+              "language": "ar",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "الديكور",
+              "language": "ar",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            }
+          ]
+        },
+        {
+          "passed": false,
+          "n_claims": 8,
+          "errors": [
+            "aspect 'إفطار' is mentioned but not listed in the claims",
+            "aspect 'إقامة' is mentioned but not listed in the claims",
+            "aspect 'استقبال' is mentioned but not listed in the claims",
+            "aspect 'الأسعار' is mentioned but not listed in the claims",
+            "aspect 'الأكل' is mentioned but not listed in the claims",
+            "aspect 'الانترنت' is mentioned but not listed in the claims",
+            "aspect 'البحر' is mentioned but not listed in the claims"
+          ],
+          "n_aspects_in_table": 15,
+          "summary": "The reviews are overwhelmingly positive across all aspects. The hotel (الفندق) is the most frequently mentioned aspect, with all 6 mentions being positive. Other highly praised aspects include فندق (5 mentions, 4 positive), الغرف (3 mentions, 2 positive), and الاقامة, الخدمة, العاملين, خدمة, طعام, إفطار, إقامة, استقبال, الأسعار, الأكل, الانترنت, and البحر — each with only positive mentions and no negative ones.",
+          "claims": [
+            {
+              "aspect": "الفندق",
+              "language": "ar",
+              "positive": 6,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "فندق",
+              "language": "ar",
+              "positive": 4,
+              "negative": 1,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الغرف",
+              "language": "ar",
+              "positive": 2,
+              "negative": 1,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الاقامة",
+              "language": "ar",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الخدمة",
+              "language": "ar",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "العاملين",
+              "language": "ar",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "خدمة",
+              "language": "ar",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "طعام",
+              "language": "ar",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            }
+          ]
+        },
+        {
+          "passed": true,
+          "n_claims": 15,
+          "errors": [],
+          "n_aspects_in_table": 15,
+          "summary": "The aspect 'مكان' is mostly praised, with 4 positive and 1 negative mention. 'فندق' is predominantly criticised, with 1 positive and 3 negative mentions. 'الإفطار' shows mixed sentiment, with 1 positive and 1 negative mention. 'الاستقبال', 'الفندق', 'المكان', 'ادارة الفندق', 'اطلاله', 'الأسلوب', 'الاستجمام', and 'الاسترخاء' are all exclusively praised (each with 1–2 positive and 0 negative mentions). 'اطقم السرير', 'الأسرة', 'الارضيات', and 'الاقامة' are each criticised once with no positive mentions.",
+          "claims": [
+            {
+              "aspect": "مكان",
+              "language": "ar",
+              "positive": 4,
+              "negative": 1,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "فندق",
+              "language": "ar",
+              "positive": 1,
+              "negative": 3,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الإفطار",
+              "language": "ar",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "الاستقبال",
+              "language": "ar",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الفندق",
+              "language": "ar",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "المكان",
+              "language": "ar",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "ادارة الفندق",
+              "language": "ar",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "اطلاله",
+              "language": "ar",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الأسلوب",
+              "language": "ar",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الاستجمام",
+              "language": "ar",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الاسترخاء",
+              "language": "ar",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "اطقم السرير",
+              "language": "ar",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الأسرة",
+              "language": "ar",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الارضيات",
+              "language": "ar",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الاقامة",
+              "language": "ar",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            }
+          ]
+        },
+        {
+          "passed": true,
+          "n_claims": 11,
+          "errors": [],
+          "n_aspects_in_table": 15,
+          "summary": "The most frequently mentioned aspect is 'الغرف' (7 mentions), which is predominantly criticized (5 negative, 2 positive). Several other aspects are also mostly criticized: 'الخدمة', 'الفندق', 'الاكل', and 'الغرفة' each have more negative than positive mentions. In contrast, 'الاستقبال', 'الطاقمُ', 'سعر', and 'موقع' are all exclusively praised (2 positive, 0 negative each). 'الافطار' and 'خدمة الغرف' show mixed sentiment with equal positive and negative mentions.",
+          "claims": [
+            {
+              "aspect": "الغرف",
+              "language": "ar",
+              "positive": 2,
+              "negative": 5,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الخدمة",
+              "language": "ar",
+              "positive": 1,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الفندق",
+              "language": "ar",
+              "positive": 1,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الاستقبال",
+              "language": "ar",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الطاقمُ",
+              "language": "ar",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "سعر",
+              "language": "ar",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "موقع",
+              "language": "ar",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الافطار",
+              "language": "ar",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "خدمة الغرف",
+              "language": "ar",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "الاكل",
+              "language": "ar",
+              "positive": 0,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الغرفة",
+              "language": "ar",
+              "positive": 0,
+              "negative": 2,
+              "dominant": "negative"
+            }
+          ]
+        },
+        {
+          "passed": false,
+          "n_claims": 8,
+          "errors": [
+            "aspect 'خدمة' is mentioned but not listed in the claims",
+            "aspect 'الافطار' is mentioned but not listed in the claims",
+            "aspect 'الاكل' is mentioned but not listed in the claims",
+            "aspect 'الانترنت' is mentioned but not listed in the claims",
+            "aspect 'التكييف' is mentioned but not listed in the claims",
+            "aspect 'الجناح' is mentioned but not listed in the claims"
+          ],
+          "n_aspects_in_table": 15,
+          "summary": "The hotel (فندق) and its service (خدمة) are consistently praised, with all 7 and 3 mentions being positive respectively. Rooms (الغرف) are mostly criticized, with 3 negative versus 2 positive mentions. Staff (الموظفون) and reception (الاستقبال) are entirely criticized, each with 2 and 1 negative mentions. Prices (أسعار, الاسعار) show mixed sentiment: one positive and one negative mention. Breakfast (إفطار, الافطار), relaxation areas (استراحات), food (الاكل), internet (الانترنت), air conditioning (التكييف), and suite (الجناح) each have only one mention, split evenly between positive and negative sentiment.",
+          "claims": [
+            {
+              "aspect": "فندق",
+              "language": "ar",
+              "positive": 7,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الغرف",
+              "language": "ar",
+              "positive": 2,
+              "negative": 3,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الموظفون",
+              "language": "ar",
+              "positive": 0,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الاستقبال",
+              "language": "ar",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "أسعار",
+              "language": "ar",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الاسعار",
+              "language": "ar",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "إفطار",
+              "language": "ar",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "استراحات",
+              "language": "ar",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            }
+          ]
+        },
+        {
+          "passed": false,
+          "n_claims": 8,
+          "errors": [
+            "aspect 'العاملون' is mentioned but not listed in the claims",
+            "aspect 'سوق' is mentioned but not listed in the claims",
+            "aspect 'الاستقبال' is mentioned but not listed in the claims"
+          ],
+          "n_aspects_in_table": 15,
+          "summary": "The hotel (الفندق) and hotel (فندق) are mostly praised, with 5 positive and 2 negative mentions for الفندق, and 3 positive and 1 negative for فندق. Staff-related aspects — العاملين, العاملون, and الاستقبال — are all fully positive. Rooms (الغرف), service (الخدمة), beach (الشاطئ), and market (سوق) also receive only positive feedback. In contrast, food (الطعام) is mostly criticised, with 1 positive and 2 negative mentions. Television (التلفزيون) is solely criticised with 1 negative mention.",
+          "claims": [
+            {
+              "aspect": "الفندق",
+              "language": "ar",
+              "positive": 5,
+              "negative": 2,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "فندق",
+              "language": "ar",
+              "positive": 3,
+              "negative": 1,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الطعام",
+              "language": "ar",
+              "positive": 1,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "العاملين",
+              "language": "ar",
+              "positive": 3,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الغرف",
+              "language": "ar",
+              "positive": 2,
+              "negative": 1,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الخدمة",
+              "language": "ar",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الشاطئ",
+              "language": "ar",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "التلفزيون",
+              "language": "ar",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            }
+          ]
+        },
+        {
+          "passed": true,
+          "n_claims": 15,
+          "errors": [],
+          "n_aspects_in_table": 15,
+          "summary": "The hotel (فندق) is overwhelmingly praised, with all 6 mentions positive. 'الفندق' and 'إقامتي' are also mostly praised, with 2 positive and 1 negative mention for the former and 2 positive for the latter. Aspects like 'الغرف' and 'خدمه' show mixed sentiment, each with 1 positive and 1 negative mention. 'إنترنت', 'التلفاز', 'الحمامات', 'الخدمة', 'الدور', and 'السجاد' are each mentioned once and all received negative feedback. 'إطلالة', 'الأثاث', 'الافطار', and 'الحرم' are each mentioned once and all received positive feedback.",
+          "claims": [
+            {
+              "aspect": "فندق",
+              "language": "ar",
+              "positive": 6,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الفندق",
+              "language": "ar",
+              "positive": 2,
+              "negative": 1,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "إقامتي",
+              "language": "ar",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الغرف",
+              "language": "ar",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "خدمه",
+              "language": "ar",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "إنترنت",
+              "language": "ar",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "التلفاز",
+              "language": "ar",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الحمامات",
+              "language": "ar",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الخدمة",
+              "language": "ar",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الدور",
+              "language": "ar",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "السجاد",
+              "language": "ar",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "إطلالة",
+              "language": "ar",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الأثاث",
+              "language": "ar",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الافطار",
+              "language": "ar",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الحرم",
+              "language": "ar",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            }
+          ]
+        },
+        {
+          "passed": true,
+          "n_claims": 14,
+          "errors": [],
+          "n_aspects_in_table": 15,
+          "summary": "Customers mostly praised the hotel (فندق, 4 positive, 1 negative) and room-related aspects like الغرفة (3 positive, 2 negative), الموظفين (2 positive, 0 negative), موقع (2 positive, 0 negative), and إقامة (1 positive, 0 negative). In contrast, الاستقبال was consistently criticised (0 positive, 3 negative), as were المطعم (0 positive, 2 negative), غرفتي (0 positive, 2 negative), and several furniture-related aspects: اثاث, اثاثه, and اريكة (each 0 positive, 1 negative). The service (الخدمة) and غرفة showed more criticism than praise (2 negative, 1 positive each), while الفندق had mixed sentiment (1 positive, 1 negative).",
+          "claims": [
+            {
+              "aspect": "الغرفة",
+              "language": "ar",
+              "positive": 3,
+              "negative": 2,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "فندق",
+              "language": "ar",
+              "positive": 4,
+              "negative": 1,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "الاستقبال",
+              "language": "ar",
+              "positive": 0,
+              "negative": 3,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الخدمة",
+              "language": "ar",
+              "positive": 1,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "غرفة",
+              "language": "ar",
+              "positive": 1,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الفندق",
+              "language": "ar",
+              "positive": 1,
+              "negative": 1,
+              "dominant": "mixed"
+            },
+            {
+              "aspect": "المطعم",
+              "language": "ar",
+              "positive": 0,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "الموظفين",
+              "language": "ar",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "غرفتي",
+              "language": "ar",
+              "positive": 0,
+              "negative": 2,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "موقع",
+              "language": "ar",
+              "positive": 2,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "إقامة",
+              "language": "ar",
+              "positive": 1,
+              "negative": 0,
+              "dominant": "positive"
+            },
+            {
+              "aspect": "اثاث",
+              "language": "ar",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "اثاثه",
+              "language": "ar",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            },
+            {
+              "aspect": "اريكة",
+              "language": "ar",
+              "positive": 0,
+              "negative": 1,
+              "dominant": "negative"
+            }
+          ]
+        }
+      ]
+    },
+    "examples": [
+      {
+        "language": "english",
+        "summary": "The aspects 'book', 'price', 'value', 'Anthony Starke', 'DVD's', 'Italian countryside', 'Italian food', 'J. Stephen \"Rock\" Peace', and 'MS version' are all praised with no negative mentions. In contrast, 'trackpad', 'DVD Series', 'Hawthorne's style', 'LCD', and 'MP3 player' are exclusively criticized. The 'story' aspect shows mixed sentiment, with one positive and one negative mention.",
+        "check": {
+          "passed": true,
+          "n_claims": 15,
+          "errors": []
+        }
+      },
+      {
+        "language": "english",
+        "summary": "The aspect 'book' is mixed, with 3 positive and 3 negative mentions. 'Story' is consistently criticised, with 0 positive and 3 negative mentions. 'Product' and 'size' are mostly praised, with 2 positive and 1 negative, and 2 positive and 0 negative mentions respectively. 'Movie' and 'special effects' are mixed, each with 1 positive and 1 negative mention. 'A Charlie Brown Christmas', 'Christmas special', 'Emmy', 'Hester', 'PUBLISHER', and 'abuse' are all negatively mentioned once each. 'Christmas tree' and 'Eyewitness Travel' are positively mentioned once each, as is 'acting'.",
+        "check": {
+          "passed": false,
+          "n_claims": 8,
+          "errors": [
+            "aspect 'Christmas tree' is mentioned but not listed in the claims",
+            "aspect 'Emmy' is mentioned but not listed in the claims",
+            "aspect 'Eyewitness Travel' is mentioned but not listed in the claims",
+            "aspect 'Hester' is mentioned but not listed in the claims",
+            "aspect 'PUBLISHER' is mentioned but not listed in the claims",
+            "aspect 'abuse' is mentioned but not listed in the claims",
+            "aspect 'acting' is mentioned but not listed in the claims"
+          ]
+        }
+      },
+      {
+        "language": "arabic",
+        "summary": "The most frequently mentioned aspects are 'الغرف' (5 mentions, mostly negative), 'الفندق' (4 mentions, mixed sentiment), and 'غرفة' and 'فندق' (3 mentions each, both mostly negative). Several aspects received only negative feedback, including 'التكييف', 'الحمام', 'الخدمه', and 'حمام السباحة' (all 2 mentions, 0 positive, 2 negative). 'المسبح' and 'الموقع' showed mixed sentiment (2 mentions each, 1 positive, 1 negative). Positive-only feedback appeared for 'استقبال', 'اقامة', and 'الإقامة' (1 mention each, all positive).",
+        "check": {
+          "passed": true,
+          "n_claims": 13,
+          "errors": []
+        }
+      },
+      {
+        "language": "arabic",
+        "summary": "The most frequently mentioned aspects are 'الغرف' (6 mentions, mostly positive), 'الفندق' (5 mentions, mostly positive), and 'فندق' (4 mentions, mostly positive). 'الموقع' and 'موقع' are also positively viewed, with 3 and 2 mentions respectively. Mixed sentiment appears for 'تلفزيون' and 'خدمة', each with 1 positive and 1 negative mention. Criticism is limited to low-frequency aspects: 'أثاث الفندق', 'الحمام', and 'الخدمة' each have 1 negative mention and no positive ones.",
+        "check": {
+          "passed": true,
+          "n_claims": 10,
+          "errors": []
+        }
+      }
+    ]
+  },
+  "paper": {}
+}

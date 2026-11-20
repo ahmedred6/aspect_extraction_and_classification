@@ -1,0 +1,530 @@
+{
+  "experiment": "e13_summarizer_grounding",
+  "run_at": "2026-11-20T22:02:41",
+  "python": "3.10.11",
+  "sklearn": "1.6.1",
+  "results": {
+    "model": "qwen-plus",
+    "batches_per_language": 25,
+    "reviews_per_batch": 30,
+    "english": {
+      "n_reviews_available": 6353,
+      "passed": 13,
+      "total": 25,
+      "pass_rate": 0.52,
+      "error_types": {
+        "unsupported number": 10,
+        "mentioned but not claimed": 59
+      },
+      "mean_claims": 12.36,
+      "runs": [
+        {
+          "passed": false,
+          "n_claims": 15,
+          "errors": [
+            "number in summary not found in the statistics: 3"
+          ],
+          "n_aspects_in_table": 15
+        },
+        {
+          "passed": true,
+          "n_claims": 15,
+          "errors": [],
+          "n_aspects_in_table": 15
+        },
+        {
+          "passed": true,
+          "n_claims": 15,
+          "errors": [],
+          "n_aspects_in_table": 15
+        },
+        {
+          "passed": false,
+          "n_claims": 12,
+          "errors": [
+            "aspect 'Hamburger Helper' is mentioned but not listed in the claims",
+            "aspect 'Mouse Cable' is mentioned but not listed in the claims",
+            "aspect 'Setting' is mentioned but not listed in the claims"
+          ],
+          "n_aspects_in_table": 15
+        },
+        {
+          "passed": true,
+          "n_claims": 15,
+          "errors": [],
+          "n_aspects_in_table": 15
+        },
+        {
+          "passed": true,
+          "n_claims": 15,
+          "errors": [],
+          "n_aspects_in_table": 15
+        },
+        {
+          "passed": false,
+          "n_claims": 15,
+          "errors": [
+            "number in summary not found in the statistics: 3",
+            "number in summary not found in the statistics: 715"
+          ],
+          "n_aspects_in_table": 15
+        },
+        {
+          "passed": false,
+          "n_claims": 6,
+          "errors": [
+            "aspect 'American literature' is mentioned but not listed in the claims",
+            "aspect 'Civil War Battlefield Preservation' is mentioned but not listed in the claims",
+            "aspect 'Civil War CDs' is mentioned but not listed in the claims",
+            "aspect 'Educational Projects' is mentioned but not listed in the claims",
+            "aspect 'OS' is mentioned but not listed in the claims",
+            "aspect \"Theraou's book Walden\" is mentioned but not listed in the claims",
+            "aspect 'USB power' is mentioned but not listed in the claims",
+            "aspect 'agricultural considerations' is mentioned but not listed in the claims",
+            "aspect 'ancient traditions and contemporary creativity' is mentioned but not listed in the claims"
+          ],
+          "n_aspects_in_table": 15
+        },
+        {
+          "passed": false,
+          "n_claims": 6,
+          "errors": [
+            "aspect 'Armand Assante' is mentioned but not listed in the claims",
+            "aspect \"Athena's portrayal\" is mentioned but not listed in the claims",
+            "aspect 'CD burners' is mentioned but not listed in the claims",
+            "aspect 'Christian legacy' is mentioned but not listed in the claims",
+            "aspect 'Claber' is mentioned but not listed in the claims",
+            "aspect 'Ray Padula Time It Deluxe Water Timer' is mentioned but not listed in the claims",
+            "aspect 'Ray Padula deluxe water timer' is mentioned but not listed in the claims",
+            "aspect 'Sci-Fi' is mentioned but not listed in the claims",
+            "aspect 'Sizes' is mentioned but not listed in the claims"
+          ],
+          "n_aspects_in_table": 15
+        },
+        {
+          "passed": true,
+          "n_claims": 15,
+          "errors": [],
+          "n_aspects_in_table": 15
+        },
+        {
+          "passed": true,
+          "n_claims": 15,
+          "errors": [],
+          "n_aspects_in_table": 15
+        },
+        {
+          "passed": false,
+          "n_claims": 6,
+          "errors": [
+            "aspect 'Amazons customer service' is mentioned but not listed in the claims",
+            "aspect 'DGK cards' is mentioned but not listed in the claims",
+            "aspect 'Digital Grey Kard' is mentioned but not listed in the claims",
+            "aspect 'EarGels' is mentioned but not listed in the claims",
+            "aspect 'Jawbone headset' is mentioned but not listed in the claims",
+            "aspect 'Jobst UltraSheer' is mentioned but not listed in the claims",
+            "aspect 'Jobst adhesive' is mentioned but not listed in the claims",
+            "aspect 'POW camps' is mentioned but not listed in the claims",
+            "aspect 'Sony 4Pin to 4Pin Digital Video cable' is mentioned but not listed in the claims"
+          ],
+          "n_aspects_in_table": 15
+        },
+        {
+          "passed": true,
+          "n_claims": 15,
+          "errors": [],
+          "n_aspects_in_table": 15
+        },
+        {
+          "passed": false,
+          "n_claims": 15,
+          "errors": [
+            "number in summary not found in the statistics: 1394"
+          ],
+          "n_aspects_in_table": 15
+        },
+        {
+          "passed": false,
+          "n_claims": 5,
+          "errors": [
+            "number in summary not found in the statistics: 4",
+            "aspect 'AA batteries' is mentioned but not listed in the claims",
+            "aspect 'Amsterdam concert' is mentioned but not listed in the claims",
+            "aspect 'Boots up' is mentioned but not listed in the claims",
+            "aspect 'Macally PS-AC4 Power Adapter' is mentioned but not listed in the claims",
+            "aspect 'PUBLISHER' is mentioned but not listed in the claims",
+            "aspect 'Penguin cloth covered books' is mentioned but not listed in the claims",
+            "aspect 'amateur boxing' is mentioned but not listed in the claims"
+          ],
+          "n_aspects_in_table": 15
+        },
+        {
+          "passed": true,
+          "n_claims": 15,
+          "errors": [],
+          "n_aspects_in_table": 15
+        },
+        {
+          "passed": true,
+          "n_claims": 15,
+          "errors": [],
+          "n_aspects_in_table": 15
+        },
+        {
+          "passed": false,
+          "n_claims": 3,
+          "errors": [
+            "number in summary not found in the statistics: 1000",
+            "aspect \"'With the lights out box'\" is mentioned but not listed in the claims",
+            "aspect 'Disney advertising' is mentioned but not listed in the claims",
+            "aspect 'Eight Crazy Nights' is mentioned but not listed in the claims",
+            "aspect 'Footnotes' is mentioned but not listed in the claims",
+            "aspect 'HP product' is mentioned but not listed in the claims",
+            "aspect 'OS X' is mentioned but not listed in the claims",
+            "aspect 'P1000' is mentioned but not listed in the claims",
+            "aspect 'USB cable' is mentioned but not listed in the claims",
+            "aspect 'air mattress' is mentioned but not listed in the claims",
+            "aspect 'airbeds' is mentioned but not listed in the claims",
+            "aspect 'album' is mentioned but not listed in the claims",
+            "aspect 'band' is mentioned but not listed in the claims"
+          ],
+          "n_aspects_in_table": 15
+        },
+        {
+          "passed": true,
+          "n_claims": 15,
+          "errors": [],
+          "n_aspects_in_table": 15
+        },
+        {
+          "passed": false,
+          "n_claims": 15,
+          "errors": [
+            "number in summary not found in the statistics: 256",
+            "number in summary not found in the statistics: 450",
+            "number in summary not found in the statistics: 960"
+          ],
+          "n_aspects_in_table": 15
+        },
+        {
+          "passed": false,
+          "n_claims": 15,
+          "errors": [
+            "number in summary not found in the statistics: 12"
+          ],
+          "n_aspects_in_table": 15
+        },
+        {
+          "passed": true,
+          "n_claims": 11,
+          "errors": [],
+          "n_aspects_in_table": 15
+        },
+        {
+          "passed": false,
+          "n_claims": 5,
+          "errors": [
+            "aspect '3D computer animation' is mentioned but not listed in the claims",
+            "aspect 'Apple power supply' is mentioned but not listed in the claims",
+            "aspect 'Cartoons' is mentioned but not listed in the claims",
+            "aspect 'Christmas video' is mentioned but not listed in the claims",
+            "aspect 'Eight Crazy Nights' is mentioned but not listed in the claims",
+            "aspect 'Gainsbourg' is mentioned but not listed in the claims",
+            "aspect 'GarageBand' is mentioned but not listed in the claims",
+            "aspect 'Hand Bookbinding: A Manual Of Instruction by Aldren Watson' is mentioned but not listed in the claims",
+            "aspect 'Macally' is mentioned but not listed in the claims",
+            "aspect 'Night World books' is mentioned but not listed in the claims"
+          ],
+          "n_aspects_in_table": 15
+        },
+        {
+          "passed": true,
+          "n_claims": 15,
+          "errors": [],
+          "n_aspects_in_table": 15
+        },
+        {
+          "passed": true,
+          "n_claims": 15,
+          "errors": [],
+          "n_aspects_in_table": 15
+        }
+      ]
+    },
+    "arabic": {
+      "n_reviews_available": 4330,
+      "passed": 12,
+      "total": 25,
+      "pass_rate": 0.48,
+      "error_types": {
+        "mentioned but not claimed": 52,
+        "invented aspect": 1
+      },
+      "mean_claims": 11.36,
+      "runs": [
+        {
+          "passed": true,
+          "n_claims": 12,
+          "errors": [],
+          "n_aspects_in_table": 15
+        },
+        {
+          "passed": false,
+          "n_claims": 11,
+          "errors": [
+            "aspect 'أسعار' is mentioned but not listed in the claims",
+            "aspect 'الاقامه' is mentioned but not listed in the claims",
+            "aspect 'الديكورات' is mentioned but not listed in the claims",
+            "aspect 'الراحة' is mentioned but not listed in the claims"
+          ],
+          "n_aspects_in_table": 15
+        },
+        {
+          "passed": false,
+          "n_claims": 14,
+          "errors": [
+            "aspect 'الفندق' is mentioned but not listed in the claims"
+          ],
+          "n_aspects_in_table": 15
+        },
+        {
+          "passed": false,
+          "n_claims": 6,
+          "errors": [
+            "aspect 'الغرفة' is mentioned but not listed in the claims",
+            "aspect 'غرف' is mentioned but not listed in the claims",
+            "aspect 'فندق' is mentioned but not listed in the claims",
+            "aspect 'الاسعار' is mentioned but not listed in the claims"
+          ],
+          "n_aspects_in_table": 15
+        },
+        {
+          "passed": true,
+          "n_claims": 14,
+          "errors": [],
+          "n_aspects_in_table": 15
+        },
+        {
+          "passed": true,
+          "n_claims": 15,
+          "errors": [],
+          "n_aspects_in_table": 15
+        },
+        {
+          "passed": false,
+          "n_claims": 7,
+          "errors": [
+            "aspect 'غرف' is mentioned but not listed in the claims",
+            "aspect 'اطلالة' is mentioned but not listed in the claims",
+            "aspect 'الافطار' is mentioned but not listed in the claims",
+            "aspect 'الاقامة' is mentioned but not listed in the claims",
+            "aspect 'الحرم والكعبه المشرفة' is mentioned but not listed in the claims",
+            "aspect 'الخدمة' is mentioned but not listed in the claims"
+          ],
+          "n_aspects_in_table": 15
+        },
+        {
+          "passed": false,
+          "n_claims": 10,
+          "errors": [
+            "aspect 'اقامة' is mentioned but not listed in the claims",
+            "aspect 'الأسرة' is mentioned but not listed in the claims",
+            "aspect 'الأسرّة' is mentioned but not listed in the claims",
+            "aspect 'الاتوبيسات' is mentioned but not listed in the claims",
+            "aspect 'الاستقبال' is mentioned but not listed in the claims"
+          ],
+          "n_aspects_in_table": 15
+        },
+        {
+          "passed": false,
+          "n_claims": 12,
+          "errors": [
+            "aspect 'إفطار' is mentioned but not listed in the claims",
+            "aspect 'الأكل' is mentioned but not listed in the claims",
+            "aspect 'البار' is mentioned but not listed in the claims"
+          ],
+          "n_aspects_in_table": 15
+        },
+        {
+          "passed": true,
+          "n_claims": 14,
+          "errors": [],
+          "n_aspects_in_table": 15
+        },
+        {
+          "passed": true,
+          "n_claims": 15,
+          "errors": [],
+          "n_aspects_in_table": 15
+        },
+        {
+          "passed": false,
+          "n_claims": 11,
+          "errors": [
+            "aspect 'الإفطار' is mentioned but not listed in the claims",
+            "aspect 'الاثاث' is mentioned but not listed in the claims"
+          ],
+          "n_aspects_in_table": 15
+        },
+        {
+          "passed": true,
+          "n_claims": 15,
+          "errors": [],
+          "n_aspects_in_table": 15
+        },
+        {
+          "passed": true,
+          "n_claims": 13,
+          "errors": [],
+          "n_aspects_in_table": 15
+        },
+        {
+          "passed": false,
+          "n_claims": 13,
+          "errors": [
+            "aspect not in the statistics: 'الإنترنت'"
+          ],
+          "n_aspects_in_table": 15
+        },
+        {
+          "passed": false,
+          "n_claims": 14,
+          "errors": [
+            "aspect 'الموظفين' is mentioned but not listed in the claims"
+          ],
+          "n_aspects_in_table": 15
+        },
+        {
+          "passed": true,
+          "n_claims": 14,
+          "errors": [],
+          "n_aspects_in_table": 15
+        },
+        {
+          "passed": true,
+          "n_claims": 12,
+          "errors": [],
+          "n_aspects_in_table": 15
+        },
+        {
+          "passed": false,
+          "n_claims": 4,
+          "errors": [
+            "aspect 'العاملين' is mentioned but not listed in the claims",
+            "aspect 'طعام' is mentioned but not listed in the claims",
+            "aspect 'إفطار' is mentioned but not listed in the claims",
+            "aspect 'الأسعار' is mentioned but not listed in the claims",
+            "aspect 'الانترنت' is mentioned but not listed in the claims",
+            "aspect 'البحر' is mentioned but not listed in the claims"
+          ],
+          "n_aspects_in_table": 15
+        },
+        {
+          "passed": false,
+          "n_claims": 3,
+          "errors": [
+            "aspect 'الاستقبال' is mentioned but not listed in the claims",
+            "aspect 'الفندق' is mentioned but not listed in the claims",
+            "aspect 'المكان' is mentioned but not listed in the claims",
+            "aspect 'ادارة الفندق' is mentioned but not listed in the claims",
+            "aspect 'اطقم السرير' is mentioned but not listed in the claims",
+            "aspect 'اطلاله' is mentioned but not listed in the claims",
+            "aspect 'الأسرة' is mentioned but not listed in the claims",
+            "aspect 'الأسلوب' is mentioned but not listed in the claims",
+            "aspect 'الارضيات' is mentioned but not listed in the claims",
+            "aspect 'الاستجمام' is mentioned but not listed in the claims",
+            "aspect 'الاسترخاء' is mentioned but not listed in the claims",
+            "aspect 'الاقامة' is mentioned but not listed in the claims"
+          ],
+          "n_aspects_in_table": 15
+        },
+        {
+          "passed": true,
+          "n_claims": 11,
+          "errors": [],
+          "n_aspects_in_table": 15
+        },
+        {
+          "passed": true,
+          "n_claims": 14,
+          "errors": [],
+          "n_aspects_in_table": 15
+        },
+        {
+          "passed": false,
+          "n_claims": 7,
+          "errors": [
+            "aspect 'العاملون' is mentioned but not listed in the claims",
+            "aspect 'الاستقبال' is mentioned but not listed in the claims"
+          ],
+          "n_aspects_in_table": 15
+        },
+        {
+          "passed": false,
+          "n_claims": 8,
+          "errors": [
+            "aspect 'إطلالة' is mentioned but not listed in the claims",
+            "aspect 'إقامتي' is mentioned but not listed in the claims",
+            "aspect 'اقامتي' is mentioned but not listed in the claims",
+            "aspect 'الأثاث' is mentioned but not listed in the claims",
+            "aspect 'الافطار' is mentioned but not listed in the claims",
+            "aspect 'الحرم' is mentioned but not listed in the claims"
+          ],
+          "n_aspects_in_table": 15
+        },
+        {
+          "passed": true,
+          "n_claims": 15,
+          "errors": [],
+          "n_aspects_in_table": 15
+        }
+      ]
+    },
+    "examples": [
+      {
+        "language": "english",
+        "summary": "The aspects 'book', 'price', 'value', 'Anthony Starke', 'DVD's', 'Italian countryside', 'Italian food', 'J. Stephen \"Rock\" Peace', and 'MS version' are all praised with no negative mentions. In contrast, 'trackpad', 'DVD Series', 'Hawthorne's style', 'LCD', and 'MP3 player' are exclusively criticised. The 'story' aspect shows mixed sentiment, with one positive and one negative review.",
+        "check": {
+          "passed": false,
+          "n_claims": 15,
+          "errors": [
+            "number in summary not found in the statistics: 3"
+          ]
+        }
+      },
+      {
+        "language": "english",
+        "summary": "The aspect 'book' is mixed, with 3 positive and 3 negative mentions. 'Product' and 'size' are mostly praised, with 2 positive and 1 negative, and 2 positive and 0 negative mentions respectively. 'Story', 'A Charlie Brown Christmas', 'Christmas special', 'Emmy', 'Hester', 'PUBLISHER', and 'abuse' are all criticised, each having 0 positive and 1 or 3 negative mentions. 'Movie' and 'special effects' are mixed, each with 1 positive and 1 negative mention. 'Christmas tree', 'Eyewitness Travel', and 'acting' are praised, each with 1 positive and 0 negative mentions.",
+        "check": {
+          "passed": true,
+          "n_claims": 15,
+          "errors": []
+        }
+      },
+      {
+        "language": "arabic",
+        "summary": "The most frequently criticized aspects are الغرف, غرفة, فندق, التكييف, الحمام, and حمام السباحة, all with more negative than positive mentions. المسبح and الموقع show mixed sentiment, with equal positive and negative reviews. A few aspects—استقبال، اقامة، الإقامة، and الاكل—are exclusively praised, each with one positive and zero negative mentions.",
+        "check": {
+          "passed": true,
+          "n_claims": 12,
+          "errors": []
+        }
+      },
+      {
+        "language": "arabic",
+        "summary": "Most aspects received predominantly positive feedback, including الغرف (4 positive, 2 negative), الفندق (3 positive, 2 negative), فندق (3 positive, 1 negative), الموقع (2 positive, 1 negative), موقع (2 positive, 0 negative), آسرة (1 positive), أسعار (1 positive), الاقامه (1 positive), الديكورات (1 positive), and الراحة (1 positive). Two aspects—تلفزيون and خدمة—had mixed sentiment with 1 positive and 1 negative mention each. A few aspects were criticised: أثاث الفندق (0 positive, 1 negative), الحمام (0 positive, 1 negative), and الخدمة (0 positive, 1 negative).",
+        "check": {
+          "passed": false,
+          "n_claims": 11,
+          "errors": [
+            "aspect 'أسعار' is mentioned but not listed in the claims",
+            "aspect 'الاقامه' is mentioned but not listed in the claims",
+            "aspect 'الديكورات' is mentioned but not listed in the claims",
+            "aspect 'الراحة' is mentioned but not listed in the claims"
+          ]
+        }
+      }
+    ]
+  },
+  "paper": {}
+}

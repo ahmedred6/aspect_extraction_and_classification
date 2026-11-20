@@ -96,6 +96,18 @@ def run():
     out = summarize(DEMO_RESULTS, llm=lambda m: fenced)
     expect("JSON inside ``` fences is accepted", out["check"]["passed"])
 
+    mp3 = [{"language": "en", "absa": {"aspects": [{"term": "MP3 player", "polarity": "negative"},
+                                                    {"term": "P1000", "polarity": "positive"}]}}]
+    out = summarize(mp3, llm=fake_llm("The MP3 player is criticised and the P1000 is praised.", [
+        {"aspect": "MP3 player", "language": "en", "positive": 0, "negative": 1, "dominant": "negative"},
+        {"aspect": "P1000", "language": "en", "positive": 1, "negative": 0, "dominant": "positive"}]))
+    expect("digits inside aspect names are not read as numbers", out["check"]["passed"])
+
+    internet = [{"language": "ar", "absa": {"aspects": [{"term": "الانترنت", "polarity": "negative"}]}}]
+    out = summarize(internet, llm=fake_llm("الإنترنت is criticised.", [
+        {"aspect": "الإنترنت", "language": "ar", "positive": 0, "negative": 1, "dominant": "negative"}]))
+    expect("Arabic spelling variants match (الإنترنت = الانترنت)", out["check"]["passed"])
+
     out = summarize([{"language": "en", "absa": {"aspects": []}}], llm=lambda m: 1 / 0)
     expect("no aspects: no LLM call, clear message", "No aspects" in out["summary"])
 
