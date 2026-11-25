@@ -8,13 +8,13 @@ from sklearn.tree import DecisionTreeClassifier
 from sklearn.linear_model import LogisticRegression
 from sklearn.ensemble import VotingClassifier
 from sklearn.preprocessing import LabelEncoder
-from sklearn.model_selection import StratifiedKFold, cross_val_score
+from sklearn.model_selection import GridSearchCV, StratifiedKFold, cross_val_score
 from sklearn.metrics import classification_report, confusion_matrix, ConfusionMatrixDisplay, accuracy_score
 
 # ==========================================
 # CONFIGURATION
 # ==========================================
-DATASET_FILE = "data/raw/router_dataset.csv"  # not in the repo yet: get it from the team
+DATASET_FILE = "data/raw/router_dataset.csv"  # from Maya (2026-11-23); kept out of git, ask the authors
 MODEL_DIR    = "models/router"
 
 def load_data(filepath):
@@ -54,29 +54,44 @@ def run_fast_training():
     le = LabelEncoder()
     y = le.fit_transform(df['label']) # 0=DIALECT, 1=MSA
 
-    # 3. Define Models (No XGBoost)
-    print("\n>>> 3. COMPARING MODELS (Stratified CV)...")
-    
+    cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
+
+    # 3. Tune each candidate by Grid Search with stratified 5-fold CV (C for LR, max_depth for DT)
+    print("\n>>> 3. TUNING (Grid Search, Stratified 5-fold CV)...")
+    grids = {
+        "Logistic Regression": (LogisticRegression(class_weight='balanced', max_iter=1000),
+                                {"C": [0.01, 0.1, 0.5, 1, 2, 5, 10]}),
+        "Decision Tree": (DecisionTreeClassifier(class_weight='balanced', random_state=42),
+                          {"max_depth": [5, 10, 20, 30, 50, None]}),
+    }
+    best_params = {}
+    for name, (est, grid) in grids.items():
+        gs = GridSearchCV(est, grid, cv=cv, scoring='accuracy', n_jobs=-1).fit(X, y)
+        best_params[name] = gs.best_params_
+        print(f"   > {name}: best {gs.best_params_} ({gs.best_score_:.2%})")
+
+    lr_params, dt_params = best_params["Logistic Regression"], best_params["Decision Tree"]
     models = {
-        "Logistic Regression": LogisticRegression(class_weight='balanced', max_iter=1000),
-        "Decision Tree": DecisionTreeClassifier(class_weight='balanced', max_depth=20),
+        "Logistic Regression": LogisticRegression(class_weight='balanced', max_iter=1000, **lr_params),
+        "Decision Tree": DecisionTreeClassifier(class_weight='balanced', random_state=42, **dt_params),
         "Ensemble (LR + DT)": VotingClassifier(
             estimators=[
-                ('lr', LogisticRegression(class_weight='balanced', max_iter=1000)),
-                ('dt', DecisionTreeClassifier(class_weight='balanced', max_depth=20))
+                ('lr', LogisticRegression(class_weight='balanced', max_iter=1000, **lr_params)),
+                ('dt', DecisionTreeClassifier(class_weight='balanced', random_state=42, **dt_params))
             ], voting='soft'
         )
     }
 
-    # 4. The Race
-    cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=42)
+    # 4. The Race (tuned models, same folds)
+    print("\n>>> 4. COMPARING TUNED MODELS (Stratified CV)...")
     results = {}
-    
+
     for name, model in models.items():
         print(f"   Running {name}...", end="\r")
         scores = cross_val_score(model, X, y, cv=cv, scoring='accuracy', n_jobs=-1)
         results[name] = scores.mean()
-        print(f"   > {name}: {scores.mean():.2%} (+/- {scores.std()*2:.2%})")
+        fit = accuracy_score(y, model.fit(X, y).predict(X))
+        print(f"   > {name}: {scores.mean():.2%} (+/- {scores.std()*2:.2%}) | training fit {fit:.2%}")
 
     # 5. Pick Winner
     best_name = max(results, key=results.get)
@@ -84,7 +99,7 @@ def run_fast_training():
     print(f"\n>>> WINNER: {best_name} ({results[best_name]:.2%})")
 
     # 6. Final Train & Save
-    print(f">>> 4. TRAINING FINAL MODEL ({best_name})...")
+    print(f">>> 5. TRAINING FINAL MODEL ({best_name})...")
     best_model.fit(X, y)
     
     if not os.path.exists(MODEL_DIR): os.makedirs(MODEL_DIR)

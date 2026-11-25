@@ -1,6 +1,6 @@
 {
   "experiment": "r08_router",
-  "run_at": "2026-11-23T22:24:33",
+  "run_at": "2026-11-25T19:46:22",
   "python": "3.10.11",
   "sklearn": "1.6.1",
   "results": {
@@ -14,7 +14,7 @@
         2113
       ]
     ],
-    "scratch_model_dir": "C:\\Users\\ahmed\\AppData\\Local\\Temp\\r08_router_omvk6pig"
+    "scratch_model_dir": "C:\\Users\\ahmed\\AppData\\Local\\Temp\\r08_router_e40cf1b6"
   },
   "paper": {
     "cv_accuracy_LR": 0.8392,
