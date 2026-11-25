@@ -88,7 +88,7 @@ def chat(messages, max_tokens, key, retries=4):
             if e.code == 400:
                 raise Rejected(msg[:300])
             raise
-        except (urllib.error.URLError, TimeoutError):
+        except (urllib.error.URLError, TimeoutError, ConnectionError, OSError):  # incl. RemoteDisconnected
             if attempt < retries - 1:
                 time.sleep(5 * (attempt + 1)); continue
             raise

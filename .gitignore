@@ -29,3 +29,6 @@ experiments/reviewer_revision/logs/
 
 # ---------------- local scraping / labeling state ----------------
 amazon_cookies.pkl
+
+# Router dataset from Maya (2026-11-23): kept local until the authors decide whether to publish it
+data/raw/router_dataset.csv

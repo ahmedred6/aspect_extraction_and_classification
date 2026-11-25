@@ -1,0 +1,96 @@
+{
+  "experiment": "e14_router_heldout",
+  "run_at": "2026-11-24T08:27:33",
+  "python": "3.10.11",
+  "sklearn": "1.6.1",
+  "results": {
+    "heldout": {
+      "train_cv5_accuracy_mean": 0.8408371001086232,
+      "train_cv5_accuracy_std": 0.008915873333288851,
+      "test_accuracy": 0.8326271186440678,
+      "test_macro_f1": 0.8326271186440678,
+      "per_class": {
+        "DIALECT": {
+          "precision": 0.8326271186440678,
+          "recall": 0.8326271186440678,
+          "f1-score": 0.8326271186440678,
+          "support": 472.0
+        },
+        "MSA": {
+          "precision": 0.8326271186440678,
+          "recall": 0.8326271186440678,
+          "f1-score": 0.8326271186440678,
+          "support": 472.0
+        }
+      },
+      "confusion_matrix_rows_true_DIALECT_MSA": [
+        [
+          393,
+          79
+        ],
+        [
+          79,
+          393
+        ]
+      ]
+    },
+    "topic_check": {
+      "domain_counts": {
+        "BOOK": 2840,
+        "HOTEL": 1587,
+        "OTHER": 293
+      },
+      "label_by_domain": {
+        "DIALECT": {
+          "BOOK": 836,
+          "HOTEL": 1366,
+          "OTHER": 158
+        },
+        "MSA": {
+          "BOOK": 2004,
+          "HOTEL": 221,
+          "OTHER": 135
+        }
+      },
+      "domain_majority_label": {
+        "BOOK": "MSA",
+        "HOTEL": "DIALECT",
+        "OTHER": "DIALECT"
+      },
+      "domain_only_baseline_test_accuracy": 0.7447033898305084,
+      "router_within_domain": {
+        "BOOK": {
+          "n_test": 553,
+          "label_counts": {
+            "MSA": 392,
+            "DIALECT": 161
+          },
+          "router_accuracy": 0.8372513562386981,
+          "router_macro_f1": 0.7858138814294567
+        },
+        "HOTEL": {
+          "n_test": 329,
+          "label_counts": {
+            "DIALECT": 274,
+            "MSA": 55
+          },
+          "router_accuracy": 0.8358662613981763,
+          "router_macro_f1": 0.5453009828009828
+        },
+        "OTHER": {
+          "n_test": 62,
+          "label_counts": {
+            "DIALECT": 37,
+            "MSA": 25
+          },
+          "router_accuracy": 0.7741935483870968,
+          "router_macro_f1": 0.7703703703703704
+        }
+      }
+    }
+  },
+  "paper": {
+    "cv_accuracy": 0.8392,
+    "training_fit": 0.8858
+  }
+}

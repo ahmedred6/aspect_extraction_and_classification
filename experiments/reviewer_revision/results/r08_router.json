@@ -1,0 +1,31 @@
+{
+  "experiment": "r08_router",
+  "run_at": "2026-11-23T22:24:33",
+  "python": "3.10.11",
+  "sklearn": "1.6.1",
+  "results": {
+    "confusion_matrix": [
+      [
+        2068,
+        292
+      ],
+      [
+        247,
+        2113
+      ]
+    ],
+    "scratch_model_dir": "C:\\Users\\ahmed\\AppData\\Local\\Temp\\r08_router_omvk6pig"
+  },
+  "paper": {
+    "cv_accuracy_LR": 0.8392,
+    "cv_accuracy_ensemble": 0.7328,
+    "cv_accuracy_DT": 0.7271,
+    "training_fit_LR": 0.8858,
+    "fig2": {
+      "dialect_correct": 2068,
+      "msa_correct": 2113,
+      "msa_as_dialect": 247,
+      "dialect_as_msa": 292
+    }
+  }
+}

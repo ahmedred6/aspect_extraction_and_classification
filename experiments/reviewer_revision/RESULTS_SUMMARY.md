@@ -38,6 +38,8 @@ Environment: Python 3.10.11, scikit-learn 1.6.1, imbalanced-learn 0.13.0. Seed 4
 | D26 | 2026-11-20 | **Add the same-CPU transformer comparison (e12) to the latency section.** Table 15 unchanged. Add a short paragraph and table in §6.7: on one machine (Ryzen 7 7445HS), same reviews and same aspects, ABSA stages only: ours 5.6 / 5.5 ms per review (EN / AR) vs DistilBERT 114 ms (1 thread) / 63 ms (12 threads), BERT-base 231 / 120 ms, AraBERT 310 / 212 ms, i.e. 11-56x slower; latency only (transformer heads not fine-tuned). Replaces the removed published-figure comparison (D5) with one measured under comparable conditions. Update the SOTA table's English span F1 to 69.3 and add the Arabic span F1 62.2 (D21) | §6.7, Table 10 |
 | D27 | 2026-11-20 | **Evaluate the guided summarizer's grounding: protocol fixed before running, script `e13_summarizer_grounding.py`.** Input: real reviews with their **gold** aspect labels (so extraction errors do not mix in): English from `amazon_absa_gpt41_labeled.jsonl`, Arabic from SemEval-2016 hotels (`NULL` aspects dropped; positive / negative only, as in the binary pipeline). 25 batches per language, each of 30 random reviews with at least one aspect (seed 42). Each batch goes through `summarizer.py` unchanged: aggregation, Qwen `qwen-plus` at temperature 0, consistency check. Report: share of summaries passing the check; count and type of errors (invented aspect, wrong count, flipped sentiment, unsupported number, mentioned-but-unclaimed aspect, invalid JSON). Whatever comes out is reported; it decides how the paper words the hallucination claims (D17b). *Amendment (2026-11-20, after run 1, approved by the author):* run 1 is kept and reported; run 2 uses a corrected checker (digits inside aspect names, e.g. "MP3 player", are not read as numbers; Arabic aspect names are matched after orthographic normalization) and a tightened prompt (at most 8 aspects; every aspect named must be listed in the claims), with full summaries saved. Same batches, same model and temperature. Both runs are reported | §3.5, §7 |
 | D28 | 2026-11-20 | **Remove the hallucination claims about our summarizer (professor: "Do not claim hallucination reduction without evaluation"); e13 stays in the records only.** Applied to `main.tex`: §3.5 *"By grounding the generative output in structured statistical data, this approach mitigates the hallucination and factual drift commonly observed in unguided abstractive summarization"* → *"The summary is generated from these aggregated statistics only, not from the raw review text"*; Conclusion *"while preserving factual grounding in the extracted aspect-sentiment distributions"* → *"based solely on the extracted aspect-sentiment distributions"*. The literature sentence in §2 (other work, cited) is unchanged; its citation [Tang 2024] is a placeholder for the Literature owner. Supersedes the open wording question in D17b | §3.5, Conclusion |
+| D29 | 2026-11-23 | **Smart Router held-out test and topic check (Hamzah's point #1): protocol fixed before running, script `e14_router_heldout.py`.** Data: Maya's `router_dataset.csv` (verified by r08). (1) **Held-out test:** same label filtering and class balancing as `train_router.py` (downsample DIALECT to 2,360, seed 42); stratified 80/20 split (seed 42) **before** any fitting; Pipeline(char_wb TF-IDF 3-5-grams, 10k features + LogisticRegression(class_weight="balanced", max_iter=1000)), the paper's winning configuration, untuned; 5-fold stratified CV on the training split only; fit on the training split, test set scored once: accuracy, macro-F1, per-class precision / recall, confusion matrix. (2) **Topic check:** each review's domain (BOOK = LABR, HOTEL = HARD, OTHER) labelled zero-shot by Qwen `qwen-plus` (temperature 0, 20 per call, cached). Report: label distribution per domain; accuracy of a domain-only baseline (predict the majority label of each domain, fit on train, scored on test); router test accuracy **within** each domain. If the router is clearly above the domain-only baseline and accurate within each domain, it is learning dialect, not topic. Whatever comes out is reported | §6.2, §4.2 |
+| D30 | 2026-11-24 | **Report the router held-out test and the topic confound (e14, option a). Applied to `main.tex`.** §6 router paragraph: added *"To obtain a true test estimate, the same configuration was retrained on a stratified 80% split and evaluated once on the remaining 944 reviews, reaching 83.3% accuracy (macro F1 0.833), consistent with the cross-validation estimate."* Table 2 and the 88.6% / 83.92% figures unchanged. §7.4 Limitations, first limitation extended (still four limitations, as the professor asked): LLM labels **and** dialect confounded with topic (hotels mostly dialect, books mostly MSA), so the router partly relies on topic (held-out: 11% of MSA hotel reviews and 60% of dialectal book reviews recognized). Future work: human-validated, domain-balanced router data. Open for Maya: §6 says the router models were compared "using Grid Search", but `train_router.py` uses fixed settings with plain 5-fold CV | §6.2, §7.4, §8 |
 **Applied to the paper (2026-11-20):** D21, D22, D24 and D26 were applied to `paper_latex/main.tex` (§3.3, §3.4 stacking wording; §6.3, §6.4 exact-span; §6.5 text and Table 6; §6.6 normalization paragraph; §6.7 new Table 10; Table 11 SOTA rows; §7.1 and §7.3 discussion). Consequence of D21 in §7.1: the Arabic comparison now reads that the Bi-LSTM-CRF (69.98, most likely exact-span) is ahead of our exact-span F1 (62.2), replacing "of a similar order to our token-level scores". Paper now 20 pages. **D12-D16 applied 2026-11-22** (§3.2, §3.3, §3.4, §5.2; D12 §5.1 list corrected 2026-11-22: Alef Maqsura added, digit conversion removed, stopwords only for English general polarity, TF-IDF vocabularies capped; D15 detector left generic: "script-based language check").
 
 **Applied to the paper (2026-11-14):** §6 Results and §7 Discussion of `paper_latex/main.tex` were rewritten applying D1–D10 (Results 440 → 252 lines incl. Discussion, ~43% shorter; paper 24 → 19 pages). Highlighted diff: `paper_latex/main_diff.pdf`.
@@ -337,3 +339,42 @@ Results in `results/e13_summarizer_grounding_run2.json` (full summaries and clai
 | Aspect mentioned in the text but missing from the claims | 82 | 77 |
 
 **Reading (finding, not a decision):** all 544 verified claims match the statistics exactly, and the corrected checker finds no unsupported number and no invented aspect in 50 summaries. But Qwen does not follow the "at most 8 aspects" rule: it names about 10-15 aspects and lists only part of them as claims, so about half of the summaries contain mentions the check cannot verify. Manual reading of one Arabic summary found two problems outside the check's scope: an incorrect English gloss (فندق rendered as "hotel management") and one aspect placed in two sentiment groups. Pass rate 48% under the strict rule. The paper cannot claim that summaries are free of hallucination; it can claim that every count and sentiment the check could verify (544 claims) was correct.
+
+## r08. Smart Router reproduced with Maya's dataset (2026-11-23)
+
+Maya supplied `dataset.csv` (5,360 rows: 3,000 DIALECT, 2,360 MSA), saved as `data/raw/router_dataset.csv` (git-ignored, like the other data). `src/1_router/train_router.py` run **unchanged** (harness `r08_router.py` only redirects its output files):
+
+| | Paper | Rerun |
+|---|---|---|
+| Balanced samples | 4,720 | 4,720 |
+| LR 5-fold CV accuracy | 83.92% | **83.92%** |
+| LR training fit | 88.58% | **88.58%** |
+| Fig. 2 (dialect correct / dialect→MSA / MSA→dialect / MSA correct) | 2,068 / 292 / 247 / 2,113 | **identical** |
+| DT CV / Ensemble CV | 72.71% / 73.28% | 72.69% / 73.96% (DT has no fixed seed) |
+
+**Conclusion:** this is the dataset behind the paper. D1 is confirmed: 88.58% is the training fit, 83.92% the cross-validation estimate. The held-out test experiment (Hamzah's point #1) is now possible.
+
+## e14. Smart Router: held-out test and topic check (Hamzah's point #1, protocol D29, run 2026-11-23/24)
+
+Results in `results/e14_router_heldout.json`; Qwen domain labels cached in `results/e14_cache/`. (Run 1 stopped at the first Qwen call on a dropped connection; the client now retries on that error. Part 1 is deterministic and identical in both runs.)
+
+**(1) Held-out test** (balanced 4,720; split 80/20 before fitting; paper's configuration, untuned):
+
+| | Accuracy |
+|---|---|
+| Paper: training fit | 88.58% |
+| Paper: 5-fold CV on all data (TF-IDF fit before CV) | 83.92% |
+| 5-fold CV on the training split only | 84.08% ± 0.89 |
+| **Held-out test (n = 944)** | **83.26%** (macro-F1 0.833; 79 / 79 errors each way) |
+
+The TF-IDF leak did not matter (0.7 points). The router's held-out accuracy is about 83%.
+
+**(2) Topic check.** Qwen domain labels: 2,840 BOOK (LABR), 1,587 HOTEL (HARD), 293 OTHER. Labels are strongly confounded with domain: hotels 86% DIALECT, books 71% MSA. A domain-only baseline (majority label per domain) reaches **74.5%** test accuracy.
+
+| Test set, per domain | n | DIALECT recall | MSA recall | Router accuracy | Majority-class accuracy |
+|---|---|---|---|---|---|
+| Books | 553 | 0.596 | 0.936 | 0.837 | 0.709 |
+| Hotels | 329 | 0.982 | **0.109** | 0.836 | 0.833 |
+| Other | 62 | 0.757 | 0.800 | 0.774 | 0.597 |
+
+**Conclusion (finding, not a decision):** the router relies largely on topic: it calls almost every hotel review DIALECT (MSA recall 0.11) and misses 40% of dialectal book reviews. It still carries real dialect signal (books 83.7% vs 70.9% majority; other 77.4% vs 59.7%), but only about 9 points above the topic-only baseline overall. Consequence for the pipeline: dialectal book reviews often skip normalization (the error type the paper calls more damaging). **How to report this is pending the authors' decision.**
